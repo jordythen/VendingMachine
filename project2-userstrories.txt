@@ -1,0 +1,56 @@
+Vending Machine user stories:
+ 
+	USER ACCOUNT Stories
+
+	1. User can create an account[vending machine] 1 account = 1 vending machine
+
+	2. User can log in
+
+	3. User can insert snacks
+
+	3.5 User can specify price of snacks and snack details
+
+	4. User can customize vending machine [name of vending machine/ color /type]
+
+	
+	INTERACTION STORIES
+
+	5.5 User can search for other people's vending machine by name
+
+	5.6 User can search for other people's vending machine by id
+
+	5.7 User can search for other people's vending machine ordered by popularity(highest rating first)
+
+	5.8 User can search for other people's vending machine ordered by popularity(lowest rating first)
+
+	5.9 User can search for other people's vending machine by type
+
+	6. User can visit other people's vending machine
+
+	7. User can look at other people's purchasable snacks.
+
+	8. User can make an offer/trade for another person's snack or snacks.
+
+	9. User can purchase other people's snack (given the outright price)
+
+	10. As a vendor, if anyone makes a trade/offer, I can accept or reject the offer.
+
+	10.5 If a user purchase a snack, their balance will be withdrawn and added on the vendor's balance.
+
+	11. Once purchased, or approved on the offer, the snack is removed from the vendor's vending machine and added onto the user's vending machine.
+
+	12. User can rate other people's vending machine
+
+	13. User can inquire another person's vending machine or snack/snacks (low priority)
+
+
+	EXTRA COOL FEATURES
+
+	> User can eat snack/snacks (ie delete)
+
+
+
+	
+	
+	
+	

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-mapping>
+	<class name="com.revature.beans.User" table="user">
+	<!-- We don't have to use triggers anymore with Hibernate -->
+		<id name="id" column="id">
+			<generator class="increment"/>
+		</id>
+		<!-- NAME IS JAVA AND COLUMN IS SQL -->
+		<property name="firstName" column="firstname"></property>
+		
+		<property name="lastName" column="lastname"></property>
+	</class>
+</hibernate-mapping>
