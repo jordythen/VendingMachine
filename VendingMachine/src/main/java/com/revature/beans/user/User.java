@@ -1,4 +1,6 @@
-package com.revature.beans;
+package com.revature.beans.user;
+
+import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.FetchType;
@@ -8,6 +10,8 @@ import javax.persistence.Id;
 import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
+
+import com.revature.beans.vendingmachine.VendingMachine;
 
 //If name is different that you have to specify the name of the table in SQL
 //ie.... @Table (name="user_table")
@@ -23,10 +27,17 @@ public class User {
 	private String firstName;
 	@Column
 	private String lastName;
+	private String email;
+	private String username;
+	private String password;
+	private Money balance;
 	
 	//We're setting up our one to one
 	@OneToOne(fetch=FetchType.EAGER)
 	private VendingMachine vendingMachine;
+	private Set<Offer> pendingOffers;
+	private Set<Order> orderHistory;
+	private Set<Review> ratingHistory;
 	
 	/*
 	@ManyToOne
