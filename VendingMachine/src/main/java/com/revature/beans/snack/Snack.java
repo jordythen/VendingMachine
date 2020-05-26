@@ -14,7 +14,6 @@ public class Snack {
 	private Money cost;
 	//A snack can have multiple types..
 	private Set<Type> types;
-	private Size size;
 	
 	//These are counted on grams...
 	private Integer totalFat;
