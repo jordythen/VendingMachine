@@ -10,7 +10,7 @@ public class Snack {
 	private String snackName;
 	private String description;
 	private Integer numInStock;
-	//nullable //HELLO
+	//nullable //HELLO2
 	private Money cost;
 	//A snack can have multiple types..
 	private Set<Type> types;
