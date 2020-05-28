@@ -15,7 +15,7 @@ import javax.persistence.Table;
 
 import com.revature.beans.vendingmachine.VendingMachine;
 
-@Table
+@Table(name="ORDERTABLE")
 public class Order {
 	@Id 
 	@SequenceGenerator(name="userGen", sequenceName="user_seq", allocationSize=1)

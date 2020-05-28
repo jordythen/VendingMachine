@@ -6,7 +6,7 @@ import javax.persistence.*;
 import com.revature.beans.snack.Snack;
 import com.revature.beans.user.Review;
 
-@Table
+@Table(name="VENDINGMACHINE")
 public class VendingMachine {
 	
 	@Id 

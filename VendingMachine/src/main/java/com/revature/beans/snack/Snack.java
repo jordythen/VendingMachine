@@ -4,7 +4,7 @@ import java.util.Set;
 
 import javax.persistence.*;
 
-@Table
+@Table(name="SNACK")
 public class Snack {
 	@Id 
 	@SequenceGenerator(name="snackGen", sequenceName="snack_seq", allocationSize=1)
