@@ -136,6 +136,8 @@ create table ORDERTABLE(
     foreign key (vendingmachineID) references vendingmachine(id)
 );
 
+alter table ordertable modify orderTime varchar2(30);
+
 
 
 
