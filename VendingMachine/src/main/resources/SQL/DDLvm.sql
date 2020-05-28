@@ -3,6 +3,7 @@ drop table VENDINGMACHINE cascade constraints;
 drop table REVIEW cascade constraints;
 drop table SNACK cascade constraints;
 drop table SNACKTYPE cascade constraints;
+drop table SNACKOFFER cascade constraints;
 drop table SNACK_SNACKTYPE cascade constraints;
 drop table OFFER cascade constraints;
 drop table ORDERTABLE cascade constraints;
@@ -42,8 +43,11 @@ create table REVIEW (
     comments varchar(50),
     reviewTime timestamp,
     
-    constraint PK_REVIEW primary key(id)
+    constraint PK_REVIEW primary key(id),
+    foreign key (authorID) references usertable(id),
+    foreign key (vendingmachineID) references vendingmachine(id)
 );
+alter table review modify reviewTime varchar2(30);
 
 create table SNACK(
     id number(10) not null,
@@ -61,6 +65,9 @@ create table SNACK(
     constraint PK_SNACK primary key(id),
     foreign key (vendingmachineID) references vendingmachine(id)
 );
+
+alter table snack add isHidden char(1);
+alter table snack add quantity number(5);
 
 --many snacks can have many types
 create table SNACKTYPE(
@@ -84,6 +91,7 @@ create table SNACK_SNACKTYPE(
 
 );
 
+--ONE TO MANY TABLE FOR OFFERS
 create table OFFER(
     id number(10) not null,
     authorID number(10),
@@ -95,6 +103,9 @@ create table OFFER(
     foreign key (vendingmachineID) references vendingmachine(id)
     
 );
+
+alter table offer add timeOfferWasMade varchar2(30);
+alter table offer modify statusType number(5);
 
 -- Everytime user makes an offer
 -- it's going to insert ONE row into the offer table
