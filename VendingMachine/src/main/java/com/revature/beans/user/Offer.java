@@ -38,12 +38,14 @@ public class Offer {
 	private VendingMachine vendingMachine;
 	
 	//ASK SIERRA IF THIS IS CORRECT
-	@OneToMany(fetch=FetchType.EAGER,cascade=CascadeType.ALL)
-	@JoinTable(name="SNACKSOFFER", joinColumns=@JoinColumn(name="offerID"),
+	@ManyToMany(fetch=FetchType.EAGER,cascade=CascadeType.ALL)
+	@JoinTable(name="SNACKOFFER", joinColumns=@JoinColumn(name="offerID"),
 									inverseJoinColumns=@JoinColumn(name="snacksOfInterestID"))
+	
+	//IS THIS ONE CORRECT? OR ^???
 	private Set<Snack> snacksOfInterest;
-	@OneToMany(fetch=FetchType.EAGER,cascade=CascadeType.ALL)
-	@JoinTable(name="SNACKSOFFER", joinColumns=@JoinColumn(name="offerID"),
+	@ManyToMany(fetch=FetchType.EAGER,cascade=CascadeType.ALL)
+	@JoinTable(name="SNACKOFFER", joinColumns=@JoinColumn(name="offerID"),
 									inverseJoinColumns=@JoinColumn(name="snacksToOfferID"))
 	private Set<Snack> snacksToOffer;
 	
