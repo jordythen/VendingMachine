@@ -5,8 +5,8 @@
 		
 		<!-- set up our JDBC connection info, same info that goes into our database properties -->
 		<property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
-		<property name="hibernate.connection.url">jdbc:oracle:thin:@localhost:1521:ORCL</property>
-		<property name="hibernate.connection.username">vendingMachineApp</property>
+		<property name="hibernate.connection.url">jdbc:oracle:thin:@rev2004.cvuojc8pwavn.us-east-2.rds.amazonaws.com:1521:ORCL</property>
+		<property name="hibernate.connection.username">vendingmachine</property>
 		<property name="hibernate.connection.password">p4ssword</property>
 		
 		<!-- tell hibernate the SQL dialect -->

@@ -3,10 +3,7 @@ package com.revature.beans.snack;
 import java.util.Set;
 
 import javax.persistence.*;
-<<<<<<< HEAD
 
-=======
->>>>>>> a81c8afd0dd3a282600c151085d30724bb789059
 @Entity
 @Table(name="SNACK")
 public class Snack {

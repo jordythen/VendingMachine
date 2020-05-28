@@ -1,8 +1,8 @@
 package com.revature.data;
 
 import java.util.List;
-import java.util.Set;
 
+import org.hibernate.query.NativeQuery;
 import org.hibernate.query.Query;
 
 import org.apache.log4j.Logger;
@@ -41,8 +41,9 @@ public class UserHibernate implements UserDAO{
 
 	@Override
 	public User getById(Integer id) {
-		System.out.println("Getting person with id "+ id);
+		log.trace("Getting person with id "+ id);
 		Session s = connection.getSession();
+		log.trace("Hibernate session has been made");
 		User u = s.get(User.class, id);
 		log.trace("Got user with id "+id);
 		return u;
@@ -61,14 +62,64 @@ public class UserHibernate implements UserDAO{
 
 	@Override
 	public void update(User t) {
-		// TODO Auto-generated method stub
+		log.trace("updating user Id" + t.getId());
+		Session s = connection.getSession();
+		Transaction tx = null;
+		try {
+			tx = s.beginTransaction();
+			s.update(t);
+			tx.commit();
+			log.trace("User updated");
+			
+		}
+		catch(Exception e){
+			if(tx != null) {
+				tx.rollback();
+				log.warn(e);
+			}
+			
+		}
+		finally {
+			s.close();
+		}
 		
 	}
 
 	@Override
 	public void delete(User t) {
-		// TODO Auto-generated method stub
+		log.trace("Deleteing" + t);
+		Session s = connection.getSession();
+		Transaction tx = null;
 		
+		try {
+			tx = s.beginTransaction();
+			s.delete(t);
+			tx.commit();
+			log.trace("Deleted " + t + " successfully");
+		}
+		catch(Exception e) {
+			if (tx != null) {
+				tx.rollback();
+				log.warn(e);
+			}
+		}
+		finally {
+			s.close();
+		}
+	}
+
+	@Override
+	public User getByUsernameAndPassword(String username, String password) {
+		log.trace("Getting user by username: " + username + " and password " + password);
+		Session s = connection.getSession();
+		String sql = "SELECT FROM User WHERE username = :username AND passwd = :password";
+		NativeQuery<Object> nq = s.createNativeQuery(sql,Object.class);
+		nq.setParameter("username", username);
+		nq.setParameter("password", password);
+		User u = (User) nq.getResultStream();
+		log.trace("User retrieved is " + u);
+		s.close();
+		return u;
 	}
 	
 
