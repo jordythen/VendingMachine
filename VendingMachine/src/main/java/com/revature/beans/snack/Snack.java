@@ -3,7 +3,7 @@ package com.revature.beans.snack;
 import java.util.Set;
 
 import javax.persistence.*;
-
+@Entity
 @Table(name="SNACK")
 public class Snack {
 	@Id 
@@ -24,7 +24,8 @@ public class Snack {
 	@ManyToMany(fetch=FetchType.EAGER)
 	@JoinTable(name="SNACK_SNACKTYPE",
 				joinColumns=@JoinColumn(name="snackid"), 
-				inverseJoinColumns=@JoinColumn(name="typeid")) 
+				inverseJoinColumns=@JoinColumn(name="typeid"))
+	private Set<Integer> typesId;
 	private Set<Type> types;
 	
 	//These are counted on grams...
@@ -99,6 +100,14 @@ public class Snack {
 	}
 	public void setIsHidden(Character isHidden) {
 		this.isHidden = isHidden;
+	}
+	
+	
+	public Set<Integer> getTypesId() {
+		return typesId;
+	}
+	public void setTypesId(Set<Integer> typesId) {
+		this.typesId = typesId;
 	}
 	@Override
 	public int hashCode() {
