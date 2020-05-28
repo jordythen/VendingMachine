@@ -6,8 +6,19 @@
 			<generator class="increment"/>
 		</id>
 		<!-- NAME IS JAVA AND COLUMN IS SQL -->
-		<property name="firstName" column="firstname"></property>
+		<property name="firstName" column="first_name"></property>
 		
-		<property name="lastName" column="lastname"></property>
+		<property name="lastName" column="last_name"></property>
+		
+		<property name="email"></property>
+		
+		<property name="username"></property>
+		
+		<property name="password" column="passwd"></property>
+		
+		<property name="balance"></property>
+		
+		<property name="vendingMachine" column="vendingmachineID"></property>
+		
 	</class>
 </hibernate-mapping>
