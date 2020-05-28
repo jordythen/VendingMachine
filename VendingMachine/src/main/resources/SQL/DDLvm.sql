@@ -138,6 +138,30 @@ create table ORDERTABLE(
 
 alter table ordertable modify orderTime varchar2(30);
 
+drop sequence USERTABLE;
+drop sequence VENDINGMACHINE;
+drop sequence REVIEW;
+drop sequence SNACK;
+drop sequence SNACK_SNACKTYPE;
+drop sequence SNACKOFFER;
+drop sequence SNACKTYPE;
+
+
+create sequence user_seq;
+create sequence vendingmachine_seq;
+create sequence review_seq;
+create sequence snack_seq;
+create sequence offer_seq;
+create sequence order_seq;
+
+
+
+
+
+
+
+
+
 
 
 

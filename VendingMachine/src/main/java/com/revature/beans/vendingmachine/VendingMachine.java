@@ -6,6 +6,7 @@ import javax.persistence.*;
 import com.revature.beans.snack.Snack;
 import com.revature.beans.user.Review;
 
+@Entity
 @Table(name="VENDINGMACHINE")
 public class VendingMachine {
 	

@@ -3,6 +3,7 @@ package com.revature.beans.user;
 import java.time.LocalDateTime;
 
 import javax.persistence.CascadeType;
+import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -14,12 +15,12 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 import com.revature.beans.vendingmachine.VendingMachine;
-
+@Entity
 @Table(name="ORDERTABLE")
 public class Order {
 	@Id 
-	@SequenceGenerator(name="userGen", sequenceName="user_seq", allocationSize=1)
-	@GeneratedValue(generator="userGen",strategy=GenerationType.SEQUENCE)
+	@SequenceGenerator(name="orderGen", sequenceName="order_seq", allocationSize=1)
+	@GeneratedValue(generator="orderGen",strategy=GenerationType.SEQUENCE)
 	private Integer id;
 
 	//We're setting up our one to one
