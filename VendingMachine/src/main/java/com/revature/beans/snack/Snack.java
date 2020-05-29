@@ -36,11 +36,11 @@ public class Snack {
 	@Column(name="snack_cost")
 	private Double cost;
 	//A snack can have multiple types..
-	@ManyToMany(fetch=FetchType.LAZY,cascade=CascadeType.ALL)
+	@OneToMany(fetch=FetchType.LAZY,cascade=CascadeType.ALL)
 	@JoinTable(name="SNACK_SNACKTYPE",
 				joinColumns=@JoinColumn(name="snackid"), 
 				inverseJoinColumns=@JoinColumn(name="typeid"))
-	private Set<Snack> typesId;
+	private Set<String> typesId;
 	private Set<Type> types;
 	
 	//These are counted on grams...
@@ -50,6 +50,7 @@ public class Snack {
 	private Integer totalCarbs;
 	private Integer sodium;
 	private Integer cholesterol;
+	
 	public Integer getId() {
 		return id;
 	}
@@ -118,10 +119,10 @@ public class Snack {
 	}
 	
 	
-	public Set<Snack> getTypesId() {
+	public Set<String> getTypesId() {
 		return typesId;
 	}
-	public void setTypesId(Set<Snack> typesId) {
+	public void setTypesId(Set<String> typesId) {
 		this.typesId = typesId;
 	}
 	@Override

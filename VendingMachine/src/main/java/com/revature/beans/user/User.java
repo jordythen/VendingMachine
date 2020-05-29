@@ -46,20 +46,19 @@ public class User {
 	
 	//Setting up our one to many table
 	@OneToMany(fetch=FetchType.EAGER,cascade=CascadeType.ALL)
-
-	@JoinTable(name="OFFER", joinColumns=@JoinColumn(name="authorID"),
-								inverseJoinColumns=@JoinColumn(name="id"))
+	@JoinTable(name="USER_OFFER", joinColumns=@JoinColumn(name="user_id"),
+								inverseJoinColumns=@JoinColumn(name="offer_id"))
 	private Set<Offer> pendingOffers;
 	
 	
 	@OneToMany(fetch=FetchType.EAGER,cascade=CascadeType.ALL)
-	@JoinTable(name="ORDERTABLE", joinColumns=@JoinColumn(name="authorID"),
-									inverseJoinColumns=@JoinColumn(name="id"))
+	@JoinTable(name="USER_ORDER", joinColumns=@JoinColumn(name="user_id"),
+									inverseJoinColumns=@JoinColumn(name="order_id"))
 	private Set<Order> orderHistory;
 	
 	@OneToMany(fetch=FetchType.EAGER,cascade=CascadeType.ALL)
-	@JoinTable(name="ORDERTABLE", joinColumns=@JoinColumn(name="authorID"),
-									inverseJoinColumns=@JoinColumn(name="id"))
+	@JoinTable(name="USER_REVIEW", joinColumns=@JoinColumn(name="user_id"),
+									inverseJoinColumns=@JoinColumn(name="review_id"))
 	private Set<Review> ratingHistory;
 	
 	
