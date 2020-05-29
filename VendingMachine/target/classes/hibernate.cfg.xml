@@ -1,6 +1,7 @@
-
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE hibernate-configuration SYSTEM "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
+
 	<session-factory>
 		
 		<!-- set up our JDBC connection info, same info that goes into our database properties -->
@@ -28,7 +29,6 @@
 		<mapping class="com.revature.beans.user.User"></mapping>
 		<mapping class="com.revature.beans.vendingmachine.VendingMachine"></mapping>
 		<mapping class="com.revature.beans.snack.Snack"></mapping>
-		<mapping class="com.revature.beans.user.Money"></mapping>
 		<mapping class="com.revature.beans.user.Offer"></mapping>
 		<mapping class="com.revature.beans.user.Order"></mapping>
 		<mapping class="com.revature.beans.user.Review"></mapping>

@@ -69,15 +69,14 @@ create table SNACK(
 alter table snack add isHidden char(1);
 alter table snack add quantity number(5);
 
---many snacks can have many types
 create table SNACKTYPE(
     id number(10) not null,
-    snackid number(10),
     snacktype varchar2(30),
     
-    constraint PK_SNACKTYPE primary key(id),
-    foreign key (snackid) references SNACK(id)
+    constraint PK_SNACKTYPE primary key(id)
 );
+
+--alter table snacktype drop column snackid;
 
 --many to many table
 create table SNACK_SNACKTYPE(

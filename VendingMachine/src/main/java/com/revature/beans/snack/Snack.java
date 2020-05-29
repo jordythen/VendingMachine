@@ -22,11 +22,11 @@ public class Snack {
 	@Column(name="snack_cost")
 	private Double cost;
 	//A snack can have multiple types..
-	@ManyToMany(fetch=FetchType.EAGER)
+	@ManyToMany(fetch=FetchType.LAZY)
 	@JoinTable(name="SNACK_SNACKTYPE",
 				joinColumns=@JoinColumn(name="snackid"), 
 				inverseJoinColumns=@JoinColumn(name="typeid"))
-	private Set<Integer> typesId;
+	private Set<String> typesId;
 	private Set<Type> types;
 	
 	//These are counted on grams...
@@ -104,10 +104,10 @@ public class Snack {
 	}
 	
 	
-	public Set<Integer> getTypesId() {
+	public Set<String> getTypesId() {
 		return typesId;
 	}
-	public void setTypesId(Set<Integer> typesId) {
+	public void setTypesId(Set<String> typesId) {
 		this.typesId = typesId;
 	}
 	@Override
