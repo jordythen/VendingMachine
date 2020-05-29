@@ -22,11 +22,6 @@ public class Order {
 	@SequenceGenerator(name="orderGen", sequenceName="order_seq", allocationSize=1)
 	@GeneratedValue(generator="orderGen",strategy=GenerationType.SEQUENCE)
 	private Integer id;
-	
-	@OneToOne(fetch=FetchType.EAGER,cascade=CascadeType.ALL)
-	@JoinTable(name="VENDINGMACHINE", joinColumns=@JoinColumn(name="id"))
-	private VendingMachine orderMadeTo;
-	
 	private Double tax;
 	private Double orderTotal;
 	private String orderTime;
@@ -35,12 +30,6 @@ public class Order {
 	}
 	public void setId(Integer id) {
 		this.id = id;
-	}
-	public VendingMachine getOrderMadeTo() {
-		return orderMadeTo;
-	}
-	public void setOrderMadeTo(VendingMachine orderMadeTo) {
-		this.orderMadeTo = orderMadeTo;
 	}
 	public Double getTax() {
 		return tax;
@@ -62,15 +51,13 @@ public class Order {
 	}
 	@Override
 	public String toString() {
-		return "Order [id=" + id + ", orderMadeTo=" + orderMadeTo + ", tax=" + tax + ", orderTotal=" + orderTotal
-				+ ", orderTime=" + orderTime + "]";
+		return "Order [id=" + id + ", tax=" + tax + ", orderTotal=" + orderTotal + ", orderTime=" + orderTime + "]";
 	}
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
-		result = prime * result + ((orderMadeTo == null) ? 0 : orderMadeTo.hashCode());
 		result = prime * result + ((orderTime == null) ? 0 : orderTime.hashCode());
 		result = prime * result + ((orderTotal == null) ? 0 : orderTotal.hashCode());
 		result = prime * result + ((tax == null) ? 0 : tax.hashCode());
@@ -89,11 +76,6 @@ public class Order {
 			if (other.id != null)
 				return false;
 		} else if (!id.equals(other.id))
-			return false;
-		if (orderMadeTo == null) {
-			if (other.orderMadeTo != null)
-				return false;
-		} else if (!orderMadeTo.equals(other.orderMadeTo))
 			return false;
 		if (orderTime == null) {
 			if (other.orderTime != null)

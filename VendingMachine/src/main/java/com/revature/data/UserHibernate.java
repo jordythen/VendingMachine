@@ -45,7 +45,8 @@ public class UserHibernate implements UserDAO{
 		Session s = connection.getSession();
 		log.trace("Hibernate session has been made");
 		User u = s.get(User.class, id);
-		log.trace("Got user with id "+id);
+		log.info("THIS IS USER: " + u);
+		log.trace("Got user with id "+ u.getId());
 		return u;
 	}
 

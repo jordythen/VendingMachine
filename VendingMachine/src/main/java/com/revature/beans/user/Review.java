@@ -24,10 +24,6 @@ public class Review {
 	@GeneratedValue(generator="reviewGen",strategy=GenerationType.SEQUENCE)
 	private Integer id;
 	
-	@OneToOne(fetch=FetchType.EAGER,cascade=CascadeType.ALL)
-	@JoinTable(name="VENDINGMACHINE", joinColumns=@JoinColumn(name="id") )
-	private VendingMachine targetVendingMachine;
-	
 	//One star to five stars!!!!
 	@Column(name="rating")
 	private Integer starRating;
@@ -39,12 +35,6 @@ public class Review {
 	}
 	public void setId(Integer id) {
 		this.id = id;
-	}
-	public VendingMachine getTargetVendingMachine() {
-		return targetVendingMachine;
-	}
-	public void setTargetVendingMachine(VendingMachine targetVendingMachine) {
-		this.targetVendingMachine = targetVendingMachine;
 	}
 	public Integer getStarRating() {
 		return starRating;
@@ -66,8 +56,8 @@ public class Review {
 	}
 	@Override
 	public String toString() {
-		return "Review [id=" + id + ", targetVendingMachine=" + targetVendingMachine + ", starRating=" + starRating
-				+ ", comments=" + comments + ", reviewTime=" + reviewTime + "]";
+		return "Review [id=" + id + ", starRating=" + starRating + ", comments=" + comments + ", reviewTime="
+				+ reviewTime + "]";
 	}
 	@Override
 	public int hashCode() {
@@ -77,7 +67,6 @@ public class Review {
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
 		result = prime * result + ((reviewTime == null) ? 0 : reviewTime.hashCode());
 		result = prime * result + ((starRating == null) ? 0 : starRating.hashCode());
-		result = prime * result + ((targetVendingMachine == null) ? 0 : targetVendingMachine.hashCode());
 		return result;
 	}
 	@Override
@@ -108,11 +97,6 @@ public class Review {
 			if (other.starRating != null)
 				return false;
 		} else if (!starRating.equals(other.starRating))
-			return false;
-		if (targetVendingMachine == null) {
-			if (other.targetVendingMachine != null)
-				return false;
-		} else if (!targetVendingMachine.equals(other.targetVendingMachine))
 			return false;
 		return true;
 	}

@@ -13,6 +13,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
+import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
@@ -39,9 +40,11 @@ public class User {
 	private String password;
 	private Double balance;
 	
-	//We're setting up our one to one
-	@OneToOne(fetch=FetchType.EAGER,cascade=CascadeType.ALL)
-	@JoinTable(name="VENDINGMACHINE", joinColumns=@JoinColumn(name="id") )
+//	//We're setting up our one to one
+//	@OneToOne(fetch=FetchType.EAGER,cascade=CascadeType.ALL)
+//	@JoinTable(name="VENDINGMACHINE", joinColumns=@JoinColumn(name="id") )
+	@OneToOne(cascade = CascadeType.ALL)
+	@PrimaryKeyJoinColumn
 	private VendingMachine vendingMachine;
 	
 	//Setting up our one to many table
