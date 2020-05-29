@@ -2,35 +2,47 @@ package com.revature.services;
 
 import java.util.List;
 
-public class SnackService implements GenericService{
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+import com.revature.beans.snack.Snack;
+import com.revature.data.SnackHibernate;
+
+@Service
+public class SnackService implements GenericService<Snack>{
+	SnackHibernate shib;
+	
+	@Autowired
+	public SnackService(SnackHibernate t) {
+		shib=t;
+	}
 	@Override
-	public Integer add(Object t) {
-		// TODO Auto-generated method stub
-		return null;
+	public Integer add(Snack t) {
+		
+		return shib.add(t);
 	}
 
 	@Override
-	public Object getById(Integer id) {
-		// TODO Auto-generated method stub
-		return null;
+	public Snack getById(Integer id) {
+		
+		return shib.getById(id);
 	}
 
 	@Override
-	public List getAll() {
-		// TODO Auto-generated method stub
-		return null;
+	public List<Snack> getAll() {
+		
+		return shib.getAll();
 	}
 
 	@Override
-	public void update(Object t) {
-		// TODO Auto-generated method stub
+	public void update(Snack t) {
+		shib.update(t);
 		
 	}
 
 	@Override
-	public void delete(Object t) {
-		// TODO Auto-generated method stub
+	public void delete(Snack t) {
+		shib.delete(t);
 		
 	}
 
