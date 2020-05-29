@@ -22,7 +22,7 @@ import javax.persistence.Table;
 import com.revature.beans.snack.Snack;
 import com.revature.beans.vendingmachine.VendingMachine;
 @Entity
-@Table(name="SNACKOFFER")
+@Table(name="OFFER")
 public class Offer {
 	
 	@Id 
@@ -42,8 +42,6 @@ public class Offer {
 	@ManyToMany(fetch=FetchType.EAGER,cascade=CascadeType.ALL)
 	@JoinTable(name="SNACKOFFER", joinColumns=@JoinColumn(name="offerID"),
 									inverseJoinColumns=@JoinColumn(name="snacksOfInterestID"))
-	
-	//IS THIS ONE CORRECT? OR ^???
 	private Set<Snack> snacksOfInterest;
 	@ManyToMany(fetch=FetchType.EAGER,cascade=CascadeType.ALL)
 	@JoinTable(name="SNACKOFFER", joinColumns=@JoinColumn(name="offerID"),
@@ -52,7 +50,7 @@ public class Offer {
 	
 	//Leave this alone for now, remember to set this later
 	@Column(name="statusType")
-	private Integer status;
+	private String status;
 	private String timeOfferWasMade;
 	
 	public Integer getId() {
@@ -85,10 +83,10 @@ public class Offer {
 	public void setSnacksToOffer(Set<Snack> snacksToOffer) {
 		this.snacksToOffer = snacksToOffer;
 	}
-	public Integer getStatus() {
+	public String getStatus() {
 		return status;
 	}
-	public void setStatus(Integer status) {
+	public void setStatus(String status) {
 		this.status = status;
 	}
 	public String getTimeOfferWasMade() {

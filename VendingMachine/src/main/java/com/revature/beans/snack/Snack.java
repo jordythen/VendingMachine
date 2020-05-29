@@ -2,7 +2,21 @@ package com.revature.beans.snack;
 
 import java.util.Set;
 
-import javax.persistence.*;
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
 
 @Entity
 @Table(name="SNACK")
@@ -22,11 +36,11 @@ public class Snack {
 	@Column(name="snack_cost")
 	private Double cost;
 	//A snack can have multiple types..
-	@ManyToMany(fetch=FetchType.EAGER)
+	@ManyToMany(fetch=FetchType.LAZY,cascade=CascadeType.ALL)
 	@JoinTable(name="SNACK_SNACKTYPE",
 				joinColumns=@JoinColumn(name="snackid"), 
 				inverseJoinColumns=@JoinColumn(name="typeid"))
-	private Set<Integer> typesId;
+	private Set<Snack> typesId;
 	private Set<Type> types;
 	
 	//These are counted on grams...
@@ -104,10 +118,10 @@ public class Snack {
 	}
 	
 	
-	public Set<Integer> getTypesId() {
+	public Set<Snack> getTypesId() {
 		return typesId;
 	}
-	public void setTypesId(Set<Integer> typesId) {
+	public void setTypesId(Set<Snack> typesId) {
 		this.typesId = typesId;
 	}
 	@Override
