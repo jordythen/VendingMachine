@@ -30,10 +30,6 @@ public class Offer {
 	@GeneratedValue(generator="offerGen",strategy=GenerationType.SEQUENCE)
 	private Integer id;
 
-	@OneToOne(fetch=FetchType.EAGER,cascade=CascadeType.ALL)
-	@JoinTable(name="VENDINGMACHINE", joinColumns=@JoinColumn(name="id"))
-	private VendingMachine vendingMachine;
-	
 	//ASK SIERRA IF THIS IS CORRECT
 	@ManyToMany(fetch=FetchType.EAGER,cascade=CascadeType.ALL)
 	@JoinTable(name="SNACKOFFER", joinColumns=@JoinColumn(name="offerID"),
@@ -54,12 +50,6 @@ public class Offer {
 	}
 	public void setId(Integer id) {
 		this.id = id;
-	}
-	public VendingMachine getVendingMachine() {
-		return vendingMachine;
-	}
-	public void setVendingMachine(VendingMachine vendingMachine) {
-		this.vendingMachine = vendingMachine;
 	}
 	public Set<Snack> getSnacksOfInterest() {
 		return snacksOfInterest;
@@ -94,7 +84,6 @@ public class Offer {
 		result = prime * result + ((snacksToOffer == null) ? 0 : snacksToOffer.hashCode());
 		result = prime * result + ((status == null) ? 0 : status.hashCode());
 		result = prime * result + ((timeOfferWasMade == null) ? 0 : timeOfferWasMade.hashCode());
-		result = prime * result + ((vendingMachine == null) ? 0 : vendingMachine.hashCode());
 		return result;
 	}
 	@Override
@@ -131,18 +120,12 @@ public class Offer {
 				return false;
 		} else if (!timeOfferWasMade.equals(other.timeOfferWasMade))
 			return false;
-		if (vendingMachine == null) {
-			if (other.vendingMachine != null)
-				return false;
-		} else if (!vendingMachine.equals(other.vendingMachine))
-			return false;
 		return true;
 	}
 	@Override
 	public String toString() {
-		return "Offer [id=" + id + ", vendingMachine=" + vendingMachine + ", snacksOfInterest=" + snacksOfInterest
-				+ ", snacksToOffer=" + snacksToOffer + ", status=" + status + ", timeOfferWasMade=" + timeOfferWasMade
-				+ "]";
+		return "Offer [id=" + id + ", snacksOfInterest=" + snacksOfInterest + ", snacksToOffer=" + snacksToOffer
+				+ ", status=" + status + ", timeOfferWasMade=" + timeOfferWasMade + "]";
 	}
 	
 	

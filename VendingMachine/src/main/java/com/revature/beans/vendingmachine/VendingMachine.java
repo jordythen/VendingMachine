@@ -16,8 +16,7 @@ public class VendingMachine {
 	@GeneratedValue(generator="vendingmachineGen",strategy=GenerationType.SEQUENCE)
 	private Integer id;
 	
-	@OneToOne(fetch=FetchType.EAGER,cascade=CascadeType.ALL)
-	@JoinTable(name="USERTABLE", joinColumns=@JoinColumn(name="id"))
+	@OneToOne(mappedBy="vendingMachine", cascade=CascadeType.ALL)
 	private User owner;
 	
 	@Column(name="vending_name")
@@ -96,7 +95,7 @@ public class VendingMachine {
 
 	@Override
 	public String toString() {
-		return "VendingMachine [id=" + id + ", owner=" + owner + ", name=" + name + ", description=" + description
+		return "VendingMachine [id=" + id + ", name=" + name + ", description=" + description
 				+ ", theme=" + theme + ", mainColor=" + mainColor + ", secondaryColor=" + secondaryColor + ", snacks="
 				+ snacks + "]";
 	}
