@@ -36,11 +36,10 @@ public class Snack {
 	@Column(name="snack_cost")
 	private Double cost;
 	//A snack can have multiple types..
-	@ManyToMany(fetch=FetchType.LAZY,cascade=CascadeType.ALL)
-	@JoinTable(name="SNACK_SNACKTYPE",
-				joinColumns=@JoinColumn(name="snackid"), 
-				inverseJoinColumns=@JoinColumn(name="typeid"))
-	private Set<Snack> typesId;
+
+	@OneToMany(fetch=FetchType.EAGER,cascade=CascadeType.ALL)
+	@JoinTable(name="SNACK_SNACKTYPE", joinColumns=@JoinColumn(name="snackid"),
+									inverseJoinColumns=@JoinColumn(name="typeid"))
 	private Set<Type> types;
 	
 	//These are counted on grams...
@@ -73,12 +72,6 @@ public class Snack {
 	}
 	public void setNumInStock(Integer numInStock) {
 		this.numInStock = numInStock;
-	}
-	public Set<Type> getTypes() {
-		return types;
-	}
-	public void setTypes(Set<Type> types) {
-		this.types = types;
 	}
 	public Integer getTotalFat() {
 		return totalFat;
@@ -117,12 +110,11 @@ public class Snack {
 		this.isHidden = isHidden;
 	}
 	
-	
-	public Set<Snack> getTypesId() {
-		return typesId;
+	public Set<Type> getTypes() {
+		return types;
 	}
-	public void setTypesId(Set<Snack> typesId) {
-		this.typesId = typesId;
+	public void setTypes(Set<Type> types) {
+		this.types = types;
 	}
 	@Override
 	public int hashCode() {

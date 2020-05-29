@@ -8,14 +8,11 @@ import org.apache.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
-import org.springframework.stereotype.Repository;
 
 import com.revature.beans.snack.Snack;
 import com.revature.utils.HibernateUtil;
 
 
-
-@Repository
 public class SnackHibernate implements GenericDAO<Snack> {
 	private HibernateUtil hu = HibernateUtil.getHibernateUtil();
 	private Logger log = Logger.getLogger(SnackHibernate.class);

@@ -34,6 +34,10 @@ create table VENDINGMACHINE (
     
     constraint PK_VENDINGMACHINE primary key(id)
 );
+alter table vendingmachine add ownerID number(10);
+ALTER TABLE vendingmachine ADD CONSTRAINT fk_owner_id FOREIGN KEY (ownerID) REFERENCES usertable(id);
+
+
 
 create table REVIEW (
     id number(10) not null,
@@ -48,6 +52,19 @@ create table REVIEW (
     foreign key (vendingmachineID) references vendingmachine(id)
 );
 alter table review modify reviewTime varchar2(30);
+alter table review drop column authorID;
+alter table review drop column authorID;
+
+
+create table USER_REVIEW(
+    
+    user_id number(20),
+    review_id number(20),
+    foreign key (user_id) references usertable(id),
+    foreign key (review_id) references review(id)
+    
+);
+
 
 create table SNACK(
     id number(10) not null,
@@ -69,14 +86,14 @@ create table SNACK(
 alter table snack add isHidden char(1);
 alter table snack add quantity number(5);
 
-create table SNACKTYPE(
-    id number(10) not null,
-    snacktype varchar2(30),
-    
-    constraint PK_SNACKTYPE primary key(id)
-);
+alter table snack drop column vendingmachineID;
 
---alter table snacktype drop column snackid;
+create table SNACK_VENDINGMACHINE(
+    snack_id number(20),
+    vendingmachine_id number(20),
+    foreign key (snack_id) references snack(id),
+    foreign key (vendingmachine_id) references vendingmachine(id)
+);
 
 --many to many table
 create table SNACK_SNACKTYPE(
@@ -89,6 +106,17 @@ create table SNACK_SNACKTYPE(
     foreign key (typeid) references SNACKTYPE(id)
 
 );
+
+alter table snack_snacktype drop column id;
+
+create table SNACKTYPE(
+    id number(10) not null,
+    snacktype varchar2(30),
+    
+    constraint PK_SNACKTYPE primary key(id)
+);
+
+--alter table snacktype drop column snackid;
 
 --ONE TO MANY TABLE FOR OFFERS
 create table OFFER(
@@ -105,6 +133,17 @@ create table OFFER(
 
 alter table offer add timeOfferWasMade varchar2(30);
 alter table offer modify statusType number(5);
+alter table offer drop column authorID;
+
+create table USER_OFFER(
+    
+    user_id number(20),
+    offer_id number(20),
+    foreign key (user_id) references usertable(id),
+    foreign key (offer_id) references offer(id)
+    
+);
+
 
 -- Everytime user makes an offer
 -- it's going to insert ONE row into the offer table
@@ -121,6 +160,7 @@ create table SNACKOFFER(
     foreign key (snacksToOfferID) references SNACK(id)
 );
 
+
 create table ORDERTABLE(
     id number(10) not null,
     authorID number(10),
@@ -134,16 +174,26 @@ create table ORDERTABLE(
     foreign key (authorID) references usertable(id),
     foreign key (vendingmachineID) references vendingmachine(id)
 );
+alter table ordertable drop column authorID;
+
+create table USER_ORDER(
+    
+    user_id number(20),
+    order_id number(20),
+    foreign key (user_id) references usertable(id),
+    foreign key (order_id) references ordertable(id)
+    
+);
 
 alter table ordertable modify orderTime varchar2(30);
 
-drop sequence USERTABLE;
-drop sequence VENDINGMACHINE;
-drop sequence REVIEW;
-drop sequence SNACK;
-drop sequence SNACK_SNACKTYPE;
-drop sequence SNACKOFFER;
-drop sequence SNACKTYPE;
+drop sequence user_seq;
+drop sequence vendingmachine_seq;
+drop sequence review_seq;
+drop sequence snack_seq;
+drop sequence offer_seq;
+drop sequence order_seq;
+drop sequence type_seq;
 
 
 create sequence user_seq;
@@ -152,6 +202,7 @@ create sequence review_seq;
 create sequence snack_seq;
 create sequence offer_seq;
 create sequence order_seq;
+create sequence type_seq;
 
 
 

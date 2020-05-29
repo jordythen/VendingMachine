@@ -31,10 +31,6 @@ public class Offer {
 	private Integer id;
 
 	@OneToOne(fetch=FetchType.EAGER,cascade=CascadeType.ALL)
-	@JoinTable(name="USERTABLE", joinColumns=@JoinColumn(name="id"))
-	private User author;
-
-	@OneToOne(fetch=FetchType.EAGER,cascade=CascadeType.ALL)
 	@JoinTable(name="VENDINGMACHINE", joinColumns=@JoinColumn(name="id"))
 	private VendingMachine vendingMachine;
 	
@@ -58,12 +54,6 @@ public class Offer {
 	}
 	public void setId(Integer id) {
 		this.id = id;
-	}
-	public User getAuthor() {
-		return author;
-	}
-	public void setAuthor(User author) {
-		this.author = author;
 	}
 	public VendingMachine getVendingMachine() {
 		return vendingMachine;
@@ -99,7 +89,6 @@ public class Offer {
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((author == null) ? 0 : author.hashCode());
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
 		result = prime * result + ((snacksOfInterest == null) ? 0 : snacksOfInterest.hashCode());
 		result = prime * result + ((snacksToOffer == null) ? 0 : snacksToOffer.hashCode());
@@ -117,11 +106,6 @@ public class Offer {
 		if (getClass() != obj.getClass())
 			return false;
 		Offer other = (Offer) obj;
-		if (author == null) {
-			if (other.author != null)
-				return false;
-		} else if (!author.equals(other.author))
-			return false;
 		if (id == null) {
 			if (other.id != null)
 				return false;
@@ -156,9 +140,9 @@ public class Offer {
 	}
 	@Override
 	public String toString() {
-		return "Offer [id=" + id + ", author=" + author + ", vendingMachine=" + vendingMachine + ", snacksOfInterest="
-				+ snacksOfInterest + ", snacksToOffer=" + snacksToOffer + ", status=" + status + ", timeOfferWasMade="
-				+ timeOfferWasMade + "]";
+		return "Offer [id=" + id + ", vendingMachine=" + vendingMachine + ", snacksOfInterest=" + snacksOfInterest
+				+ ", snacksToOffer=" + snacksToOffer + ", status=" + status + ", timeOfferWasMade=" + timeOfferWasMade
+				+ "]";
 	}
 	
 	

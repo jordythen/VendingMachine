@@ -5,6 +5,7 @@ import java.util.Set;
 import javax.persistence.*;
 import com.revature.beans.snack.Snack;
 import com.revature.beans.user.Review;
+import com.revature.beans.user.User;
 
 @Entity
 @Table(name="VENDINGMACHINE")
@@ -14,6 +15,10 @@ public class VendingMachine {
 	@SequenceGenerator(name="vendingmachineGen", sequenceName="vendingmachine_seq", allocationSize=1)
 	@GeneratedValue(generator="vendingmachineGen",strategy=GenerationType.SEQUENCE)
 	private Integer id;
+	
+	@OneToOne(fetch=FetchType.EAGER,cascade=CascadeType.ALL)
+	@JoinTable(name="USERTABLE", joinColumns=@JoinColumn(name="id"))
+	private User owner;
 	
 	@Column(name="vending_name")
 	private String name;
@@ -26,15 +31,10 @@ public class VendingMachine {
 	private String mainColor;
 	@Column(name="secondary_color")
 	private String secondaryColor;
-	
+
 	@OneToMany(fetch=FetchType.EAGER,cascade=CascadeType.ALL)
-	@JoinTable(name="REVIEW", joinColumns=@JoinColumn(name="vendingmachineID"),
-											inverseJoinColumns=@JoinColumn(name="id"))
-	private Set<Review> ratings;
-	
-	@OneToMany(fetch=FetchType.EAGER,cascade=CascadeType.ALL)
-	@JoinTable(name="SNACK", joinColumns=@JoinColumn(name="vendingmachineID"),
-											inverseJoinColumns=@JoinColumn(name="id"))
+	@JoinTable(name="SNACK_VENDINGMACHINE", joinColumns=@JoinColumn(name="vendingmachine_id"),
+											inverseJoinColumns=@JoinColumn(name="snack_id"))
 	private Set<Snack> snacks;
 	
 	public Integer getId() {
@@ -85,14 +85,6 @@ public class VendingMachine {
 		this.secondaryColor = secondaryColor;
 	}
 
-	public Set<Review> getRatings() {
-		return ratings;
-	}
-
-	public void setRatings(Set<Review> ratings) {
-		this.ratings = ratings;
-	}
-
 	public Set<Snack> getSnacks() {
 		return snacks;
 	}
@@ -104,9 +96,9 @@ public class VendingMachine {
 
 	@Override
 	public String toString() {
-		return "VendingMachine [id=" + id + ", name=" + name + ", description=" + description + ", theme=" + theme
-				+ ", mainColor=" + mainColor + ", secondaryColor=" + secondaryColor + ", ratings=" + ratings
-				+ ", snacks=" + snacks + ", hiddenSnacks=" + "]";
+		return "VendingMachine [id=" + id + ", owner=" + owner + ", name=" + name + ", description=" + description
+				+ ", theme=" + theme + ", mainColor=" + mainColor + ", secondaryColor=" + secondaryColor + ", snacks="
+				+ snacks + "]";
 	}
 
 	@Override
@@ -117,7 +109,7 @@ public class VendingMachine {
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
 		result = prime * result + ((mainColor == null) ? 0 : mainColor.hashCode());
 		result = prime * result + ((name == null) ? 0 : name.hashCode());
-		result = prime * result + ((ratings == null) ? 0 : ratings.hashCode());
+		result = prime * result + ((owner == null) ? 0 : owner.hashCode());
 		result = prime * result + ((secondaryColor == null) ? 0 : secondaryColor.hashCode());
 		result = prime * result + ((snacks == null) ? 0 : snacks.hashCode());
 		result = prime * result + ((theme == null) ? 0 : theme.hashCode());
@@ -153,10 +145,10 @@ public class VendingMachine {
 				return false;
 		} else if (!name.equals(other.name))
 			return false;
-		if (ratings == null) {
-			if (other.ratings != null)
+		if (owner == null) {
+			if (other.owner != null)
 				return false;
-		} else if (!ratings.equals(other.ratings))
+		} else if (!owner.equals(other.owner))
 			return false;
 		if (secondaryColor == null) {
 			if (other.secondaryColor != null)

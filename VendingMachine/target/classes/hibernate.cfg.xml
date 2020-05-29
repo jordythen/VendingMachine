@@ -29,6 +29,7 @@
 		<mapping class="com.revature.beans.user.User"></mapping>
 		<mapping class="com.revature.beans.vendingmachine.VendingMachine"></mapping>
 		<mapping class="com.revature.beans.snack.Snack"></mapping>
+		<mapping class="com.revature.beans.snack.Type"></mapping>
 		<mapping class="com.revature.beans.user.Offer"></mapping>
 		<mapping class="com.revature.beans.user.Order"></mapping>
 		<mapping class="com.revature.beans.user.Review"></mapping>
