@@ -403,3 +403,137 @@
 2020-05-29 13:50:28 INFO  pooling:129 - HHH10001003: Autocommit mode: false
 2020-05-29 13:50:28 INFO  DriverManagerConnectionProviderImpl:249 - HHH000115: Hibernate connection pool size: 20 (min=1)
 2020-05-29 13:50:29 INFO  Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2020-05-29 13:52:04 TRACE UserHibernate:44 - Getting person with id 1
+2020-05-29 13:52:04 DEBUG logging:44 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2020-05-29 13:52:04 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.16.Final
+2020-05-29 13:52:04 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-05-29 13:52:05 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-05-29 13:52:05 INFO  pooling:115 - HHH10001005: using driver [oracle.jdbc.driver.OracleDriver] at URL [jdbc:oracle:thin:@rev2004.cvuojc8pwavn.us-east-2.rds.amazonaws.com:1521:ORCL]
+2020-05-29 13:52:05 INFO  pooling:124 - HHH10001001: Connection properties: {user=vendingmachine, password=****}
+2020-05-29 13:52:05 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2020-05-29 13:52:05 INFO  DriverManagerConnectionProviderImpl:249 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-05-29 13:52:06 INFO  Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2020-05-29 13:52:43 TRACE UserHibernate:44 - Getting person with id 1
+2020-05-29 13:52:43 DEBUG logging:44 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2020-05-29 13:52:43 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.16.Final
+2020-05-29 13:52:43 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-05-29 13:52:44 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-05-29 13:52:44 INFO  pooling:115 - HHH10001005: using driver [oracle.jdbc.driver.OracleDriver] at URL [jdbc:oracle:thin:@rev2004.cvuojc8pwavn.us-east-2.rds.amazonaws.com:1521:ORCL]
+2020-05-29 13:52:44 INFO  pooling:124 - HHH10001001: Connection properties: {user=vendingmachine, password=****}
+2020-05-29 13:52:44 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2020-05-29 13:52:44 INFO  DriverManagerConnectionProviderImpl:249 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-05-29 13:52:45 INFO  Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2020-05-29 14:03:07 TRACE UserHibernate:44 - Getting person with id 1
+2020-05-29 14:03:07 DEBUG logging:44 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2020-05-29 14:03:07 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.16.Final
+2020-05-29 14:03:08 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-05-29 14:03:08 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-05-29 14:03:08 INFO  pooling:115 - HHH10001005: using driver [oracle.jdbc.driver.OracleDriver] at URL [jdbc:oracle:thin:@rev2004.cvuojc8pwavn.us-east-2.rds.amazonaws.com:1521:ORCL]
+2020-05-29 14:03:08 INFO  pooling:124 - HHH10001001: Connection properties: {user=vendingmachine, password=****}
+2020-05-29 14:03:08 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2020-05-29 14:03:08 INFO  DriverManagerConnectionProviderImpl:249 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-05-29 14:03:09 INFO  Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2020-05-29 14:05:03 TRACE UserHibernate:44 - Getting person with id 1
+2020-05-29 14:05:03 DEBUG logging:44 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2020-05-29 14:05:03 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.16.Final
+2020-05-29 14:05:03 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-05-29 14:05:04 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-05-29 14:05:04 INFO  pooling:115 - HHH10001005: using driver [oracle.jdbc.driver.OracleDriver] at URL [jdbc:oracle:thin:@rev2004.cvuojc8pwavn.us-east-2.rds.amazonaws.com:1521:ORCL]
+2020-05-29 14:05:04 INFO  pooling:124 - HHH10001001: Connection properties: {user=vendingmachine, password=****}
+2020-05-29 14:05:04 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2020-05-29 14:05:04 INFO  DriverManagerConnectionProviderImpl:249 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-05-29 14:05:05 INFO  Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2020-05-29 14:05:54 TRACE UserHibernate:44 - Getting person with id 1
+2020-05-29 14:05:54 DEBUG logging:44 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2020-05-29 14:05:54 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.16.Final
+2020-05-29 14:05:55 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-05-29 14:05:55 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-05-29 14:05:55 INFO  pooling:115 - HHH10001005: using driver [oracle.jdbc.driver.OracleDriver] at URL [jdbc:oracle:thin:@rev2004.cvuojc8pwavn.us-east-2.rds.amazonaws.com:1521:ORCL]
+2020-05-29 14:05:55 INFO  pooling:124 - HHH10001001: Connection properties: {user=vendingmachine, password=****}
+2020-05-29 14:05:55 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2020-05-29 14:05:55 INFO  DriverManagerConnectionProviderImpl:249 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-05-29 14:05:56 INFO  Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2020-05-29 14:05:58 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-05-29 14:05:58 TRACE UserHibernate:46 - Hibernate session has been made
+2020-05-29 14:05:59 WARN  SqlExceptionHelper:137 - SQL Error: 904, SQLState: 42000
+2020-05-29 14:05:59 ERROR SqlExceptionHelper:142 - ORA-00904: "ORDER2_1_"."ORDERMADETO_ID": invalid identifier
+
+2020-05-29 14:05:59 INFO  DefaultLoadEventListener:116 - HHH000327: Error performing load command
+org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:63)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:42)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:113)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:99)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.extract(ResultSetReturnImpl.java:67)
+	at org.hibernate.loader.plan.exec.internal.AbstractLoadPlanBasedLoader.getResultSet(AbstractLoadPlanBasedLoader.java:390)
+	at org.hibernate.loader.plan.exec.internal.AbstractLoadPlanBasedLoader.executeQueryStatement(AbstractLoadPlanBasedLoader.java:163)
+	at org.hibernate.loader.plan.exec.internal.AbstractLoadPlanBasedLoader.executeLoad(AbstractLoadPlanBasedLoader.java:104)
+	at org.hibernate.loader.entity.plan.AbstractLoadPlanBasedEntityLoader.load(AbstractLoadPlanBasedEntityLoader.java:223)
+	at org.hibernate.persister.entity.AbstractEntityPersister.doLoad(AbstractEntityPersister.java:4399)
+	at org.hibernate.persister.entity.AbstractEntityPersister.load(AbstractEntityPersister.java:4389)
+	at org.hibernate.event.internal.DefaultLoadEventListener.loadFromDatasource(DefaultLoadEventListener.java:569)
+	at org.hibernate.event.internal.DefaultLoadEventListener.doLoad(DefaultLoadEventListener.java:537)
+	at org.hibernate.event.internal.DefaultLoadEventListener.load(DefaultLoadEventListener.java:208)
+	at org.hibernate.event.internal.DefaultLoadEventListener.proxyOrLoad(DefaultLoadEventListener.java:332)
+	at org.hibernate.event.internal.DefaultLoadEventListener.doOnLoad(DefaultLoadEventListener.java:108)
+	at org.hibernate.event.internal.DefaultLoadEventListener.onLoad(DefaultLoadEventListener.java:74)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:113)
+	at org.hibernate.internal.SessionImpl.fireLoadNoChecks(SessionImpl.java:1184)
+	at org.hibernate.internal.SessionImpl.fireLoad(SessionImpl.java:1173)
+	at org.hibernate.internal.SessionImpl.access$2100(SessionImpl.java:194)
+	at org.hibernate.internal.SessionImpl$IdentifierLoadAccessImpl.doLoad(SessionImpl.java:2784)
+	at org.hibernate.internal.SessionImpl$IdentifierLoadAccessImpl.lambda$load$1(SessionImpl.java:2765)
+	at org.hibernate.internal.SessionImpl$IdentifierLoadAccessImpl.perform(SessionImpl.java:2721)
+	at org.hibernate.internal.SessionImpl$IdentifierLoadAccessImpl.load(SessionImpl.java:2765)
+	at org.hibernate.internal.SessionImpl.get(SessionImpl.java:981)
+	at com.revature.data.UserHibernate.getById(UserHibernate.java:47)
+	at com.revature.data.userHibernateTest.getByIdTest(userHibernateTest.java:20)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+Caused by: java.sql.SQLSyntaxErrorException: ORA-00904: "ORDER2_1_"."ORDERMADETO_ID": invalid identifier
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:509)
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:461)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1104)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:550)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:268)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:655)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:270)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:91)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForDescribe(T4CPreparedStatement.java:807)
+	at oracle.jdbc.driver.OracleStatement.executeMaybeDescribe(OracleStatement.java:983)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1168)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3666)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeInternal(T4CPreparedStatement.java:1426)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeQuery(OraclePreparedStatement.java:3713)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeQuery(OraclePreparedStatementWrapper.java:1167)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.extract(ResultSetReturnImpl.java:57)
+	... 49 more
+Caused by: Error : 904, Position : 3711, Sql = select user0_.id as id1_11_0_, user0_.balance as balance2_11_0_, user0_.email as email3_11_0_, user0_.first_name as first_name4_11_0_, user0_.last_name as last_name5_11_0_, user0_.passwd as passwd6_11_0_, user0_.username as username7_11_0_, user0_1_.vendingMachine_id as vendingmachine_id7_12_0_, orderhisto1_.user_id as user_id1_9_1_, order2_.id as order_id2_9_1_, order2_.id as id1_1_2_, order2_.orderTime as ordertime2_1_2_, order2_.orderTotal as ordertotal3_1_2_, order2_.tax as tax4_1_2_, order2_1_.orderMadeTo_id as ordermadeto_id8_12_2_, vendingmac3_.id as id1_12_3_, vendingmac3_.descript as descript2_12_3_, vendingmac3_.main_color as main_color3_12_3_, vendingmac3_.vending_name as vending_name4_12_3_, vendingmac3_.secondary_color as secondary_color5_12_3_, vendingmac3_.theme as theme6_12_3_, vendingmac3_1_.owner_id as owner_id8_11_3_, snacks4_.vendingmachine_id as vendingmachine_id1_5_4_, snack5_.id as snack_id2_5_4_, snack5_.id as id1_3_5_, snack5_.cholesterol as cholesterol2_3_5_, snack5_.snack_cost as snack_cost3_3_5_, snack5_.snack_desc as snack_desc4_3_5_, snack5_.isHidden as ishidden5_3_5_, snack5_.quantity as quantity6_3_5_, snack5_.snack_name as snack_name7_3_5_, snack5_.sodium as sodium8_3_5_, snack5_.total_carbs as total_carbs9_3_5_, snack5_.total_fat as total_fat10_3_5_, types6_.snackid as snackid1_4_6_, type7_.id as typeid2_4_6_, type7_.id as id1_7_7_, type7_.snacktype as snacktype2_7_7_, user8_.id as id1_11_8_, user8_.balance as balance2_11_8_, user8_.email as email3_11_8_, user8_.first_name as first_name4_11_8_, user8_.last_name as last_name5_11_8_, user8_.passwd as passwd6_11_8_, user8_.username as username7_11_8_, user8_1_.vendingMachine_id as vendingmachine_id7_12_8_, pendingoff9_.user_id as user_id1_8_9_, offer10_.id as offer_id2_8_9_, offer10_.id as id1_0_10_, offer10_.statusType as statustype2_0_10_, offer10_.timeOfferWasMade as timeofferwasmade3_0_10_, offer10_1_.vendingMachine_id as vendingmachine_id7_12_10_, snacksofin11_.offerID as offerid1_6_11_, snack12_.id as snacksofinterestid3_6_11_, snack12_.id as id1_3_12_, snack12_.cholesterol as cholesterol2_3_12_, snack12_.snack_cost as snack_cost3_3_12_, snack12_.snack_desc as snack_desc4_3_12_, snack12_.isHidden as ishidden5_3_12_, snack12_.quantity as quantity6_3_12_, snack12_.snack_name as snack_name7_3_12_, snack12_.sodium as sodium8_3_12_, snack12_.total_carbs as total_carbs9_3_12_, snack12_.total_fat as total_fat10_3_12_, vendingmac13_.id as id1_12_13_, vendingmac13_.descript as descript2_12_13_, vendingmac13_.main_color as main_color3_12_13_, vendingmac13_.vending_name as vending_name4_12_13_, vendingmac13_.secondary_color as secondary_color5_12_13_, vendingmac13_.theme as theme6_12_13_, vendingmac13_1_.owner_id as owner_id8_11_13_, ratinghist14_.user_id as user_id1_10_14_, review15_.id as review_id2_10_14_, review15_.id as id1_2_15_, review15_.comments as comments2_2_15_, review15_.reviewTime as reviewtime3_2_15_, review15_.rating as rating4_2_15_, review15_1_.targetVendingMachine_id as targetvendingmachi9_12_15_, vendingmac16_.id as id1_12_16_, vendingmac16_.descript as descript2_12_16_, vendingmac16_.main_color as main_color3_12_16_, vendingmac16_.vending_name as vending_name4_12_16_, vendingmac16_.secondary_color as secondary_color5_12_16_, vendingmac16_.theme as theme6_12_16_, vendingmac16_1_.owner_id as owner_id8_11_16_ from USERTABLE user0_ left outer join VENDINGMACHINE user0_1_ on user0_.id=user0_1_.id left outer join USER_ORDER orderhisto1_ on user0_.id=orderhisto1_.user_id left outer join ORDERTABLE order2_ on orderhisto1_.order_id=order2_.id left outer join VENDINGMACHINE order2_1_ on order2_.id=order2_1_.id left outer join VENDINGMACHINE vendingmac3_ on order2_1_.orderMadeTo_id=vendingmac3_.id left outer join USERTABLE vendingmac3_1_ on vendingmac3_.id=vendingmac3_1_.id left outer join SNACK_VENDINGMACHINE snacks4_ on vendingmac3_.id=snacks4_.vendingmachine_id left outer join SNACK snack5_ on snacks4_.snack_id=snack5_.id left outer join SNACK_SNACKTYPE types6_ on snack5_.id=types6_.snackid left outer join SNACKTYPE type7_ on types6_.typeid=type7_.id left outer join USERTABLE user8_ on vendingmac3_1_.owner_id=user8_.id left outer join VENDINGMACHINE user8_1_ on user8_.id=user8_1_.id left outer join USER_OFFER pendingoff9_ on user8_.id=pendingoff9_.user_id left outer join OFFER offer10_ on pendingoff9_.offer_id=offer10_.id left outer join VENDINGMACHINE offer10_1_ on offer10_.id=offer10_1_.id left outer join SNACKOFFER snacksofin11_ on offer10_.id=snacksofin11_.offerID left outer join SNACK snack12_ on snacksofin11_.snacksOfInterestID=snack12_.id left outer join VENDINGMACHINE vendingmac13_ on offer10_1_.vendingMachine_id=vendingmac13_.id left outer join USERTABLE vendingmac13_1_ on vendingmac13_.id=vendingmac13_1_.id left outer join USER_REVIEW ratinghist14_ on user8_.id=ratinghist14_.user_id left outer join REVIEW review15_ on ratinghist14_.review_id=review15_.id left outer join VENDINGMACHINE review15_1_ on review15_.id=review15_1_.id left outer join VENDINGMACHINE vendingmac16_ on review15_1_.targetVendingMachine_id=vendingmac16_.id left outer join USERTABLE vendingmac16_1_ on vendingmac16_.id=vendingmac16_1_.id where user0_.id=:1 , OriginalSql = select user0_.id as id1_11_0_, user0_.balance as balance2_11_0_, user0_.email as email3_11_0_, user0_.first_name as first_name4_11_0_, user0_.last_name as last_name5_11_0_, user0_.passwd as passwd6_11_0_, user0_.username as username7_11_0_, user0_1_.vendingMachine_id as vendingmachine_id7_12_0_, orderhisto1_.user_id as user_id1_9_1_, order2_.id as order_id2_9_1_, order2_.id as id1_1_2_, order2_.orderTime as ordertime2_1_2_, order2_.orderTotal as ordertotal3_1_2_, order2_.tax as tax4_1_2_, order2_1_.orderMadeTo_id as ordermadeto_id8_12_2_, vendingmac3_.id as id1_12_3_, vendingmac3_.descript as descript2_12_3_, vendingmac3_.main_color as main_color3_12_3_, vendingmac3_.vending_name as vending_name4_12_3_, vendingmac3_.secondary_color as secondary_color5_12_3_, vendingmac3_.theme as theme6_12_3_, vendingmac3_1_.owner_id as owner_id8_11_3_, snacks4_.vendingmachine_id as vendingmachine_id1_5_4_, snack5_.id as snack_id2_5_4_, snack5_.id as id1_3_5_, snack5_.cholesterol as cholesterol2_3_5_, snack5_.snack_cost as snack_cost3_3_5_, snack5_.snack_desc as snack_desc4_3_5_, snack5_.isHidden as ishidden5_3_5_, snack5_.quantity as quantity6_3_5_, snack5_.snack_name as snack_name7_3_5_, snack5_.sodium as sodium8_3_5_, snack5_.total_carbs as total_carbs9_3_5_, snack5_.total_fat as total_fat10_3_5_, types6_.snackid as snackid1_4_6_, type7_.id as typeid2_4_6_, type7_.id as id1_7_7_, type7_.snacktype as snacktype2_7_7_, user8_.id as id1_11_8_, user8_.balance as balance2_11_8_, user8_.email as email3_11_8_, user8_.first_name as first_name4_11_8_, user8_.last_name as last_name5_11_8_, user8_.passwd as passwd6_11_8_, user8_.username as username7_11_8_, user8_1_.vendingMachine_id as vendingmachine_id7_12_8_, pendingoff9_.user_id as user_id1_8_9_, offer10_.id as offer_id2_8_9_, offer10_.id as id1_0_10_, offer10_.statusType as statustype2_0_10_, offer10_.timeOfferWasMade as timeofferwasmade3_0_10_, offer10_1_.vendingMachine_id as vendingmachine_id7_12_10_, snacksofin11_.offerID as offerid1_6_11_, snack12_.id as snacksofinterestid3_6_11_, snack12_.id as id1_3_12_, snack12_.cholesterol as cholesterol2_3_12_, snack12_.snack_cost as snack_cost3_3_12_, snack12_.snack_desc as snack_desc4_3_12_, snack12_.isHidden as ishidden5_3_12_, snack12_.quantity as quantity6_3_12_, snack12_.snack_name as snack_name7_3_12_, snack12_.sodium as sodium8_3_12_, snack12_.total_carbs as total_carbs9_3_12_, snack12_.total_fat as total_fat10_3_12_, vendingmac13_.id as id1_12_13_, vendingmac13_.descript as descript2_12_13_, vendingmac13_.main_color as main_color3_12_13_, vendingmac13_.vending_name as vending_name4_12_13_, vendingmac13_.secondary_color as secondary_color5_12_13_, vendingmac13_.theme as theme6_12_13_, vendingmac13_1_.owner_id as owner_id8_11_13_, ratinghist14_.user_id as user_id1_10_14_, review15_.id as review_id2_10_14_, review15_.id as id1_2_15_, review15_.comments as comments2_2_15_, review15_.reviewTime as reviewtime3_2_15_, review15_.rating as rating4_2_15_, review15_1_.targetVendingMachine_id as targetvendingmachi9_12_15_, vendingmac16_.id as id1_12_16_, vendingmac16_.descript as descript2_12_16_, vendingmac16_.main_color as main_color3_12_16_, vendingmac16_.vending_name as vending_name4_12_16_, vendingmac16_.secondary_color as secondary_color5_12_16_, vendingmac16_.theme as theme6_12_16_, vendingmac16_1_.owner_id as owner_id8_11_16_ from USERTABLE user0_ left outer join VENDINGMACHINE user0_1_ on user0_.id=user0_1_.id left outer join USER_ORDER orderhisto1_ on user0_.id=orderhisto1_.user_id left outer join ORDERTABLE order2_ on orderhisto1_.order_id=order2_.id left outer join VENDINGMACHINE order2_1_ on order2_.id=order2_1_.id left outer join VENDINGMACHINE vendingmac3_ on order2_1_.orderMadeTo_id=vendingmac3_.id left outer join USERTABLE vendingmac3_1_ on vendingmac3_.id=vendingmac3_1_.id left outer join SNACK_VENDINGMACHINE snacks4_ on vendingmac3_.id=snacks4_.vendingmachine_id left outer join SNACK snack5_ on snacks4_.snack_id=snack5_.id left outer join SNACK_SNACKTYPE types6_ on snack5_.id=types6_.snackid left outer join SNACKTYPE type7_ on types6_.typeid=type7_.id left outer join USERTABLE user8_ on vendingmac3_1_.owner_id=user8_.id left outer join VENDINGMACHINE user8_1_ on user8_.id=user8_1_.id left outer join USER_OFFER pendingoff9_ on user8_.id=pendingoff9_.user_id left outer join OFFER offer10_ on pendingoff9_.offer_id=offer10_.id left outer join VENDINGMACHINE offer10_1_ on offer10_.id=offer10_1_.id left outer join SNACKOFFER snacksofin11_ on offer10_.id=snacksofin11_.offerID left outer join SNACK snack12_ on snacksofin11_.snacksOfInterestID=snack12_.id left outer join VENDINGMACHINE vendingmac13_ on offer10_1_.vendingMachine_id=vendingmac13_.id left outer join USERTABLE vendingmac13_1_ on vendingmac13_.id=vendingmac13_1_.id left outer join USER_REVIEW ratinghist14_ on user8_.id=ratinghist14_.user_id left outer join REVIEW review15_ on ratinghist14_.review_id=review15_.id left outer join VENDINGMACHINE review15_1_ on review15_.id=review15_1_.id left outer join VENDINGMACHINE vendingmac16_ on review15_1_.targetVendingMachine_id=vendingmac16_.id left outer join USERTABLE vendingmac16_1_ on vendingmac16_.id=vendingmac16_1_.id where user0_.id=?, Error Msg = ORA-00904: "ORDER2_1_"."ORDERMADETO_ID": invalid identifier
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:513)
+	... 64 more
