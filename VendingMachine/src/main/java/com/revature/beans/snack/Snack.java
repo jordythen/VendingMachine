@@ -23,7 +23,7 @@ import javax.persistence.Table;
 public class Snack {
 	@Id 
 	@SequenceGenerator(name="snackGen", sequenceName="snack_seq", allocationSize=1)
-	@GeneratedValue(generator="snackGen",strategy=GenerationType.SEQUENCE)
+	@GeneratedValue(generator="snackGen", strategy=GenerationType.SEQUENCE)
 	private Integer id;
 	private Character isHidden;
 	@Column(name="snack_name")
@@ -47,8 +47,12 @@ public class Snack {
 	private Integer totalFat;
 	@Column(name="total_carbs")
 	private Integer totalCarbs;
+	@Column
 	private Integer sodium;
+	@Column
 	private Integer cholesterol;
+	
+	//getters and setters
 	public Integer getId() {
 		return id;
 	}
