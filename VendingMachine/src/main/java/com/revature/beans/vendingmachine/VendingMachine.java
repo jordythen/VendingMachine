@@ -16,9 +16,6 @@ public class VendingMachine {
 	@GeneratedValue(generator="vendingmachineGen",strategy=GenerationType.SEQUENCE)
 	private Integer id;
 	
-	@OneToOne(mappedBy="vendingMachine", cascade=CascadeType.ALL)
-	private User owner;
-	
 	@Column(name="vending_name")
 	private String name;
 	@Column(name="descript")
@@ -95,9 +92,8 @@ public class VendingMachine {
 
 	@Override
 	public String toString() {
-		return "VendingMachine [id=" + id + ", name=" + name + ", description=" + description
-				+ ", theme=" + theme + ", mainColor=" + mainColor + ", secondaryColor=" + secondaryColor + ", snacks="
-				+ snacks + "]";
+		return "VendingMachine [id=" + id + ", name=" + name + ", description=" + description + ", theme=" + theme
+				+ ", mainColor=" + mainColor + ", secondaryColor=" + secondaryColor + ", snacks=" + snacks + "]";
 	}
 
 	@Override
@@ -108,7 +104,6 @@ public class VendingMachine {
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
 		result = prime * result + ((mainColor == null) ? 0 : mainColor.hashCode());
 		result = prime * result + ((name == null) ? 0 : name.hashCode());
-		result = prime * result + ((owner == null) ? 0 : owner.hashCode());
 		result = prime * result + ((secondaryColor == null) ? 0 : secondaryColor.hashCode());
 		result = prime * result + ((snacks == null) ? 0 : snacks.hashCode());
 		result = prime * result + ((theme == null) ? 0 : theme.hashCode());
@@ -143,11 +138,6 @@ public class VendingMachine {
 			if (other.name != null)
 				return false;
 		} else if (!name.equals(other.name))
-			return false;
-		if (owner == null) {
-			if (other.owner != null)
-				return false;
-		} else if (!owner.equals(other.owner))
 			return false;
 		if (secondaryColor == null) {
 			if (other.secondaryColor != null)

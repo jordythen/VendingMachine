@@ -43,8 +43,9 @@ public class User {
 //	//We're setting up our one to one
 //	@OneToOne(fetch=FetchType.EAGER,cascade=CascadeType.ALL)
 //	@JoinTable(name="VENDINGMACHINE", joinColumns=@JoinColumn(name="id") )
-	@OneToOne(cascade = CascadeType.ALL)
-	@PrimaryKeyJoinColumn
+	@OneToOne(fetch=FetchType.EAGER,cascade=CascadeType.ALL)
+	@JoinTable(name="USER_VENDINGMACHINE", joinColumns=@JoinColumn(name="user_id"),
+									inverseJoinColumns=@JoinColumn(name="vendingmachine_id"))
 	private VendingMachine vendingMachine;
 	
 	//Setting up our one to many table

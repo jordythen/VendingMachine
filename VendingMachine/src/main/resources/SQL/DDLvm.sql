@@ -35,14 +35,21 @@ create table USERTABLE (
     username varchar2(30) unique,
     passwd varchar2(30),
     balance number(5,2),
-    vendingmachineID number(10),
-    
-    
-    constraint PK_USERTABLE primary key(id),
-    constraint FK_USERTABLE_VENDINGMACHINE foreign key (vendingmachineID) references VENDINGMACHINE(id)
-
+    --vendingmachineID number(10),
+    constraint PK_USERTABLE primary key(id)
+    --constraint FK_USERTABLE_VENDINGMACHINE foreign key (vendingmachineID) references VENDINGMACHINE(id)
 );
+alter table usertable drop column vendingmachineID;
+alter table usertable modify balance number(10,2);
 
+create table USER_VENDINGMACHINE(
+
+    user_id number(20),
+    vendingmachine_id number(20),
+    foreign key (user_id) references usertable(id),
+    foreign key (vendingmachine_id) references vendingmachine(id)
+    
+);
 
 create table REVIEW (
     id number(10) not null,

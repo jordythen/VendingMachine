@@ -29,7 +29,10 @@ public class UserHibernate implements UserDAO{
 		Transaction tx = null;
 		try {
 			tx = s.beginTransaction();
+			log.trace("Saving.....");
 			s.save(t);
+
+			tx.commit();
 			log.trace("Successfully added person " + t.getFirstName());
 			
 		}catch(Exception e) {
