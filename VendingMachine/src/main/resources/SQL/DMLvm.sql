@@ -1,7 +1,7 @@
 /*- - - - - - - - Add sample data to tables - - - - - - - -*/
 
 -- ----------------- insert sample users -----------------
-
+/*
 INSERT INTO usertable (id, first_name, last_name, email, username, passwd, balance)
     VALUES (1, 'Cookie', 'Monster', 'cmonster@email.com', 'cmonster', 'c123', 100.00);
     
@@ -38,42 +38,42 @@ INSERT INTO snack (id, snack_name, snack_desc, snack_cost, vendingmachineid, qua
     VALUES (5, 'Snickers', 'Large Snickers Bar', 1.99, 2, 15);
 
 -- ----------------- insert sample snacktypes -----------------
-
-INSERT INTO snacktype (id, snackid, snacktype)
-    VALUES (1, 1, 'DRIED_FRUIT');
-INSERT INTO snacktype (id, snackid, snacktype)
-    VALUES (2, 1, 'NUTS');
-INSERT INTO snacktype (id, snackid, snacktype)
-    VALUES (3, 1, 'CHIPS');
-INSERT INTO snacktype (id, snackid, snacktype)
-    VALUES (4, 1, 'CHOCOLATE');
-INSERT INTO snacktype (id, snackid, snacktype)
-    VALUES (5, 1, 'CHEESE');
-INSERT INTO snacktype (id, snackid, snacktype)
-    VALUES (6, 1, 'CRACKERS');
-INSERT INTO snacktype (id, snackid, snacktype)
-    VALUES (7, 1, 'TRAIL_MIX');
-INSERT INTO snacktype (id, snackid, snacktype)
-    VALUES (8, 1, 'YOGURT');
-INSERT INTO snacktype (id, snackid, snacktype)
-    VALUES (9, 1, 'JERKY');
-INSERT INTO snacktype (id, snackid, snacktype)
-    VALUES (10, 1, 'CANDY');
-INSERT INTO snacktype (id, snackid, snacktype)
-    VALUES (11, 1, 'COOKIES');
-INSERT INTO snacktype (id, snackid, snacktype)
-    VALUES (12, 1, 'PRETZELS');
-INSERT INTO snacktype (id, snackid, snacktype)
-    VALUES (13, 1, 'FRUIT_CANDY');
-INSERT INTO snacktype (id, snackid, snacktype)
-    VALUES (14, 1, 'PROTEIN_BAR');
-INSERT INTO snacktype (id, snackid, snacktype)
-    VALUES (15, 1, 'CEREAL_BAR');
-INSERT INTO snacktype (id, snackid, snacktype)
-    VALUES (16, 1, 'OTHER');
+*/
+INSERT INTO snacktype (id,  snacktype)
+    VALUES (1,  'DRIED_FRUIT');
+INSERT INTO snacktype (id,  snacktype)
+    VALUES (2,  'NUTS');
+INSERT INTO snacktype (id,  snacktype)
+    VALUES (3,  'CHIPS');
+INSERT INTO snacktype (id,  snacktype)
+    VALUES (4,  'CHOCOLATE');
+INSERT INTO snacktype (id,  snacktype)
+    VALUES (5,  'CHEESE');
+INSERT INTO snacktype (id,  snacktype)
+    VALUES (6,  'CRACKERS');
+INSERT INTO snacktype (id,  snacktype)
+    VALUES (7,  'TRAIL_MIX');
+INSERT INTO snacktype (id,  snacktype)
+    VALUES (8,  'YOGURT');
+INSERT INTO snacktype (id,  snacktype)
+    VALUES (9,  'JERKY');
+INSERT INTO snacktype (id,  snacktype)
+    VALUES (10,  'CANDY');
+INSERT INTO snacktype (id,  snacktype)
+    VALUES (11,  'COOKIES');
+INSERT INTO snacktype (id, snacktype)
+    VALUES (12,  'PRETZELS');
+INSERT INTO snacktype (id,  snacktype)
+    VALUES (13,  'FRUIT_CANDY');
+INSERT INTO snacktype (id,  snacktype)
+    VALUES (14,  'PROTEIN_BAR');
+INSERT INTO snacktype (id,  snacktype)
+    VALUES (15,  'CEREAL_BAR');
+INSERT INTO snacktype (id,  snacktype)
+    VALUES (16,  'OTHER');
 
 -- ----------------- insert sample snack-snacktypes -----------------
-
+/*
 INSERT INTO snack_snacktype (id, snackid, typeid)
     VALUES (1, 1, 11);
 INSERT INTO snack_snacktype (id, snackid, typeid)
@@ -84,6 +84,6 @@ INSERT INTO snack_snacktype (id, snackid, typeid)
     VALUES (4, 4, 10);
 INSERT INTO snack_snacktype (id, snackid, typeid)
     VALUES (5, 5, 10);
-
+*/
 /*- - - - - - - - Make it so - - - - - - - -*/
 COMMIT;
