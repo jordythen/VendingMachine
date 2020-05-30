@@ -2,6 +2,11 @@ package com.revature.data;
 
 import java.util.List;
 
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Predicate;
+import javax.persistence.criteria.Root;
+
 import org.hibernate.query.NativeQuery;
 import org.hibernate.query.Query;
 
@@ -113,15 +118,28 @@ public class UserHibernate implements UserDAO{
 	public User getByUsernameAndPassword(String username, String password) {
 		log.trace("Getting user by username: " + username + " and password " + password);
 		Session s = connection.getSession();
-		String sql = "SELECT FROM User WHERE username = :username AND passwd = :password";
-		NativeQuery<Object> nq = s.createNativeQuery(sql,Object.class);
-		nq.setParameter("username", username);
-		nq.setParameter("password", password);
-		User u = (User) nq.getResultStream();
-		log.trace("User retrieved is " + u);
-		s.close();
+		CriteriaBuilder cb = s.getCriteriaBuilder();
+		CriteriaQuery<User> krit = cb.createQuery(User.class);
+		Root<User> root = krit.from(User.class);
+		
+		Predicate predicateForUsername = cb.equal(root.get("username"), username);
+		Predicate predicateForPassword = cb.equal(root.get("password"), password);
+		Predicate predicateForUsernamePassword = cb.and(predicateForUsername, predicateForPassword);
+
+		krit.select(root).where(predicateForUsernamePassword);
+		
+		User u = s.createQuery(krit).getSingleResult();
+		
 		return u;
 	}
-	
+//	Session s = connection.getSession();
+//	String sql = "SELECT FROM User WHERE username = :username AND passwd = :password";
+//	NativeQuery<Object> nq = s.createNativeQuery(sql,Object.class);
+//	nq.setParameter("username", username);
+//	nq.setParameter("password", password);
+//	User u = (User) nq.getResultStream();
+//	log.trace("User retrieved is " + u);
+//	s.close();
+//	return u;
 
 }

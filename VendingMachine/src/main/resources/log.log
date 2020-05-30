@@ -49,3 +49,110 @@
 2020-05-29 17:21:46 INFO  Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
 2020-05-29 17:21:48 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
 2020-05-29 17:21:48 TRACE UserHibernate:114 - Getting user by username: cmonster and password c123
+2020-05-29 18:03:32 TRACE UserHibernate:119 - Getting user by username: cmonster and password c123
+2020-05-29 18:03:32 DEBUG logging:44 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2020-05-29 18:03:32 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.16.Final
+2020-05-29 18:03:33 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-05-29 18:03:33 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-05-29 18:03:34 INFO  pooling:115 - HHH10001005: using driver [oracle.jdbc.driver.OracleDriver] at URL [jdbc:oracle:thin:@rev2004.cvuojc8pwavn.us-east-2.rds.amazonaws.com:1521:ORCL]
+2020-05-29 18:03:34 INFO  pooling:124 - HHH10001001: Connection properties: {user=vendingmachine, password=****}
+2020-05-29 18:03:34 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2020-05-29 18:03:34 INFO  DriverManagerConnectionProviderImpl:249 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-05-29 18:03:35 INFO  Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2020-05-29 18:03:36 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-05-29 20:12:19 TRACE UserHibernate:119 - Getting user by username: cmonster and password c123
+2020-05-29 20:12:19 DEBUG logging:44 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2020-05-29 20:12:19 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.16.Final
+2020-05-29 20:12:20 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-05-29 20:12:20 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-05-29 20:12:20 INFO  pooling:115 - HHH10001005: using driver [oracle.jdbc.driver.OracleDriver] at URL [jdbc:oracle:thin:@rev2004.cvuojc8pwavn.us-east-2.rds.amazonaws.com:1521:ORCL]
+2020-05-29 20:12:20 INFO  pooling:124 - HHH10001001: Connection properties: {user=vendingmachine, password=****}
+2020-05-29 20:12:20 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2020-05-29 20:12:20 INFO  DriverManagerConnectionProviderImpl:249 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-05-29 20:12:21 INFO  Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2020-05-29 20:12:23 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-05-29 20:12:52 TRACE UserHibernate:27 - Adding user User [id=null, firstName=Jordy, lastName=Then, email=jordythen@gmail.com, username=jordythen, password=pass, balance=1000.0, vendingMachine=null, pendingOffers=null, orderHistory=null, ratingHistory=null] to the database
+2020-05-29 20:12:52 DEBUG logging:44 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2020-05-29 20:12:52 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.16.Final
+2020-05-29 20:12:53 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-05-29 20:12:53 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-05-29 20:12:53 INFO  pooling:115 - HHH10001005: using driver [oracle.jdbc.driver.OracleDriver] at URL [jdbc:oracle:thin:@rev2004.cvuojc8pwavn.us-east-2.rds.amazonaws.com:1521:ORCL]
+2020-05-29 20:12:53 INFO  pooling:124 - HHH10001001: Connection properties: {user=vendingmachine, password=****}
+2020-05-29 20:12:53 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2020-05-29 20:12:53 INFO  DriverManagerConnectionProviderImpl:249 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-05-29 20:12:54 INFO  Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2020-05-29 20:12:56 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-05-29 20:12:56 TRACE UserHibernate:33 - Successfully added person Jordy
+2020-05-29 20:14:48 TRACE UserHibernate:27 - Adding user User [id=null, firstName=Jordy, lastName=Then, email=jordythen@gmail.com, username=jordythen, password=pass, balance=1000.0, vendingMachine=null, pendingOffers=null, orderHistory=null, ratingHistory=null] to the database
+2020-05-29 20:14:48 DEBUG logging:44 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2020-05-29 20:14:48 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.16.Final
+2020-05-29 20:14:48 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-05-29 20:14:48 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-05-29 20:14:49 INFO  pooling:115 - HHH10001005: using driver [oracle.jdbc.driver.OracleDriver] at URL [jdbc:oracle:thin:@rev2004.cvuojc8pwavn.us-east-2.rds.amazonaws.com:1521:ORCL]
+2020-05-29 20:14:49 INFO  pooling:124 - HHH10001001: Connection properties: {user=vendingmachine, password=****}
+2020-05-29 20:14:49 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2020-05-29 20:14:49 INFO  DriverManagerConnectionProviderImpl:249 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-05-29 20:14:50 INFO  Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2020-05-29 20:14:51 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-05-29 20:14:51 TRACE UserHibernate:33 - Successfully added person Jordy
+2020-05-29 20:15:42 TRACE UserHibernate:27 - Adding user User [id=null, firstName=Jordy, lastName=Then, email=jordythen@gmail.com, username=jordythen, password=pass, balance=1000.0, vendingMachine=null, pendingOffers=null, orderHistory=null, ratingHistory=null] to the database
+2020-05-29 20:15:42 DEBUG logging:44 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2020-05-29 20:15:42 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.16.Final
+2020-05-29 20:15:42 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-05-29 20:15:43 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-05-29 20:15:43 INFO  pooling:115 - HHH10001005: using driver [oracle.jdbc.driver.OracleDriver] at URL [jdbc:oracle:thin:@rev2004.cvuojc8pwavn.us-east-2.rds.amazonaws.com:1521:ORCL]
+2020-05-29 20:15:43 INFO  pooling:124 - HHH10001001: Connection properties: {user=vendingmachine, password=****}
+2020-05-29 20:15:43 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2020-05-29 20:15:43 INFO  DriverManagerConnectionProviderImpl:249 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-05-29 20:15:44 INFO  Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2020-05-29 20:15:46 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-05-29 20:15:46 TRACE UserHibernate:33 - Successfully added person Jordy
+2020-05-29 20:15:46 TRACE UserHibernate:119 - Getting user by username: jordythen and password pass
+2020-05-29 20:18:34 TRACE UserHibernate:27 - Adding user User [id=null, firstName=Jordy, lastName=Then, email=jordythen@gmail.com, username=jordythen, password=pass, balance=1000.0, vendingMachine=null, pendingOffers=null, orderHistory=null, ratingHistory=null] to the database
+2020-05-29 20:18:34 DEBUG logging:44 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2020-05-29 20:18:34 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.16.Final
+2020-05-29 20:18:34 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-05-29 20:18:35 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-05-29 20:18:35 INFO  pooling:115 - HHH10001005: using driver [oracle.jdbc.driver.OracleDriver] at URL [jdbc:oracle:thin:@rev2004.cvuojc8pwavn.us-east-2.rds.amazonaws.com:1521:ORCL]
+2020-05-29 20:18:35 INFO  pooling:124 - HHH10001001: Connection properties: {user=vendingmachine, password=****}
+2020-05-29 20:18:35 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2020-05-29 20:18:35 INFO  DriverManagerConnectionProviderImpl:249 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-05-29 20:18:36 INFO  Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2020-05-29 20:18:38 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-05-29 20:18:38 TRACE UserHibernate:33 - Successfully added person Jordy
+2020-05-29 20:18:38 TRACE UserHibernate:119 - Getting user by username: jordythen and password pass
+2020-05-29 20:18:38 TRACE UserHibernate:60 - Getting all users from the database
+2020-05-29 20:24:46 TRACE UserHibernate:27 - Adding user User [id=null, firstName=Jordy, lastName=Then, email=jordythen@gmail.com, username=jordythen, password=pass, balance=1000.0, vendingMachine=null, pendingOffers=null, orderHistory=null, ratingHistory=null] to the database
+2020-05-29 20:24:46 DEBUG logging:44 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2020-05-29 20:24:46 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.16.Final
+2020-05-29 20:24:46 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-05-29 20:24:47 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-05-29 20:24:47 INFO  pooling:115 - HHH10001005: using driver [oracle.jdbc.driver.OracleDriver] at URL [jdbc:oracle:thin:@rev2004.cvuojc8pwavn.us-east-2.rds.amazonaws.com:1521:ORCL]
+2020-05-29 20:24:47 INFO  pooling:124 - HHH10001001: Connection properties: {user=vendingmachine, password=****}
+2020-05-29 20:24:47 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2020-05-29 20:24:47 INFO  DriverManagerConnectionProviderImpl:249 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-05-29 20:24:48 INFO  Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2020-05-29 20:24:49 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-05-29 20:24:50 TRACE UserHibernate:33 - Successfully added person Jordy
+2020-05-29 20:24:50 TRACE UserHibernate:49 - Getting person with id 1
+2020-05-29 20:24:50 TRACE UserHibernate:51 - Hibernate session has been made
+2020-05-29 20:24:50 INFO  UserHibernate:53 - THIS IS USER: null
+2020-05-29 20:24:50 TRACE UserHibernate:119 - Getting user by username: jordythen and password pass
+2020-05-29 20:24:50 TRACE UserHibernate:60 - Getting all users from the database
+2020-05-29 20:37:41 TRACE UserHibernate:27 - Adding user User [id=null, firstName=Jordy, lastName=Then, email=jordythen@gmail.com, username=jordythen, password=pass, balance=1000.0, vendingMachine=null, pendingOffers=null, orderHistory=null, ratingHistory=null] to the database
+2020-05-29 20:37:41 DEBUG logging:44 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2020-05-29 20:37:41 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.16.Final
+2020-05-29 20:37:42 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-05-29 20:37:42 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-05-29 20:37:42 INFO  pooling:115 - HHH10001005: using driver [oracle.jdbc.driver.OracleDriver] at URL [jdbc:oracle:thin:@rev2004.cvuojc8pwavn.us-east-2.rds.amazonaws.com:1521:ORCL]
+2020-05-29 20:37:42 INFO  pooling:124 - HHH10001001: Connection properties: {user=vendingmachine, password=****}
+2020-05-29 20:37:42 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2020-05-29 20:37:42 INFO  DriverManagerConnectionProviderImpl:249 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-05-29 20:37:44 INFO  Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2020-05-29 20:37:45 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-05-29 20:37:45 TRACE UserHibernate:33 - Successfully added person Jordy
+2020-05-29 20:37:45 TRACE UserHibernate:49 - Getting person with id 1
+2020-05-29 20:37:45 TRACE UserHibernate:51 - Hibernate session has been made
+2020-05-29 20:37:45 INFO  UserHibernate:53 - THIS IS USER: null
+2020-05-29 20:37:45 TRACE UserHibernate:119 - Getting user by username: jordythen and password pass
+2020-05-29 20:37:46 TRACE UserHibernate:60 - Getting all users from the database
