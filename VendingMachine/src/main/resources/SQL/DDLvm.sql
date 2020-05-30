@@ -1,6 +1,7 @@
 select 'drop table '|| table_name || ' cascade constraints;' from user_tables;
 drop table VENDINGMACHINE cascade constraints;
 drop table USERTABLE cascade constraints;
+drop table USER_VENDINGMACHINE cascade constraints;
 drop table REVIEW cascade constraints;
 drop table USER_REVIEW cascade constraints;
 drop table SNACK cascade constraints;
@@ -12,8 +13,7 @@ drop table USER_OFFER cascade constraints;
 drop table SNACKOFFER cascade constraints;
 drop table ORDERTABLE cascade constraints;
 drop table USER_ORDER cascade constraints;
-
-
+drop table HT_USERTABLE cascade constraints;
 
 create table VENDINGMACHINE (
     id number(10) not null,
@@ -34,13 +34,13 @@ create table USERTABLE (
     email varchar2(30),
     username varchar2(30) unique,
     passwd varchar2(30),
-    balance number(5,2),
+    balance number(10,2),
     --vendingmachineID number(10),
     constraint PK_USERTABLE primary key(id)
     --constraint FK_USERTABLE_VENDINGMACHINE foreign key (vendingmachineID) references VENDINGMACHINE(id)
 );
-alter table usertable drop column vendingmachineID;
-alter table usertable modify balance number(10,2);
+--alter table usertable drop column vendingmachineID;
+--alter table usertable modify balance number(10,2);
 
 create table USER_VENDINGMACHINE(
 
