@@ -16,7 +16,7 @@ import javax.persistence.Table;
 
 import com.revature.beans.vendingmachine.VendingMachine;
 
-@Table
+@Table(name="REVIEW")
 public class Review {
 	@Id 
 	@SequenceGenerator(name="reviewGen", sequenceName="review_seq", allocationSize=1)

@@ -21,7 +21,7 @@ import com.revature.beans.vendingmachine.VendingMachine;
 //If name is different that you have to specify the name of the table in SQL
 //ie.... @Table (name="user_table")
 
-@Table
+@Table(name="USERTABLE")
 public class User {
 	//If we have a different name in the SQL, you want to specify the column
 	//ie.... @Column(name="userId")
