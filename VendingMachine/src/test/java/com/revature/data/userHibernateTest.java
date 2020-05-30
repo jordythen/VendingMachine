@@ -14,6 +14,7 @@ public class userHibernateTest {
 	static UserHibernate uh = new UserHibernate();
 	static int id;
 	static int num;
+	static int bc;
 	//static String uname=
 	@Before
 	public void setNum() {
@@ -21,13 +22,14 @@ public class userHibernateTest {
 	}
 	@BeforeClass
 	static public void setup() {
+		bc=uh.getAll().size();
 		User u5 = new User();
 		u5.setFirstName("Jordy");
 		u5.setLastName("Then");
 		u5.setEmail("fordythen@gmail.com");
 		u5.setPassword("pass");
 		
-		u5.setUsername("usertest");
+		u5.setUsername("usertest"+bc);
 		u5.setBalance(1000.00);
 		u5.setVendingMachine(null);
 		u5.setRatingHistory(null);
@@ -35,7 +37,7 @@ public class userHibernateTest {
 	}
 	@Test
 	public void getByUsernameAndPasswordTest() {
-		User u = uh.getByUsernameAndPassword("usertest", "pass");
+		User u = uh.getByUsernameAndPassword("usertest"+bc, "pass");
 		System.out.println("user is " + u);
 		assertTrue(u.getEmail().contains("fordythen@gmail.com"));
 	}
