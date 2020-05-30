@@ -14,17 +14,18 @@ import com.revature.beans.snack.Type;
 
 public class SnackHibernateTest {
 	static SnackHibernate sdao=new SnackHibernate();
+	static int id;
 	@BeforeClass
-	public void setup() {
+	static public void setup() {
 		Snack s=new Snack();
 		s.setDescription("JUnit test case");
-		sdao.add(s);
+		id=sdao.add(s);
 		}
 	@Test
 	public void getByIdTest() {
-		Snack s=sdao.getById(1);
+		Snack s=sdao.getById(id);
 		System.out.println(s);
-		assertTrue(s.getDescription()!=null);
+		assertTrue(s.getDescription().contains("JUnit test case"));
 	}
 	
 	@Test
