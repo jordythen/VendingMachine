@@ -8,7 +8,7 @@ import com.revature.beans.vendingmachine.VendingMachine;
 public interface VendingMachineDAO extends GenericDAO<VendingMachine> {
 	
 	//5.5 User can search for other people's vending machine by name
-	public VendingMachine getByName(VendingMachine vm);
+	public List<VendingMachine> getByName(String name);
 	
 	//5.7 User can search for other people's vending machine ordered by popularity(highest rating first)
 	public List<VendingMachine> getByPopularityHighest();
