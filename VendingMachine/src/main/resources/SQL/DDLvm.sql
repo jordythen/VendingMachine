@@ -1,13 +1,32 @@
-drop table USERTABLE cascade constraints;
+select 'drop table '|| table_name || ' cascade constraints;' from user_tables;
 drop table VENDINGMACHINE cascade constraints;
+drop table USERTABLE cascade constraints;
 drop table REVIEW cascade constraints;
+drop table USER_REVIEW cascade constraints;
 drop table SNACK cascade constraints;
+drop table SNACK_VENDINGMACHINE cascade constraints;
 drop table SNACKTYPE cascade constraints;
-drop table SNACKOFFER cascade constraints;
 drop table SNACK_SNACKTYPE cascade constraints;
 drop table OFFER cascade constraints;
+drop table USER_OFFER cascade constraints;
+drop table SNACKOFFER cascade constraints;
 drop table ORDERTABLE cascade constraints;
+drop table USER_ORDER cascade constraints;
 
+
+
+create table VENDINGMACHINE (
+    id number(10) not null,
+    vending_name varchar2(30),
+    descript varchar2(50),
+    theme varchar2(30),
+    main_color varchar2(30),
+    secondary_color varchar2(30),
+    
+    constraint PK_VENDINGMACHINE primary key(id)
+);
+--alter table vendingmachine add ownerID number(10);
+--ALTER TABLE vendingmachine ADD CONSTRAINT fk_owner_id FOREIGN KEY (ownerID) REFERENCES usertable(id);
 create table USERTABLE (
     id number(10) not null,
     first_name varchar2(30),
@@ -24,36 +43,22 @@ create table USERTABLE (
 
 );
 
-create table VENDINGMACHINE (
-    id number(10) not null,
-    vending_name varchar2(30),
-    descript varchar2(50),
-    theme varchar2(30),
-    main_color varchar2(30),
-    secondary_color varchar2(30),
-    
-    constraint PK_VENDINGMACHINE primary key(id)
-);
-alter table vendingmachine add ownerID number(10);
-ALTER TABLE vendingmachine ADD CONSTRAINT fk_owner_id FOREIGN KEY (ownerID) REFERENCES usertable(id);
-
-
 
 create table REVIEW (
     id number(10) not null,
-    authorID number(10),
+    --authorID number(10),
     vendingmachineID number(10),
     rating number(1),
     comments varchar(50),
     reviewTime timestamp,
     
     constraint PK_REVIEW primary key(id),
-    foreign key (authorID) references usertable(id),
+    --foreign key (authorID) references usertable(id),
     foreign key (vendingmachineID) references vendingmachine(id)
 );
 alter table review modify reviewTime varchar2(30);
-alter table review drop column authorID;
-alter table review drop column authorID;
+--alter table review drop column authorID;
+--alter table review drop column authorID;
 
 
 create table USER_REVIEW(
@@ -72,21 +77,21 @@ create table SNACK(
     snack_desc varchar(50),
     snack_cost number(5,2),
     
-    vendingmachineID number(10),
+    --vendingmachineID number(10),
     
     total_fat number(30),
     total_carbs number(30),
     sodium number(30),
     cholesterol number(30),
     
-    constraint PK_SNACK primary key(id),
-    foreign key (vendingmachineID) references vendingmachine(id)
+    constraint PK_SNACK primary key(id)
+    --foreign key (vendingmachineID) references vendingmachine(id)
 );
 
 alter table snack add isHidden char(1);
 alter table snack add quantity number(5);
 
-alter table snack drop column vendingmachineID;
+--alter table snack drop column vendingmachineID;
 
 create table SNACK_VENDINGMACHINE(
     snack_id number(20),
@@ -95,19 +100,10 @@ create table SNACK_VENDINGMACHINE(
     foreign key (vendingmachine_id) references vendingmachine(id)
 );
 
---many to many table
-create table SNACK_SNACKTYPE(
-    id number(10) not null,
-    snackid number(10),
-    typeid number(10),
 
-    constraint PK_SNACK_SNACKTYPE primary key(id),
-    foreign key (snackid) references SNACK(id),
-    foreign key (typeid) references SNACKTYPE(id)
 
-);
 
-alter table snack_snacktype drop column id;
+--alter table snack_snacktype drop column id;
 
 create table SNACKTYPE(
     id number(10) not null,
@@ -115,25 +111,38 @@ create table SNACKTYPE(
     
     constraint PK_SNACKTYPE primary key(id)
 );
-
 --alter table snacktype drop column snackid;
+
+--many to many table
+create table SNACK_SNACKTYPE(
+    --id number(10) not null,
+    snackid number(10),
+    typeid number(10),
+
+    --constraint PK_SNACK_SNACKTYPE primary key(id),
+    foreign key (snackid) references SNACK(id),
+    foreign key (typeid) references SNACKTYPE(id)
+
+);
+--alter table snack_snacktype drop column id;
+
 
 --ONE TO MANY TABLE FOR OFFERS
 create table OFFER(
     id number(10) not null,
-    authorID number(10),
+    --authorID number(10),
     vendingmachineID number(10),
     statusType varchar2(30),
     
     constraint PK_OFFER primary key(id),
-    foreign key (authorID) references usertable(id),
+    --foreign key (authorID) references usertable(id),
     foreign key (vendingmachineID) references vendingmachine(id)
     
 );
 
 alter table offer add timeOfferWasMade varchar2(30);
 alter table offer modify statusType number(5);
-alter table offer drop column authorID;
+--alter table offer drop column authorID;
 
 create table USER_OFFER(
     
@@ -163,7 +172,7 @@ create table SNACKOFFER(
 
 create table ORDERTABLE(
     id number(10) not null,
-    authorID number(10),
+    --authorID number(10),
     vendingmachineID number(10),
     tax number(5,2),
     orderTotal number(5,2),
@@ -171,10 +180,10 @@ create table ORDERTABLE(
     
     
     constraint PK_ORDERTABLE primary key(id),
-    foreign key (authorID) references usertable(id),
+    --foreign key (authorID) references usertable(id),
     foreign key (vendingmachineID) references vendingmachine(id)
 );
-alter table ordertable drop column authorID;
+--alter table ordertable drop column authorID;
 
 create table USER_ORDER(
     
