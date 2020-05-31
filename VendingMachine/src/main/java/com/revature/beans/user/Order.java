@@ -3,6 +3,7 @@ package com.revature.beans.user;
 import java.time.LocalDateTime;
 
 import javax.persistence.CascadeType;
+import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -14,23 +15,13 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 import com.revature.beans.vendingmachine.VendingMachine;
-
+@Entity
 @Table(name="ORDERTABLE")
 public class Order {
 	@Id 
-	@SequenceGenerator(name="userGen", sequenceName="user_seq", allocationSize=1)
-	@GeneratedValue(generator="userGen",strategy=GenerationType.SEQUENCE)
+	@SequenceGenerator(name="orderGen", sequenceName="order_seq", allocationSize=1)
+	@GeneratedValue(generator="orderGen",strategy=GenerationType.SEQUENCE)
 	private Integer id;
-
-	//We're setting up our one to one
-	@OneToOne(fetch=FetchType.EAGER,cascade=CascadeType.ALL)
-	@JoinTable(name="USERTABLE", joinColumns=@JoinColumn(name="id"))
-	private User orderMadeBy;
-	
-	@OneToOne(fetch=FetchType.EAGER,cascade=CascadeType.ALL)
-	@JoinTable(name="VENDINGMACHINE", joinColumns=@JoinColumn(name="id"))
-	private VendingMachine orderMadeTo;
-	
 	private Double tax;
 	private Double orderTotal;
 	private String orderTime;
@@ -39,18 +30,6 @@ public class Order {
 	}
 	public void setId(Integer id) {
 		this.id = id;
-	}
-	public User getOrderMadeBy() {
-		return orderMadeBy;
-	}
-	public void setOrderMadeBy(User orderMadeBy) {
-		this.orderMadeBy = orderMadeBy;
-	}
-	public VendingMachine getOrderMadeTo() {
-		return orderMadeTo;
-	}
-	public void setOrderMadeTo(VendingMachine orderMadeTo) {
-		this.orderMadeTo = orderMadeTo;
 	}
 	public Double getTax() {
 		return tax;
@@ -72,16 +51,13 @@ public class Order {
 	}
 	@Override
 	public String toString() {
-		return "Order [id=" + id + ", orderMadeBy=" + orderMadeBy + ", orderMadeTo=" + orderMadeTo + ", tax=" + tax
-				+ ", orderTotal=" + orderTotal + ", orderTime=" + orderTime + "]";
+		return "Order [id=" + id + ", tax=" + tax + ", orderTotal=" + orderTotal + ", orderTime=" + orderTime + "]";
 	}
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
-		result = prime * result + ((orderMadeBy == null) ? 0 : orderMadeBy.hashCode());
-		result = prime * result + ((orderMadeTo == null) ? 0 : orderMadeTo.hashCode());
 		result = prime * result + ((orderTime == null) ? 0 : orderTime.hashCode());
 		result = prime * result + ((orderTotal == null) ? 0 : orderTotal.hashCode());
 		result = prime * result + ((tax == null) ? 0 : tax.hashCode());
@@ -100,16 +76,6 @@ public class Order {
 			if (other.id != null)
 				return false;
 		} else if (!id.equals(other.id))
-			return false;
-		if (orderMadeBy == null) {
-			if (other.orderMadeBy != null)
-				return false;
-		} else if (!orderMadeBy.equals(other.orderMadeBy))
-			return false;
-		if (orderMadeTo == null) {
-			if (other.orderMadeTo != null)
-				return false;
-		} else if (!orderMadeTo.equals(other.orderMadeTo))
 			return false;
 		if (orderTime == null) {
 			if (other.orderTime != null)

@@ -1,10 +1,8 @@
-package com.revature.data;
+package com.revature.services;
 
 import java.util.List;
 
-//This is our generic methods of adding and deleting stuff into the database/data set.
-public interface GenericDAO<T> {
-
+public interface GenericService<T> {
 	public Integer add(T t);
 	public T getById(Integer id);
 	public List<T> getAll();

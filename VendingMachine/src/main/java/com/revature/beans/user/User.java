@@ -13,6 +13,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
+import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
@@ -20,7 +21,7 @@ import com.revature.beans.vendingmachine.VendingMachine;
 
 //If name is different that you have to specify the name of the table in SQL
 //ie.... @Table (name="user_table")
-
+@Entity
 @Table(name="USERTABLE")
 public class User {
 	//If we have a different name in the SQL, you want to specify the column
@@ -39,27 +40,29 @@ public class User {
 	private String password;
 	private Double balance;
 	
-	//We're setting up our one to one
+//	//We're setting up our one to one
+//	@OneToOne(fetch=FetchType.EAGER,cascade=CascadeType.ALL)
+//	@JoinTable(name="VENDINGMACHINE", joinColumns=@JoinColumn(name="id") )
 	@OneToOne(fetch=FetchType.EAGER,cascade=CascadeType.ALL)
-	@JoinTable(name="VENDINGMACHINE", joinColumns=@JoinColumn(name="id") )
+	@JoinTable(name="USER_VENDINGMACHINE", joinColumns=@JoinColumn(name="user_id"),
+									inverseJoinColumns=@JoinColumn(name="vendingmachine_id"))
 	private VendingMachine vendingMachine;
 	
 	//Setting up our one to many table
 	@OneToMany(fetch=FetchType.EAGER,cascade=CascadeType.ALL)
-
-	@JoinTable(name="OFFER", joinColumns=@JoinColumn(name="authorID"),
-								inverseJoinColumns=@JoinColumn(name="id"))
+	@JoinTable(name="USER_OFFER", joinColumns=@JoinColumn(name="user_id"),
+								inverseJoinColumns=@JoinColumn(name="offer_id"))
 	private Set<Offer> pendingOffers;
 	
 	
 	@OneToMany(fetch=FetchType.EAGER,cascade=CascadeType.ALL)
-	@JoinTable(name="ORDERTABLE", joinColumns=@JoinColumn(name="authorID"),
-									inverseJoinColumns=@JoinColumn(name="id"))
+	@JoinTable(name="USER_ORDER", joinColumns=@JoinColumn(name="user_id"),
+									inverseJoinColumns=@JoinColumn(name="order_id"))
 	private Set<Order> orderHistory;
 	
 	@OneToMany(fetch=FetchType.EAGER,cascade=CascadeType.ALL)
-	@JoinTable(name="ORDERTABLE", joinColumns=@JoinColumn(name="authorID"),
-									inverseJoinColumns=@JoinColumn(name="id"))
+	@JoinTable(name="USER_REVIEW", joinColumns=@JoinColumn(name="user_id"),
+									inverseJoinColumns=@JoinColumn(name="review_id"))
 	private Set<Review> ratingHistory;
 	
 	

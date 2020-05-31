@@ -4,6 +4,7 @@ import java.time.LocalDateTime;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -15,21 +16,13 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 import com.revature.beans.vendingmachine.VendingMachine;
-
+@Entity
 @Table(name="REVIEW")
 public class Review {
 	@Id 
 	@SequenceGenerator(name="reviewGen", sequenceName="review_seq", allocationSize=1)
 	@GeneratedValue(generator="reviewGen",strategy=GenerationType.SEQUENCE)
 	private Integer id;
-	
-	@OneToOne(fetch=FetchType.EAGER,cascade=CascadeType.ALL)
-	@JoinTable(name="USERTABLE", joinColumns=@JoinColumn(name="id") )
-	private User author;
-	
-	@OneToOne(fetch=FetchType.EAGER,cascade=CascadeType.ALL)
-	@JoinTable(name="VENDINGMACHINE", joinColumns=@JoinColumn(name="id") )
-	private VendingMachine targetVendingMachine;
 	
 	//One star to five stars!!!!
 	@Column(name="rating")
@@ -42,18 +35,6 @@ public class Review {
 	}
 	public void setId(Integer id) {
 		this.id = id;
-	}
-	public User getAuthor() {
-		return author;
-	}
-	public void setAuthor(User author) {
-		this.author = author;
-	}
-	public VendingMachine getTargetVendingMachine() {
-		return targetVendingMachine;
-	}
-	public void setTargetVendingMachine(VendingMachine targetVendingMachine) {
-		this.targetVendingMachine = targetVendingMachine;
 	}
 	public Integer getStarRating() {
 		return starRating;
@@ -75,19 +56,17 @@ public class Review {
 	}
 	@Override
 	public String toString() {
-		return "Review [id=" + id + ", author=" + author + ", targetVendingMachine=" + targetVendingMachine
-				+ ", starRating=" + starRating + ", comments=" + comments + ", reviewTime=" + reviewTime + "]";
+		return "Review [id=" + id + ", starRating=" + starRating + ", comments=" + comments + ", reviewTime="
+				+ reviewTime + "]";
 	}
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((author == null) ? 0 : author.hashCode());
 		result = prime * result + ((comments == null) ? 0 : comments.hashCode());
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
 		result = prime * result + ((reviewTime == null) ? 0 : reviewTime.hashCode());
 		result = prime * result + ((starRating == null) ? 0 : starRating.hashCode());
-		result = prime * result + ((targetVendingMachine == null) ? 0 : targetVendingMachine.hashCode());
 		return result;
 	}
 	@Override
@@ -99,11 +78,6 @@ public class Review {
 		if (getClass() != obj.getClass())
 			return false;
 		Review other = (Review) obj;
-		if (author == null) {
-			if (other.author != null)
-				return false;
-		} else if (!author.equals(other.author))
-			return false;
 		if (comments == null) {
 			if (other.comments != null)
 				return false;
@@ -123,11 +97,6 @@ public class Review {
 			if (other.starRating != null)
 				return false;
 		} else if (!starRating.equals(other.starRating))
-			return false;
-		if (targetVendingMachine == null) {
-			if (other.targetVendingMachine != null)
-				return false;
-		} else if (!targetVendingMachine.equals(other.targetVendingMachine))
 			return false;
 		return true;
 	}

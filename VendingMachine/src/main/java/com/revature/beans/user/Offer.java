@@ -5,6 +5,7 @@ import java.util.Set;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -20,8 +21,8 @@ import javax.persistence.Table;
 
 import com.revature.beans.snack.Snack;
 import com.revature.beans.vendingmachine.VendingMachine;
-
-@Table(name="SNACKOFFER")
+@Entity
+@Table(name="OFFER")
 public class Offer {
 	
 	@Id 
@@ -29,20 +30,10 @@ public class Offer {
 	@GeneratedValue(generator="offerGen",strategy=GenerationType.SEQUENCE)
 	private Integer id;
 
-	@OneToOne(fetch=FetchType.EAGER,cascade=CascadeType.ALL)
-	@JoinTable(name="USERTABLE", joinColumns=@JoinColumn(name="id"))
-	private User author;
-
-	@OneToOne(fetch=FetchType.EAGER,cascade=CascadeType.ALL)
-	@JoinTable(name="VENDINGMACHINE", joinColumns=@JoinColumn(name="id"))
-	private VendingMachine vendingMachine;
-	
 	//ASK SIERRA IF THIS IS CORRECT
 	@ManyToMany(fetch=FetchType.EAGER,cascade=CascadeType.ALL)
 	@JoinTable(name="SNACKOFFER", joinColumns=@JoinColumn(name="offerID"),
 									inverseJoinColumns=@JoinColumn(name="snacksOfInterestID"))
-	
-	//IS THIS ONE CORRECT? OR ^???
 	private Set<Snack> snacksOfInterest;
 	@ManyToMany(fetch=FetchType.EAGER,cascade=CascadeType.ALL)
 	@JoinTable(name="SNACKOFFER", joinColumns=@JoinColumn(name="offerID"),
@@ -51,7 +42,7 @@ public class Offer {
 	
 	//Leave this alone for now, remember to set this later
 	@Column(name="statusType")
-	private Integer status;
+	private String status;
 	private String timeOfferWasMade;
 	
 	public Integer getId() {
@@ -59,18 +50,6 @@ public class Offer {
 	}
 	public void setId(Integer id) {
 		this.id = id;
-	}
-	public User getAuthor() {
-		return author;
-	}
-	public void setAuthor(User author) {
-		this.author = author;
-	}
-	public VendingMachine getVendingMachine() {
-		return vendingMachine;
-	}
-	public void setVendingMachine(VendingMachine vendingMachine) {
-		this.vendingMachine = vendingMachine;
 	}
 	public Set<Snack> getSnacksOfInterest() {
 		return snacksOfInterest;
@@ -84,10 +63,10 @@ public class Offer {
 	public void setSnacksToOffer(Set<Snack> snacksToOffer) {
 		this.snacksToOffer = snacksToOffer;
 	}
-	public Integer getStatus() {
+	public String getStatus() {
 		return status;
 	}
-	public void setStatus(Integer status) {
+	public void setStatus(String status) {
 		this.status = status;
 	}
 	public String getTimeOfferWasMade() {
@@ -100,13 +79,11 @@ public class Offer {
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((author == null) ? 0 : author.hashCode());
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
 		result = prime * result + ((snacksOfInterest == null) ? 0 : snacksOfInterest.hashCode());
 		result = prime * result + ((snacksToOffer == null) ? 0 : snacksToOffer.hashCode());
 		result = prime * result + ((status == null) ? 0 : status.hashCode());
 		result = prime * result + ((timeOfferWasMade == null) ? 0 : timeOfferWasMade.hashCode());
-		result = prime * result + ((vendingMachine == null) ? 0 : vendingMachine.hashCode());
 		return result;
 	}
 	@Override
@@ -118,11 +95,6 @@ public class Offer {
 		if (getClass() != obj.getClass())
 			return false;
 		Offer other = (Offer) obj;
-		if (author == null) {
-			if (other.author != null)
-				return false;
-		} else if (!author.equals(other.author))
-			return false;
 		if (id == null) {
 			if (other.id != null)
 				return false;
@@ -148,18 +120,12 @@ public class Offer {
 				return false;
 		} else if (!timeOfferWasMade.equals(other.timeOfferWasMade))
 			return false;
-		if (vendingMachine == null) {
-			if (other.vendingMachine != null)
-				return false;
-		} else if (!vendingMachine.equals(other.vendingMachine))
-			return false;
 		return true;
 	}
 	@Override
 	public String toString() {
-		return "Offer [id=" + id + ", author=" + author + ", vendingMachine=" + vendingMachine + ", snacksOfInterest="
-				+ snacksOfInterest + ", snacksToOffer=" + snacksToOffer + ", status=" + status + ", timeOfferWasMade="
-				+ timeOfferWasMade + "]";
+		return "Offer [id=" + id + ", snacksOfInterest=" + snacksOfInterest + ", snacksToOffer=" + snacksToOffer
+				+ ", status=" + status + ", timeOfferWasMade=" + timeOfferWasMade + "]";
 	}
 	
 	
