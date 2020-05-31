@@ -17,7 +17,7 @@ import com.revature.beans.user.User;
 import com.revature.services.UserService;
 
 @RestController
-@CrossOrigin(origins="http://localhost:4200")
+@CrossOrigin(origins="http://localhost:4200", allowCredentials="true")
 @RequestMapping(path="/login")
 public class UserController {
 	public static Logger log = Logger.getLogger(UserController.class);
