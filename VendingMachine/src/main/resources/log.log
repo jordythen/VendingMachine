@@ -522,3 +522,37 @@
 2020-05-31 14:33:21 TRACE UserHibernate:65 - Getting all users from the database
 2020-05-31 14:33:25 TRACE UserHibernate:65 - Getting all users from the database
 2020-05-31 14:33:29 TRACE UserHibernate:124 - Getting user by username: usertest41 and password pass
+2020-05-31 15:02:35 TRACE UserHibernate:37 - Successfully added person Jordy
+2020-05-31 15:02:35 TRACE UserHibernate:124 - Getting user by username: jordythen and password pass
+2020-05-31 15:02:35 WARN  SqlExceptionHelper:137 - SQL Error: 1, SQLState: 23000
+2020-05-31 15:02:36 ERROR SqlExceptionHelper:142 - ORA-00001: unique constraint (VENDINGMACHINE.SYS_C005453) violated
+
+2020-05-31 15:02:38 WARN  UserHibernate:42 - javax.persistence.PersistenceException: org.hibernate.exception.ConstraintViolationException: could not execute statement
+2020-05-31 15:02:38 TRACE UserHibernate:124 - Getting user by username: jordythen and password pass
+2020-05-31 15:03:29 TRACE UserHibernate:65 - Getting all users from the database
+2020-05-31 15:03:29 DEBUG logging:44 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2020-05-31 15:03:30 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.16.Final
+2020-05-31 15:03:33 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-05-31 15:03:34 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-05-31 15:03:34 INFO  pooling:115 - HHH10001005: using driver [oracle.jdbc.driver.OracleDriver] at URL [jdbc:oracle:thin:@rev2004.cvuojc8pwavn.us-east-2.rds.amazonaws.com:1521:ORCL]
+2020-05-31 15:03:34 INFO  pooling:124 - HHH10001001: Connection properties: {user=vendingmachine, password=****}
+2020-05-31 15:03:34 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2020-05-31 15:03:34 INFO  DriverManagerConnectionProviderImpl:249 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-05-31 15:03:37 INFO  Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2020-05-31 15:03:40 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-05-31 15:03:41 TRACE UserHibernate:28 - Adding user User [id=null, firstName=Jordy, lastName=Then, email=fordythen@gmail.com, username=usertest0, password=pass, balance=1000.0, vendingMachine=null, pendingOffers=null, orderHistory=null, ratingHistory=null] to the database
+2020-05-31 15:03:41 TRACE UserHibernate:33 - Saving.....
+2020-05-31 15:03:41 TRACE UserHibernate:37 - Successfully added person Jordy
+2020-05-31 15:03:41 TRACE UserHibernate:65 - Getting all users from the database
+2020-05-31 15:03:41 TRACE UserHibernate:28 - Adding user User [id=null, firstName=Jordy, lastName=Then, email=jordythen@gmail.com, username=jordythen1, password=pass, balance=1000.0, vendingMachine=null, pendingOffers=null, orderHistory=null, ratingHistory=null] to the database
+2020-05-31 15:03:41 TRACE UserHibernate:33 - Saving.....
+2020-05-31 15:03:41 TRACE UserHibernate:37 - Successfully added person Jordy
+2020-05-31 15:03:41 TRACE UserHibernate:124 - Getting user by username: jordythen1 and password pass
+2020-05-31 15:03:42 TRACE UserHibernate:65 - Getting all users from the database
+2020-05-31 15:03:42 TRACE UserHibernate:53 - Getting person with id 1
+2020-05-31 15:03:42 TRACE UserHibernate:55 - Hibernate session has been made
+2020-05-31 15:03:42 INFO  UserHibernate:57 - THIS IS USER: User [id=1, firstName=Jordy, lastName=Then, email=fordythen@gmail.com, username=usertest0, password=pass, balance=1000.0, vendingMachine=null, pendingOffers=[], orderHistory=[], ratingHistory=[]]
+2020-05-31 15:03:42 TRACE UserHibernate:65 - Getting all users from the database
+2020-05-31 15:03:42 TRACE UserHibernate:65 - Getting all users from the database
+2020-05-31 15:03:42 TRACE UserHibernate:65 - Getting all users from the database
+2020-05-31 15:03:42 TRACE UserHibernate:124 - Getting user by username: usertest0 and password pass
