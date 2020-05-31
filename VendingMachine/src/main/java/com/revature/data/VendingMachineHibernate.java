@@ -3,7 +3,7 @@ package com.revature.data;
 import java.util.List;
 
 import org.hibernate.query.Query;
-
+import org.springframework.stereotype.Repository;
 import org.apache.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -12,6 +12,7 @@ import com.revature.beans.snack.Type;
 import com.revature.beans.vendingmachine.VendingMachine;
 import com.revature.utils.HibernateUtil;
 
+@Repository
 public class VendingMachineHibernate implements VendingMachineDAO {
 	private HibernateUtil connection = HibernateUtil.getHibernateUtil();
 	Logger log = Logger.getLogger(VendingMachineHibernate.class);

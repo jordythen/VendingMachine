@@ -9,7 +9,7 @@ import javax.persistence.criteria.Root;
 
 import org.hibernate.query.NativeQuery;
 import org.hibernate.query.Query;
-
+import org.springframework.stereotype.Repository;
 import org.apache.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -17,6 +17,7 @@ import org.hibernate.Transaction;
 import com.revature.beans.user.User;
 import com.revature.utils.HibernateUtil;
 
+@Repository
 public class UserHibernate implements UserDAO{
 	private HibernateUtil connection = HibernateUtil.getHibernateUtil();
 	Logger log = Logger.getLogger(UserHibernate.class);
@@ -54,8 +55,13 @@ public class UserHibernate implements UserDAO{
 		log.trace("Hibernate session has been made");
 		User u = s.get(User.class, id);
 		log.info("THIS IS USER: " + u);
+<<<<<<< HEAD
 		s.close();
 		log.trace("Got user with id "+ u.getId());
+=======
+		//log.trace("Got user with id "+ u.getId());
+		// For this log.trace if getById returns null, the above commented out line will cause error because u has no id
+>>>>>>> d8cee84daa18b7b48b62a299cf9b9d88f03a3cb8
 		return u;
 	}
 

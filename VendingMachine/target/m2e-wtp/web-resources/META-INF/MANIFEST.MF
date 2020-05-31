@@ -1,5 +1,10 @@
 Manifest-Version: 1.0
+<<<<<<< HEAD
 Built-By: gerol
 Build-Jdk: 1.8.0_251
+=======
+Built-By: Jordy Then
+Build-Jdk: 1.8.0_231
+>>>>>>> d8cee84daa18b7b48b62a299cf9b9d88f03a3cb8
 Created-By: Maven Integration for Eclipse
 
