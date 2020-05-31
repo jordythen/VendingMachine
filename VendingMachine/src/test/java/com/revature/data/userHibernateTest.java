@@ -68,13 +68,49 @@ public class userHibernateTest {
 		assertTrue(u.getEmail().contains("fordythen@gmail.com"));
 	}
 	@Test
-	public void getByAllTest() {
+	public void getAllTest() {
 		List<User> u = uh.getAll();
 		System.out.println(u);
 		assertTrue(u.size()>=1);
 	}
 	
-
+	@Test
+	public void updateTest() {
+		User u = new User();
+		u.setFirstName("Jordy");
+		u.setLastName("Then");
+		u.setEmail("jordythen@gmail.com");
+		u.setPassword("pass");
+		u.setUsername("jordythen"+num);
+		u.setBalance(1000.00);
+		u.setVendingMachine(null);
+		u.setRatingHistory(null);
+		u.setId(uh.add(u));
+		
+		u.setLastName("updateuser");
+		uh.update(u);
+		assertTrue(uh.getById(u.getId()).getLastName().contains("updateuser"));
+	}
+	
+	@Test
+	public void deleteTest() {
+		User u = new User();
+		u.setFirstName("DELETE");
+		u.setLastName("DELETE");
+		u.setEmail("DELETE@gmail.com");
+		u.setPassword("pass");
+		u.setUsername("DELETE"+num);
+		u.setBalance(1000.00);
+		u.setVendingMachine(null);
+		u.setRatingHistory(null);
+		u.setId(uh.add(u));
+		System.out.println(u);
+		int k=u.getId();
+		uh.delete(u);
+		System.out.println(uh.getById(k));
+		assertTrue(uh.getById(k)==null);
+		
+	}
 	
 
 }

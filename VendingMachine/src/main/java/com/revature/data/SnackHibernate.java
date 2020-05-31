@@ -55,11 +55,10 @@ public class SnackHibernate implements GenericDAO<Snack> {
 		log.trace("Getting all snacks");
 		Session s = hu.getSession();
 		
-		String query = "FROM SNACK";
+		String query = "FROM Snack"; //Snack is name of class in java, make sure Capitalization is same. 
+		//Example: Our java class is Snack, "FROM SNACK" will not work, use "FROM Snack"
 		Query<Snack> q = s.createQuery(query, Snack.class);
 		List<Snack> snackList = q.getResultList();
-//		Set<Snack> snackSet = new HashSet<Snack>();
-//		snackSet.addAll(snackList);
 		s.close();
 		log.trace("All snacks retrieved.");
 		return snackList;
