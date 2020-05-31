@@ -9,7 +9,7 @@ import javax.persistence.criteria.Root;
 
 import org.hibernate.query.NativeQuery;
 import org.hibernate.query.Query;
-
+import org.springframework.stereotype.Repository;
 import org.apache.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -17,6 +17,7 @@ import org.hibernate.Transaction;
 import com.revature.beans.user.User;
 import com.revature.utils.HibernateUtil;
 
+@Repository
 public class UserHibernate implements UserDAO{
 	private HibernateUtil connection = HibernateUtil.getHibernateUtil();
 	Logger log = Logger.getLogger(UserHibernate.class);
