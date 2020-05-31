@@ -55,6 +55,8 @@ public class UserHibernate implements UserDAO{
 		log.trace("Hibernate session has been made");
 		User u = s.get(User.class, id);
 		log.info("THIS IS USER: " + u);
+		s.close();
+		log.trace("Got user with id "+ u.getId());
 		//log.trace("Got user with id "+ u.getId());
 		// For this log.trace if getById returns null, the above commented out line will cause error because u has no id
 		return u;
