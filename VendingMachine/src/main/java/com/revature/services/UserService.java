@@ -46,5 +46,9 @@ public class UserService implements GenericService<User> {
 		// TODO Auto-generated method stub
 		uhib.delete(t);
 	}
+	
+	public User getByUsernameAndPassword(String username, String password) {
+		return uhib.getByUsernameAndPassword(username, password);
+	}
 
 }
