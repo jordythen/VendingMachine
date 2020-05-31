@@ -14,7 +14,7 @@ import com.revature.utils.HibernateUtil;
 @Repository
 public class ReviewHibernate implements ReviewDAO {
 	private HibernateUtil connection = HibernateUtil.getHibernateUtil();
-	Logger log = Logger.getLogger(UserHibernate.class);
+	Logger log = Logger.getLogger(ReviewHibernate.class);
 	
 	@Override
 	public Integer add(Review t) {
