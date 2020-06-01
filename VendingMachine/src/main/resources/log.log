@@ -1,3 +1,69 @@
+<<<<<<< HEAD
+2020-06-01 17:01:41 TRACE SnackHibernate:22 - Adding new snack
+2020-06-01 17:01:41 DEBUG logging:44 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2020-06-01 17:01:42 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.16.Final
+2020-06-01 17:01:45 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-01 17:01:47 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-06-01 17:01:48 INFO  pooling:115 - HHH10001005: using driver [oracle.jdbc.driver.OracleDriver] at URL [jdbc:oracle:thin:@rev2004.cvuojc8pwavn.us-east-2.rds.amazonaws.com:1521:ORCL]
+2020-06-01 17:01:48 INFO  pooling:124 - HHH10001001: Connection properties: {user=vendingmachine, password=****}
+2020-06-01 17:01:48 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2020-06-01 17:01:48 INFO  DriverManagerConnectionProviderImpl:249 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-06-01 17:01:51 INFO  Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2020-06-01 17:01:58 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-01 17:02:02 TRACE SnackHibernate:30 - Added snack successfully. Assigned id: 1
+2020-06-01 17:02:02 TRACE SnackHibernate:22 - Adding new snack
+2020-06-01 17:02:02 TRACE SnackHibernate:35 - Exception in add snackHibernate
+2020-06-01 17:02:02 TRACE SnackHibernate:45 - Getting snack with id 2
+2020-06-01 17:02:02 TRACE SnackHibernate:50 - Got snack.
+2020-06-01 17:02:02 TRACE SnackHibernate:45 - Getting snack with id 1
+2020-06-01 17:02:02 TRACE SnackHibernate:50 - Got snack.
+2020-06-01 17:02:02 TRACE SnackHibernate:22 - Adding new snack
+2020-06-01 17:02:03 TRACE SnackHibernate:30 - Added snack successfully. Assigned id: 3
+2020-06-01 17:02:03 TRACE SnackHibernate:70 - Updating snack with id 3
+2020-06-01 17:02:03 TRACE SnackHibernate:77 - Updated snack successfully.
+2020-06-01 17:02:03 TRACE SnackHibernate:45 - Getting snack with id 3
+2020-06-01 17:02:03 TRACE SnackHibernate:50 - Got snack.
+2020-06-01 17:02:03 TRACE SnackHibernate:56 - Getting all snacks
+2020-06-01 17:02:05 TRACE SnackHibernate:64 - All snacks retrieved.
+2020-06-01 17:02:05 TRACE SnackHibernate:22 - Adding new snack
+2020-06-01 17:02:05 TRACE SnackHibernate:30 - Added snack successfully. Assigned id: 4
+2020-06-01 17:02:05 TRACE SnackHibernate:90 - Deleting snack with id 4
+2020-06-01 17:02:06 TRACE SnackHibernate:97 - Deleted snack successfully.
+2020-06-01 17:02:06 TRACE SnackHibernate:45 - Getting snack with id 4
+2020-06-01 17:02:06 TRACE SnackHibernate:50 - Got snack.
+2020-06-01 17:02:54 TRACE SnackHibernate:22 - Adding new snack
+2020-06-01 17:02:54 DEBUG logging:44 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2020-06-01 17:02:55 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.16.Final
+2020-06-01 17:02:58 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-01 17:02:59 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-06-01 17:03:00 INFO  pooling:115 - HHH10001005: using driver [oracle.jdbc.driver.OracleDriver] at URL [jdbc:oracle:thin:@rev2004.cvuojc8pwavn.us-east-2.rds.amazonaws.com:1521:ORCL]
+2020-06-01 17:03:00 INFO  pooling:124 - HHH10001001: Connection properties: {user=vendingmachine, password=****}
+2020-06-01 17:03:00 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2020-06-01 17:03:00 INFO  DriverManagerConnectionProviderImpl:249 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-06-01 17:03:03 INFO  Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2020-06-01 17:03:11 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-01 17:03:12 TRACE SnackHibernate:30 - Added snack successfully. Assigned id: 5
+2020-06-01 17:03:12 TRACE SnackHibernate:22 - Adding new snack
+2020-06-01 17:03:13 TRACE SnackHibernate:30 - Added snack successfully. Assigned id: 6
+2020-06-01 17:03:13 TRACE SnackHibernate:45 - Getting snack with id 6
+2020-06-01 17:03:13 TRACE SnackHibernate:50 - Got snack.
+2020-06-01 17:03:13 TRACE SnackHibernate:45 - Getting snack with id 5
+2020-06-01 17:03:13 TRACE SnackHibernate:50 - Got snack.
+2020-06-01 17:03:13 TRACE SnackHibernate:22 - Adding new snack
+2020-06-01 17:03:13 TRACE SnackHibernate:30 - Added snack successfully. Assigned id: 7
+2020-06-01 17:03:13 TRACE SnackHibernate:70 - Updating snack with id 7
+2020-06-01 17:03:13 TRACE SnackHibernate:77 - Updated snack successfully.
+2020-06-01 17:03:13 TRACE SnackHibernate:45 - Getting snack with id 7
+2020-06-01 17:03:13 TRACE SnackHibernate:50 - Got snack.
+2020-06-01 17:03:13 TRACE SnackHibernate:56 - Getting all snacks
+2020-06-01 17:03:14 TRACE SnackHibernate:64 - All snacks retrieved.
+2020-06-01 17:03:14 TRACE SnackHibernate:22 - Adding new snack
+2020-06-01 17:03:14 TRACE SnackHibernate:30 - Added snack successfully. Assigned id: 8
+2020-06-01 17:03:14 TRACE SnackHibernate:90 - Deleting snack with id 8
+2020-06-01 17:03:15 TRACE SnackHibernate:97 - Deleted snack successfully.
+2020-06-01 17:03:15 TRACE SnackHibernate:45 - Getting snack with id 8
+2020-06-01 17:03:15 TRACE SnackHibernate:50 - Got snack.
+=======
 2020-06-01 17:16:25 TRACE VendingMachineHibernate:26 - Adding VendingMachine VendingMachine [id=null, name=myvendo, description=, theme=default, mainColor=000, secondaryColor=fff, snacks=null] to the database
 2020-06-01 17:16:25 DEBUG logging:44 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
 2020-06-01 17:16:25 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.16.Final
@@ -38,6 +104,101 @@
 2020-06-01 17:18:01 TRACE UserHibernate:28 - Adding user User [id=null, firstName=Michael, lastName=Mead, email=michaelmead@gmail.com, username=michaelmead8, password=pass, balance=1000.0, vendingMachine=VendingMachine [id=5, name=Michael Mead, description=, theme=default, mainColor=000, secondaryColor=fff, snacks=null], pendingOffers=null, orderHistory=null, ratingHistory=null] to the database
 2020-06-01 17:18:01 TRACE UserHibernate:33 - Saving.....
 2020-06-01 17:18:02 TRACE UserHibernate:37 - Successfully added person Michael
+<<<<<<< HEAD
+>>>>>>> b0d739e9d05b69a10fa7079ec51507b2633a295b
+2020-06-01 17:41:21 TRACE VendingMachineHibernate:26 - Adding VendingMachine VendingMachine [id=null, name=myvendo, description=, theme=default, mainColor=000, secondaryColor=fff, snacks=null] to the database
+2020-06-01 17:41:21 DEBUG logging:44 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2020-06-01 17:41:22 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.16.Final
+2020-06-01 17:41:23 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-01 17:41:25 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-06-01 17:41:25 INFO  pooling:115 - HHH10001005: using driver [oracle.jdbc.driver.OracleDriver] at URL [jdbc:oracle:thin:@rev2004.cvuojc8pwavn.us-east-2.rds.amazonaws.com:1521:ORCL]
+2020-06-01 17:41:25 INFO  pooling:124 - HHH10001001: Connection properties: {user=vendingmachine, password=****}
+2020-06-01 17:41:25 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2020-06-01 17:41:25 INFO  DriverManagerConnectionProviderImpl:249 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-06-01 17:41:27 INFO  Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2020-06-01 17:41:32 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-01 17:41:32 TRACE VendingMachineHibernate:34 - Successfully added VendingMachine myvendo
+2020-06-01 17:41:32 TRACE SnackHibernate:22 - Adding new snack
+2020-06-01 17:41:32 TRACE SnackHibernate:30 - Added snack successfully. Assigned id: 9
+2020-06-01 17:41:32 TRACE SnackHibernate:22 - Adding new snack
+2020-06-01 17:41:32 TRACE SnackHibernate:30 - Added snack successfully. Assigned id: 10
+2020-06-01 17:41:32 TRACE VendingMachineHibernate:26 - Adding VendingMachine VendingMachine [id=null, name=myvendoupdate1, description=, theme=default, mainColor=000, secondaryColor=fff, snacks=[Snack [id=9, isHidden=null, snackName=null, description=VendingMachineUpdateSnack1, numInStock=null, cost=null, types=null, totalFat=null, totalCarbs=null, sodium=null, cholesterol=null], Snack [id=10, isHidden=null, snackName=null, description=VendingMachineUpdateSnack2, numInStock=null, cost=null, types=null, totalFat=null, totalCarbs=null, sodium=null, cholesterol=null]]] to the database
+2020-06-01 17:41:33 TRACE VendingMachineHibernate:34 - Successfully added VendingMachine myvendoupdate1
+2020-06-01 17:41:33 TRACE VendingMachineHibernate:26 - Adding VendingMachine VendingMachine [id=null, name=myvendoupdate2, description=, theme=default, mainColor=000, secondaryColor=fff, snacks=[Snack [id=10, isHidden=null, snackName=null, description=VendingMachineUpdateSnack2, numInStock=null, cost=null, types=null, totalFat=null, totalCarbs=null, sodium=null, cholesterol=null]]] to the database
+2020-06-01 17:41:33 TRACE VendingMachineHibernate:34 - Successfully added VendingMachine myvendoupdate2
+2020-06-01 17:41:33 TRACE VendingMachineHibernate:51 - Getting VendingMachine with id 7
+2020-06-01 17:41:33 TRACE VendingMachineHibernate:54 - Got user with id 7
+2020-06-01 17:49:38 TRACE SnackHibernate:22 - Adding new snack
+2020-06-01 17:49:38 DEBUG logging:44 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2020-06-01 17:49:38 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.16.Final
+2020-06-01 17:49:40 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-01 17:49:41 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-06-01 17:49:42 INFO  pooling:115 - HHH10001005: using driver [oracle.jdbc.driver.OracleDriver] at URL [jdbc:oracle:thin:@rev2004.cvuojc8pwavn.us-east-2.rds.amazonaws.com:1521:ORCL]
+2020-06-01 17:49:42 INFO  pooling:124 - HHH10001001: Connection properties: {user=vendingmachine, password=****}
+2020-06-01 17:49:42 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2020-06-01 17:49:42 INFO  DriverManagerConnectionProviderImpl:249 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-06-01 17:49:45 INFO  Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2020-06-01 17:49:54 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-01 17:49:55 TRACE SnackHibernate:30 - Added snack successfully. Assigned id: 11
+2020-06-01 17:49:55 TRACE SnackHibernate:22 - Adding new snack
+2020-06-01 17:49:55 TRACE SnackHibernate:30 - Added snack successfully. Assigned id: 12
+2020-06-01 17:49:55 TRACE VendingMachineHibernate:26 - Adding VendingMachine VendingMachine [id=null, name=myvendoupdate1, description=, theme=default, mainColor=000, secondaryColor=fff, snacks=[Snack [id=11, isHidden=null, snackName=null, description=VendingMachineUpdateSnack1, numInStock=null, cost=null, types=null, totalFat=null, totalCarbs=null, sodium=null, cholesterol=null], Snack [id=12, isHidden=null, snackName=null, description=VendingMachineUpdateSnack2, numInStock=null, cost=null, types=null, totalFat=null, totalCarbs=null, sodium=null, cholesterol=null]]] to the database
+2020-06-01 17:49:55 TRACE VendingMachineHibernate:34 - Successfully added VendingMachine myvendoupdate1
+2020-06-01 17:49:55 TRACE VendingMachineHibernate:26 - Adding VendingMachine VendingMachine [id=null, name=myvendoupdate2, description=, theme=default, mainColor=000, secondaryColor=fff, snacks=null] to the database
+2020-06-01 17:49:55 TRACE VendingMachineHibernate:34 - Successfully added VendingMachine myvendoupdate2
+2020-06-01 17:49:55 TRACE VendingMachineHibernate:73 - Updating VendingMachine myvendoupdate2
+2020-06-01 17:49:56 TRACE VendingMachineHibernate:80 - VendingMachine updated
+2020-06-01 17:49:56 TRACE VendingMachineHibernate:51 - Getting VendingMachine with id 9
+2020-06-01 17:49:56 TRACE VendingMachineHibernate:54 - Got user with id 9
+2020-06-01 17:49:56 TRACE VendingMachineHibernate:26 - Adding VendingMachine VendingMachine [id=null, name=myvendo, description=, theme=default, mainColor=000, secondaryColor=fff, snacks=null] to the database
+2020-06-01 17:49:56 TRACE VendingMachineHibernate:34 - Successfully added VendingMachine myvendo
+2020-06-01 17:51:59 TRACE SnackHibernate:22 - Adding new snack
+2020-06-01 17:51:59 DEBUG logging:44 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2020-06-01 17:51:59 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.16.Final
+2020-06-01 17:52:01 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-01 17:52:02 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-06-01 17:52:02 INFO  pooling:115 - HHH10001005: using driver [oracle.jdbc.driver.OracleDriver] at URL [jdbc:oracle:thin:@rev2004.cvuojc8pwavn.us-east-2.rds.amazonaws.com:1521:ORCL]
+2020-06-01 17:52:02 INFO  pooling:124 - HHH10001001: Connection properties: {user=vendingmachine, password=****}
+2020-06-01 17:52:02 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2020-06-01 17:52:02 INFO  DriverManagerConnectionProviderImpl:249 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-06-01 17:52:06 INFO  Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2020-06-01 17:52:12 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-01 17:52:13 TRACE SnackHibernate:30 - Added snack successfully. Assigned id: 13
+2020-06-01 17:52:13 TRACE SnackHibernate:22 - Adding new snack
+2020-06-01 17:52:13 TRACE SnackHibernate:30 - Added snack successfully. Assigned id: 14
+2020-06-01 17:52:13 TRACE VendingMachineHibernate:26 - Adding VendingMachine VendingMachine [id=null, name=myvendoupdate1, description=, theme=default, mainColor=000, secondaryColor=fff, snacks=[Snack [id=13, isHidden=null, snackName=null, description=VendingMachineUpdateSnack1, numInStock=null, cost=null, types=null, totalFat=null, totalCarbs=null, sodium=null, cholesterol=null], Snack [id=14, isHidden=null, snackName=null, description=VendingMachineUpdateSnack2, numInStock=null, cost=null, types=null, totalFat=null, totalCarbs=null, sodium=null, cholesterol=null]]] to the database
+2020-06-01 17:52:13 TRACE VendingMachineHibernate:34 - Successfully added VendingMachine myvendoupdate1
+2020-06-01 17:52:13 TRACE VendingMachineHibernate:26 - Adding VendingMachine VendingMachine [id=null, name=myvendoupdate2, description=, theme=default, mainColor=000, secondaryColor=fff, snacks=[Snack [id=14, isHidden=null, snackName=null, description=VendingMachineUpdateSnack2, numInStock=null, cost=null, types=null, totalFat=null, totalCarbs=null, sodium=null, cholesterol=null]]] to the database
+2020-06-01 17:52:14 TRACE VendingMachineHibernate:34 - Successfully added VendingMachine myvendoupdate2
+2020-06-01 17:52:14 TRACE VendingMachineHibernate:73 - Updating VendingMachine myvendoupdate2
+2020-06-01 17:52:14 TRACE VendingMachineHibernate:80 - VendingMachine updated
+2020-06-01 17:52:14 TRACE VendingMachineHibernate:51 - Getting VendingMachine with id 12
+2020-06-01 17:52:14 TRACE VendingMachineHibernate:54 - Got user with id 12
+2020-06-01 17:52:14 TRACE VendingMachineHibernate:26 - Adding VendingMachine VendingMachine [id=null, name=myvendo, description=, theme=default, mainColor=000, secondaryColor=fff, snacks=null] to the database
+2020-06-01 17:52:14 TRACE VendingMachineHibernate:34 - Successfully added VendingMachine myvendo
+2020-06-01 17:57:49 TRACE SnackHibernate:22 - Adding new snack
+2020-06-01 17:57:49 DEBUG logging:44 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2020-06-01 17:57:49 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.16.Final
+2020-06-01 17:57:51 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-01 17:57:52 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-06-01 17:57:52 INFO  pooling:115 - HHH10001005: using driver [oracle.jdbc.driver.OracleDriver] at URL [jdbc:oracle:thin:@rev2004.cvuojc8pwavn.us-east-2.rds.amazonaws.com:1521:ORCL]
+2020-06-01 17:57:52 INFO  pooling:124 - HHH10001001: Connection properties: {user=vendingmachine, password=****}
+2020-06-01 17:57:52 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2020-06-01 17:57:52 INFO  DriverManagerConnectionProviderImpl:249 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-06-01 17:57:54 INFO  Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2020-06-01 17:57:58 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-01 17:57:59 TRACE SnackHibernate:30 - Added snack successfully. Assigned id: 15
+2020-06-01 17:57:59 TRACE SnackHibernate:22 - Adding new snack
+2020-06-01 17:57:59 TRACE SnackHibernate:30 - Added snack successfully. Assigned id: 16
+2020-06-01 17:57:59 TRACE VendingMachineHibernate:26 - Adding VendingMachine VendingMachine [id=null, name=myvendoupdate, description=, theme=default, mainColor=000, secondaryColor=fff, snacks=null] to the database
+2020-06-01 17:57:59 TRACE VendingMachineHibernate:34 - Successfully added VendingMachine myvendoupdate
+2020-06-01 17:57:59 TRACE VendingMachineHibernate:73 - Updating VendingMachine myvendoupdate
+2020-06-01 17:58:00 TRACE VendingMachineHibernate:80 - VendingMachine updated
+2020-06-01 17:58:00 TRACE VendingMachineHibernate:51 - Getting VendingMachine with id 15
+2020-06-01 17:58:00 TRACE VendingMachineHibernate:54 - Got user with id 15
+2020-06-01 17:58:00 TRACE VendingMachineHibernate:26 - Adding VendingMachine VendingMachine [id=null, name=myvendo, description=, theme=default, mainColor=000, secondaryColor=fff, snacks=null] to the database
+2020-06-01 17:58:00 TRACE VendingMachineHibernate:34 - Successfully added VendingMachine myvendo
+=======
 2020-06-01 17:30:52 TRACE ReviewHibernate:60 - Getting all reviews from the database
 2020-06-01 17:30:52 DEBUG logging:44 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
 2020-06-01 17:30:52 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.16.Final
@@ -119,3 +280,4 @@
 2020-06-01 17:54:13 INFO  ReviewHibernate:52 - THIS IS REVIEW: Review [id=1, starRating=5, comments=comment, reviewTime=null]
 2020-06-01 17:54:13 TRACE ReviewHibernate:54 - Got review with id 1
 2020-06-01 17:54:13 TRACE ReviewHibernate:60 - Getting all reviews from the database
+>>>>>>> 4587a96362ef3ae00477cae6aa422212371607f9

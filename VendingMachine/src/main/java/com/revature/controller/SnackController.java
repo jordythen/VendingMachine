@@ -2,6 +2,8 @@ package com.revature.controller;
 
 import java.util.List;
 
+import javax.servlet.http.HttpSession;
+
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -16,6 +18,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.revature.beans.snack.Snack;
+import com.revature.beans.user.User;
+import com.revature.beans.vendingmachine.VendingMachine;
 import com.revature.services.SnackService;
 
 @RestController
@@ -63,6 +67,19 @@ public class SnackController {
 		Snack s=sserv.getById(id);
 		sserv.delete(s);
 		return ResponseEntity.noContent().build();
+	}
+	
+	@PutMapping(path="/buywithmoney")
+	public ResponseEntity<Void> buySnackWithMoney(@RequestBody Snack s, HttpSession session){
+		User u=(User) session.getAttribute("user");
+		VendingMachine buyer=u.getVendingMachine();
+		if (buyer==null|| s==null) {
+			return ResponseEntity.status(400).build();
+		}else {
+			sserv.buySnackFromVendingMachine(s, buyer);
+			return ResponseEntity.ok().build();
+		}
+		
 	}
 	
 }
