@@ -8,11 +8,11 @@ drop table SNACK_VENDINGMACHINE cascade constraints;
 drop table SNACKTYPE cascade constraints;
 drop table SNACK_SNACKTYPE cascade constraints;
 drop table OFFER cascade constraints;
-drop table USER_OFFER cascade constraints;
+--drop table USER_OFFER cascade constraints;
 drop table SNACKOFFER cascade constraints;
 drop table ORDERTABLE cascade constraints;
 drop table USER_ORDER cascade constraints;
-
+drop table USER_VENDINGMACHINE cascade constraints;
 
 
 create table VENDINGMACHINE (
@@ -101,7 +101,7 @@ alter table snack add quantity number(5);
 --alter table snack drop column vendingmachineID;
 
 create table SNACK_VENDINGMACHINE(
-    snack_id number(20),
+    snack_id number(20) unique, --added unique, may need to remove if hibernate doesn't work
     vendingmachine_id number(20),
     foreign key (snack_id) references snack(id),
     foreign key (vendingmachine_id) references vendingmachine(id)
@@ -150,7 +150,7 @@ create table OFFER(
 alter table offer add timeOfferWasMade varchar2(30);
 alter table offer modify statusType number(5);
 --alter table offer drop column authorID;
-
+/*
 create table USER_OFFER(
     
     user_id number(20),
@@ -159,7 +159,7 @@ create table USER_OFFER(
     foreign key (offer_id) references offer(id)
     
 );
-
+*/
 
 -- Everytime user makes an offer
 -- it's going to insert ONE row into the offer table
@@ -169,11 +169,12 @@ create table SNACKOFFER(
     offerID number(10),
     snacksOfInterestID number(10),
     snacksToOfferID number(10),
-    
+    userID number(10),
     constraint PK_OFFER_SNACK primary key(id),
     foreign key (offerID) references OFFER(id),
     foreign key (snacksOfInterestID) references SNACK(id),
-    foreign key (snacksToOfferID) references SNACK(id)
+    foreign key (snacksToOfferID) references SNACK(id),
+    foreign key (userID) references USERTABLE(id)
 );
 
 

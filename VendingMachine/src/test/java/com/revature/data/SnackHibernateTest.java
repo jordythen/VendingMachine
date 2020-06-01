@@ -22,7 +22,7 @@ public class SnackHibernateTest {
 	static public void setup() {
 		Snack s=new Snack();
 		s.setDescription("iJUnit test case");
-		sdao.add(s);
+		s.setId(sdao.add(s));
 		id=s.getId();
 		}
 	@Test

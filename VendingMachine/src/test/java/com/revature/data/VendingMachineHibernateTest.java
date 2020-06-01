@@ -3,10 +3,12 @@ package com.revature.data;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.Test;
 
+import com.revature.beans.snack.Snack;
 import com.revature.beans.snack.Type;
 import com.revature.beans.vendingmachine.VendingMachine;
 import com.revature.services.VendingMachineService;
@@ -14,7 +16,7 @@ import com.revature.services.VendingMachineService;
 public class VendingMachineHibernateTest {
 	static VendingMachineHibernate vmh = new VendingMachineHibernate();
 	static VendingMachineService vms = new VendingMachineService(vmh);
-	
+	static SnackHibernate sdao=new SnackHibernate();
 //	@Test
 //	public void getByNameTest() {
 //		//TODO this test only works if we give it a name that we know exists
@@ -84,12 +86,37 @@ public class VendingMachineHibernateTest {
 	public void getAllTest() {
 		// TODO
 	}
-	
+	*/
 	@Test
 	public void updateTest() {
-		// TODO
+		//adding snacks
+		Snack s=new Snack();
+		s.setDescription("VendingMachineUpdateSnack1");
+		s.setId(sdao.add(s));
+		Snack s2=new Snack();
+		s2.setDescription("VendingMachineUpdateSnack2");
+		s2.setId(sdao.add(s2));
+		List<Snack> listA=new ArrayList<Snack>();
+		listA.add(s);
+		listA.add(s2);
+				
+		//Vending 
+		VendingMachine vendo = new VendingMachine();
+		
+		vendo.setName("myvendoupdate");
+		vendo.setMainColor("000");
+		vendo.setSecondaryColor("fff");
+		vendo.setDescription("");
+		vendo.setTheme("default");
+		vendo.setSnacks(null);
+		vendo.setId(vmh.add(vendo));
+		
+		vendo.setSnacks(listA);
+		vmh.update(vendo);
+		
+		assertTrue(vmh.getById(vendo.getId()).getSnacks().size()==2);
 	}
-	
+	/*
 	@Test
 	public void deleteTest() {
 		// TODO
