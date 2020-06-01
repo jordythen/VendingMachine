@@ -222,6 +222,7 @@ create sequence type_seq;
 
 
 
+select * from review;
 
 
 
