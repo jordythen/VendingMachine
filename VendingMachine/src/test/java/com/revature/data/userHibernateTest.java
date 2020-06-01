@@ -9,6 +9,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 import com.revature.beans.user.User;
+import com.revature.beans.vendingmachine.VendingMachine;
 
 public class userHibernateTest {
 	static UserHibernate uh = new UserHibernate();
@@ -51,7 +52,8 @@ public class userHibernateTest {
 		u.setPassword("pass");
 		u.setUsername("jordythen"+num);
 		u.setBalance(1000.00);
-		u.setVendingMachine(null);
+		VendingMachine vm = new VendingMachine();
+		u.setVendingMachine(vm);
 		u.setRatingHistory(null);
 		u.setId(uh.add(u));
 		System.out.println("THIS IS THE ID OF CREATED PERSON: "+u.getId());
@@ -59,6 +61,7 @@ public class userHibernateTest {
 		User u2 = uh.getByUsernameAndPassword("jordythen"+num, "pass");
 		System.out.println("user is " + u2);
 		assertTrue(u2.getEmail().contains("jordythen@gmail.com"));
+		assertTrue(u2.getVendingMachine()!= null);
 	}
 	
 	@Test
