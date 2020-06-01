@@ -39,7 +39,7 @@ create table USERTABLE (
     constraint PK_USERTABLE primary key(id)
     --constraint FK_USERTABLE_VENDINGMACHINE foreign key (vendingmachineID) references VENDINGMACHINE(id)
 );
-alter table usertable drop column vendingmachineID;
+--alter table usertable drop column vendingmachineID;
 alter table usertable modify balance number(10,2);
 
 create table USER_VENDINGMACHINE(
