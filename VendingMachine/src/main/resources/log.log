@@ -104,6 +104,7 @@
 2020-06-01 17:18:01 TRACE UserHibernate:28 - Adding user User [id=null, firstName=Michael, lastName=Mead, email=michaelmead@gmail.com, username=michaelmead8, password=pass, balance=1000.0, vendingMachine=VendingMachine [id=5, name=Michael Mead, description=, theme=default, mainColor=000, secondaryColor=fff, snacks=null], pendingOffers=null, orderHistory=null, ratingHistory=null] to the database
 2020-06-01 17:18:01 TRACE UserHibernate:33 - Saving.....
 2020-06-01 17:18:02 TRACE UserHibernate:37 - Successfully added person Michael
+<<<<<<< HEAD
 >>>>>>> b0d739e9d05b69a10fa7079ec51507b2633a295b
 2020-06-01 17:41:21 TRACE VendingMachineHibernate:26 - Adding VendingMachine VendingMachine [id=null, name=myvendo, description=, theme=default, mainColor=000, secondaryColor=fff, snacks=null] to the database
 2020-06-01 17:41:21 DEBUG logging:44 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
@@ -197,3 +198,86 @@
 2020-06-01 17:58:00 TRACE VendingMachineHibernate:54 - Got user with id 15
 2020-06-01 17:58:00 TRACE VendingMachineHibernate:26 - Adding VendingMachine VendingMachine [id=null, name=myvendo, description=, theme=default, mainColor=000, secondaryColor=fff, snacks=null] to the database
 2020-06-01 17:58:00 TRACE VendingMachineHibernate:34 - Successfully added VendingMachine myvendo
+=======
+2020-06-01 17:30:52 TRACE ReviewHibernate:60 - Getting all reviews from the database
+2020-06-01 17:30:52 DEBUG logging:44 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2020-06-01 17:30:52 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.16.Final
+2020-06-01 17:30:52 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-01 17:30:53 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-06-01 17:30:53 INFO  pooling:115 - HHH10001005: using driver [oracle.jdbc.driver.OracleDriver] at URL [jdbc:oracle:thin:@rev2004.cvuojc8pwavn.us-east-2.rds.amazonaws.com:1521:ORCL]
+2020-06-01 17:30:53 INFO  pooling:124 - HHH10001001: Connection properties: {user=vendingmachine, password=****}
+2020-06-01 17:30:53 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2020-06-01 17:30:53 INFO  DriverManagerConnectionProviderImpl:249 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-06-01 17:30:54 INFO  Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2020-06-01 17:30:56 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-01 17:43:09 TRACE ReviewHibernate:60 - Getting all reviews from the database
+2020-06-01 17:43:09 DEBUG logging:44 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2020-06-01 17:43:10 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.16.Final
+2020-06-01 17:43:10 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-01 17:43:10 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-06-01 17:43:10 INFO  pooling:115 - HHH10001005: using driver [oracle.jdbc.driver.OracleDriver] at URL [jdbc:oracle:thin:@rev2004.cvuojc8pwavn.us-east-2.rds.amazonaws.com:1521:ORCL]
+2020-06-01 17:43:10 INFO  pooling:124 - HHH10001001: Connection properties: {user=vendingmachine, password=****}
+2020-06-01 17:43:10 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2020-06-01 17:43:10 INFO  DriverManagerConnectionProviderImpl:249 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-06-01 17:43:11 INFO  Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2020-06-01 17:43:13 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-01 17:46:02 TRACE ReviewHibernate:60 - Getting all reviews from the database
+2020-06-01 17:46:02 DEBUG logging:44 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2020-06-01 17:46:02 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.16.Final
+2020-06-01 17:46:02 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-01 17:46:03 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-06-01 17:46:03 INFO  pooling:115 - HHH10001005: using driver [oracle.jdbc.driver.OracleDriver] at URL [jdbc:oracle:thin:@rev2004.cvuojc8pwavn.us-east-2.rds.amazonaws.com:1521:ORCL]
+2020-06-01 17:46:03 INFO  pooling:124 - HHH10001001: Connection properties: {user=vendingmachine, password=****}
+2020-06-01 17:46:03 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2020-06-01 17:46:03 INFO  DriverManagerConnectionProviderImpl:249 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-06-01 17:46:04 INFO  Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2020-06-01 17:46:06 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-01 17:48:40 TRACE ReviewHibernate:60 - Getting all reviews from the database
+2020-06-01 17:48:40 DEBUG logging:44 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2020-06-01 17:48:40 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.16.Final
+2020-06-01 17:48:41 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-01 17:48:41 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-06-01 17:48:41 INFO  pooling:115 - HHH10001005: using driver [oracle.jdbc.driver.OracleDriver] at URL [jdbc:oracle:thin:@rev2004.cvuojc8pwavn.us-east-2.rds.amazonaws.com:1521:ORCL]
+2020-06-01 17:48:41 INFO  pooling:124 - HHH10001001: Connection properties: {user=vendingmachine, password=****}
+2020-06-01 17:48:41 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2020-06-01 17:48:41 INFO  DriverManagerConnectionProviderImpl:249 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-06-01 17:48:42 INFO  Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2020-06-01 17:48:44 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-01 17:49:38 TRACE ReviewHibernate:48 - Getting review with id 1
+2020-06-01 17:49:38 DEBUG logging:44 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2020-06-01 17:49:38 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.16.Final
+2020-06-01 17:49:39 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-01 17:49:39 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-06-01 17:49:39 INFO  pooling:115 - HHH10001005: using driver [oracle.jdbc.driver.OracleDriver] at URL [jdbc:oracle:thin:@rev2004.cvuojc8pwavn.us-east-2.rds.amazonaws.com:1521:ORCL]
+2020-06-01 17:49:39 INFO  pooling:124 - HHH10001001: Connection properties: {user=vendingmachine, password=****}
+2020-06-01 17:49:39 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2020-06-01 17:49:39 INFO  DriverManagerConnectionProviderImpl:249 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-06-01 17:49:40 INFO  Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2020-06-01 17:49:42 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-01 17:49:42 TRACE ReviewHibernate:50 - Hibernate session has been made
+2020-06-01 17:49:42 INFO  ReviewHibernate:52 - THIS IS REVIEW: Review [id=1, starRating=5, comments=comment, reviewTime=null]
+2020-06-01 17:49:42 TRACE ReviewHibernate:54 - Got review with id 1
+2020-06-01 17:49:42 TRACE ReviewHibernate:60 - Getting all reviews from the database
+2020-06-01 17:54:09 TRACE ReviewHibernate:21 - Adding user Review [id=null, starRating=5, comments=These are comments, reviewTime=null] to the database
+2020-06-01 17:54:09 DEBUG logging:44 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2020-06-01 17:54:10 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.16.Final
+2020-06-01 17:54:10 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-01 17:54:10 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-06-01 17:54:10 INFO  pooling:115 - HHH10001005: using driver [oracle.jdbc.driver.OracleDriver] at URL [jdbc:oracle:thin:@rev2004.cvuojc8pwavn.us-east-2.rds.amazonaws.com:1521:ORCL]
+2020-06-01 17:54:10 INFO  pooling:124 - HHH10001001: Connection properties: {user=vendingmachine, password=****}
+2020-06-01 17:54:10 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2020-06-01 17:54:10 INFO  DriverManagerConnectionProviderImpl:249 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-06-01 17:54:11 INFO  Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2020-06-01 17:54:13 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-01 17:54:13 TRACE ReviewHibernate:27 - Saving.....
+2020-06-01 17:54:13 TRACE ReviewHibernate:30 - Successfully added review 2
+2020-06-01 17:54:13 TRACE ReviewHibernate:48 - Getting review with id 2
+2020-06-01 17:54:13 TRACE ReviewHibernate:50 - Hibernate session has been made
+2020-06-01 17:54:13 INFO  ReviewHibernate:52 - THIS IS REVIEW: Review [id=2, starRating=5, comments=These are comments, reviewTime=null]
+2020-06-01 17:54:13 TRACE ReviewHibernate:54 - Got review with id 2
+2020-06-01 17:54:13 TRACE ReviewHibernate:48 - Getting review with id 1
+2020-06-01 17:54:13 TRACE ReviewHibernate:50 - Hibernate session has been made
+2020-06-01 17:54:13 INFO  ReviewHibernate:52 - THIS IS REVIEW: Review [id=1, starRating=5, comments=comment, reviewTime=null]
+2020-06-01 17:54:13 TRACE ReviewHibernate:54 - Got review with id 1
+2020-06-01 17:54:13 TRACE ReviewHibernate:60 - Getting all reviews from the database
+>>>>>>> 4587a96362ef3ae00477cae6aa422212371607f9

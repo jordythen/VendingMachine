@@ -50,8 +50,8 @@ public class User {
 	
 	//Setting up our one to many table
 	@OneToMany(fetch=FetchType.EAGER,cascade=CascadeType.ALL)
-	@JoinTable(name="USER_OFFER", joinColumns=@JoinColumn(name="user_id"),
-								inverseJoinColumns=@JoinColumn(name="offer_id"))
+	@JoinTable(name="SNACKOFFER", joinColumns=@JoinColumn(name="userid"),
+								inverseJoinColumns=@JoinColumn(name="offerid"))
 	private Set<Offer> pendingOffers;
 	
 	

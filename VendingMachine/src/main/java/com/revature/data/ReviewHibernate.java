@@ -59,7 +59,7 @@ public class ReviewHibernate implements ReviewDAO {
 	public List<Review> getAll() {
 		log.trace("Getting all reviews from the database");
 		Session s = connection.getSession();
-		String hql = "FROM review";
+		String hql = "FROM Review";
 		Query<Review> q = s.createQuery(hql, Review.class);
 		List<Review> reviewList = q.getResultList();
 		s.close();

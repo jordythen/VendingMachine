@@ -15,7 +15,7 @@ public class ReviewHibernateTest {
 	@Test
 	public void getByIdTest()
 	{
-		Review r = rh.getById(id);
+		Review r = rh.getById(1);
 		System.out.println("review is " + r);
 		assertTrue(r.getStarRating() == 5);
 	}
@@ -32,10 +32,12 @@ public class ReviewHibernateTest {
 	public void addTest()
 	{
 		Review r = new Review();
-		r.setReviewTime("Now");
+		r.setReviewTime(null);
 		r.setComments("These are comments");
-		r.setStarRating(4);
+		r.setStarRating(5);
 		r.setId(rh.add(r));
 		System.out.println("THIS IS THE ID OF CREATED REVIEW" + r.getId());
+		Review r2 = rh.getById(r.getId());
+		assertTrue(r2.getComments().contains("These are comments")); 
 	}
 }
