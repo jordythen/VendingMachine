@@ -30,6 +30,7 @@ public class VendingMachineHibernate implements VendingMachineDAO {
 		try {
 			tx = s.beginTransaction();
 			s.save(vm);
+			tx.commit();
 			log.trace("Successfully added VendingMachine " + vm.getName());
 			
 		}catch(Exception e) {

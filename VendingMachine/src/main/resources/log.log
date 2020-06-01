@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 2020-06-01 17:01:41 TRACE SnackHibernate:22 - Adding new snack
 2020-06-01 17:01:41 DEBUG logging:44 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
 2020-06-01 17:01:42 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.16.Final
@@ -62,3 +63,45 @@
 2020-06-01 17:03:15 TRACE SnackHibernate:97 - Deleted snack successfully.
 2020-06-01 17:03:15 TRACE SnackHibernate:45 - Getting snack with id 8
 2020-06-01 17:03:15 TRACE SnackHibernate:50 - Got snack.
+=======
+2020-06-01 17:16:25 TRACE VendingMachineHibernate:26 - Adding VendingMachine VendingMachine [id=null, name=myvendo, description=, theme=default, mainColor=000, secondaryColor=fff, snacks=null] to the database
+2020-06-01 17:16:25 DEBUG logging:44 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2020-06-01 17:16:25 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.16.Final
+2020-06-01 17:16:26 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-01 17:16:26 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-06-01 17:16:26 INFO  pooling:115 - HHH10001005: using driver [oracle.jdbc.driver.OracleDriver] at URL [jdbc:oracle:thin:@rev2004.cvuojc8pwavn.us-east-2.rds.amazonaws.com:1521:ORCL]
+2020-06-01 17:16:26 INFO  pooling:124 - HHH10001001: Connection properties: {user=vendingmachine, password=****}
+2020-06-01 17:16:26 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2020-06-01 17:16:26 INFO  DriverManagerConnectionProviderImpl:249 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-06-01 17:16:27 INFO  Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2020-06-01 17:16:29 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-01 17:16:29 TRACE VendingMachineHibernate:33 - Successfully added VendingMachine myvendo
+2020-06-01 17:17:25 TRACE VendingMachineHibernate:26 - Adding VendingMachine VendingMachine [id=null, name=myvendo, description=, theme=default, mainColor=000, secondaryColor=fff, snacks=null] to the database
+2020-06-01 17:17:25 DEBUG logging:44 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2020-06-01 17:17:25 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.16.Final
+2020-06-01 17:17:25 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-01 17:17:26 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-06-01 17:17:26 INFO  pooling:115 - HHH10001005: using driver [oracle.jdbc.driver.OracleDriver] at URL [jdbc:oracle:thin:@rev2004.cvuojc8pwavn.us-east-2.rds.amazonaws.com:1521:ORCL]
+2020-06-01 17:17:26 INFO  pooling:124 - HHH10001001: Connection properties: {user=vendingmachine, password=****}
+2020-06-01 17:17:26 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2020-06-01 17:17:26 INFO  DriverManagerConnectionProviderImpl:249 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-06-01 17:17:27 INFO  Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2020-06-01 17:17:29 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-01 17:17:29 TRACE VendingMachineHibernate:34 - Successfully added VendingMachine myvendo
+2020-06-01 17:17:56 TRACE UserHibernate:67 - Getting all users from the database
+2020-06-01 17:17:56 DEBUG logging:44 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2020-06-01 17:17:56 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.16.Final
+2020-06-01 17:17:57 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-01 17:17:57 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-06-01 17:17:57 INFO  pooling:115 - HHH10001005: using driver [oracle.jdbc.driver.OracleDriver] at URL [jdbc:oracle:thin:@rev2004.cvuojc8pwavn.us-east-2.rds.amazonaws.com:1521:ORCL]
+2020-06-01 17:17:57 INFO  pooling:124 - HHH10001001: Connection properties: {user=vendingmachine, password=****}
+2020-06-01 17:17:57 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2020-06-01 17:17:57 INFO  DriverManagerConnectionProviderImpl:249 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-06-01 17:17:59 INFO  Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2020-06-01 17:18:00 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-01 17:18:01 TRACE VendingMachineHibernate:26 - Adding VendingMachine VendingMachine [id=null, name=Michael Mead, description=, theme=default, mainColor=000, secondaryColor=fff, snacks=null] to the database
+2020-06-01 17:18:01 TRACE VendingMachineHibernate:34 - Successfully added VendingMachine Michael Mead
+2020-06-01 17:18:01 TRACE UserHibernate:28 - Adding user User [id=null, firstName=Michael, lastName=Mead, email=michaelmead@gmail.com, username=michaelmead8, password=pass, balance=1000.0, vendingMachine=VendingMachine [id=5, name=Michael Mead, description=, theme=default, mainColor=000, secondaryColor=fff, snacks=null], pendingOffers=null, orderHistory=null, ratingHistory=null] to the database
+2020-06-01 17:18:01 TRACE UserHibernate:33 - Saving.....
+2020-06-01 17:18:02 TRACE UserHibernate:37 - Successfully added person Michael
+>>>>>>> b0d739e9d05b69a10fa7079ec51507b2633a295b
