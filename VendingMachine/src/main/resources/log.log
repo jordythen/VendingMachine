@@ -1,0 +1,64 @@
+2020-06-01 17:01:41 TRACE SnackHibernate:22 - Adding new snack
+2020-06-01 17:01:41 DEBUG logging:44 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2020-06-01 17:01:42 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.16.Final
+2020-06-01 17:01:45 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-01 17:01:47 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-06-01 17:01:48 INFO  pooling:115 - HHH10001005: using driver [oracle.jdbc.driver.OracleDriver] at URL [jdbc:oracle:thin:@rev2004.cvuojc8pwavn.us-east-2.rds.amazonaws.com:1521:ORCL]
+2020-06-01 17:01:48 INFO  pooling:124 - HHH10001001: Connection properties: {user=vendingmachine, password=****}
+2020-06-01 17:01:48 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2020-06-01 17:01:48 INFO  DriverManagerConnectionProviderImpl:249 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-06-01 17:01:51 INFO  Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2020-06-01 17:01:58 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-01 17:02:02 TRACE SnackHibernate:30 - Added snack successfully. Assigned id: 1
+2020-06-01 17:02:02 TRACE SnackHibernate:22 - Adding new snack
+2020-06-01 17:02:02 TRACE SnackHibernate:35 - Exception in add snackHibernate
+2020-06-01 17:02:02 TRACE SnackHibernate:45 - Getting snack with id 2
+2020-06-01 17:02:02 TRACE SnackHibernate:50 - Got snack.
+2020-06-01 17:02:02 TRACE SnackHibernate:45 - Getting snack with id 1
+2020-06-01 17:02:02 TRACE SnackHibernate:50 - Got snack.
+2020-06-01 17:02:02 TRACE SnackHibernate:22 - Adding new snack
+2020-06-01 17:02:03 TRACE SnackHibernate:30 - Added snack successfully. Assigned id: 3
+2020-06-01 17:02:03 TRACE SnackHibernate:70 - Updating snack with id 3
+2020-06-01 17:02:03 TRACE SnackHibernate:77 - Updated snack successfully.
+2020-06-01 17:02:03 TRACE SnackHibernate:45 - Getting snack with id 3
+2020-06-01 17:02:03 TRACE SnackHibernate:50 - Got snack.
+2020-06-01 17:02:03 TRACE SnackHibernate:56 - Getting all snacks
+2020-06-01 17:02:05 TRACE SnackHibernate:64 - All snacks retrieved.
+2020-06-01 17:02:05 TRACE SnackHibernate:22 - Adding new snack
+2020-06-01 17:02:05 TRACE SnackHibernate:30 - Added snack successfully. Assigned id: 4
+2020-06-01 17:02:05 TRACE SnackHibernate:90 - Deleting snack with id 4
+2020-06-01 17:02:06 TRACE SnackHibernate:97 - Deleted snack successfully.
+2020-06-01 17:02:06 TRACE SnackHibernate:45 - Getting snack with id 4
+2020-06-01 17:02:06 TRACE SnackHibernate:50 - Got snack.
+2020-06-01 17:02:54 TRACE SnackHibernate:22 - Adding new snack
+2020-06-01 17:02:54 DEBUG logging:44 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2020-06-01 17:02:55 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.16.Final
+2020-06-01 17:02:58 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-01 17:02:59 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-06-01 17:03:00 INFO  pooling:115 - HHH10001005: using driver [oracle.jdbc.driver.OracleDriver] at URL [jdbc:oracle:thin:@rev2004.cvuojc8pwavn.us-east-2.rds.amazonaws.com:1521:ORCL]
+2020-06-01 17:03:00 INFO  pooling:124 - HHH10001001: Connection properties: {user=vendingmachine, password=****}
+2020-06-01 17:03:00 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2020-06-01 17:03:00 INFO  DriverManagerConnectionProviderImpl:249 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-06-01 17:03:03 INFO  Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2020-06-01 17:03:11 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-01 17:03:12 TRACE SnackHibernate:30 - Added snack successfully. Assigned id: 5
+2020-06-01 17:03:12 TRACE SnackHibernate:22 - Adding new snack
+2020-06-01 17:03:13 TRACE SnackHibernate:30 - Added snack successfully. Assigned id: 6
+2020-06-01 17:03:13 TRACE SnackHibernate:45 - Getting snack with id 6
+2020-06-01 17:03:13 TRACE SnackHibernate:50 - Got snack.
+2020-06-01 17:03:13 TRACE SnackHibernate:45 - Getting snack with id 5
+2020-06-01 17:03:13 TRACE SnackHibernate:50 - Got snack.
+2020-06-01 17:03:13 TRACE SnackHibernate:22 - Adding new snack
+2020-06-01 17:03:13 TRACE SnackHibernate:30 - Added snack successfully. Assigned id: 7
+2020-06-01 17:03:13 TRACE SnackHibernate:70 - Updating snack with id 7
+2020-06-01 17:03:13 TRACE SnackHibernate:77 - Updated snack successfully.
+2020-06-01 17:03:13 TRACE SnackHibernate:45 - Getting snack with id 7
+2020-06-01 17:03:13 TRACE SnackHibernate:50 - Got snack.
+2020-06-01 17:03:13 TRACE SnackHibernate:56 - Getting all snacks
+2020-06-01 17:03:14 TRACE SnackHibernate:64 - All snacks retrieved.
+2020-06-01 17:03:14 TRACE SnackHibernate:22 - Adding new snack
+2020-06-01 17:03:14 TRACE SnackHibernate:30 - Added snack successfully. Assigned id: 8
+2020-06-01 17:03:14 TRACE SnackHibernate:90 - Deleting snack with id 8
+2020-06-01 17:03:15 TRACE SnackHibernate:97 - Deleted snack successfully.
+2020-06-01 17:03:15 TRACE SnackHibernate:45 - Getting snack with id 8
+2020-06-01 17:03:15 TRACE SnackHibernate:50 - Got snack.
