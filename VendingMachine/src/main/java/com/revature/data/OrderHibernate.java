@@ -2,6 +2,7 @@ package com.revature.data;
 
 import java.util.List;
 
+
 import org.apache.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -16,6 +17,34 @@ public class OrderHibernate implements OrderDAO {
 	
 	private HibernateUtil conn = HibernateUtil.getHibernateUtil();
 	Logger logger = Logger.getLogger(OrderHibernate.class);
+
+	
+public void addOrder(Order t) {
+	
+	logger.trace("adding Order: " + t);
+	Session session = conn.getSession();
+	Transaction transaction = null;
+	
+	try {
+		transaction = session.beginTransaction();
+		session.save(t);
+		transaction.commit();
+		
+	}
+	catch(Exception e) {
+		if(transaction != null) {
+			transaction.rollback();
+			logger.trace("Exception occured when adding order: " + e);
+			logger.trace("Transaction: " + transaction);
+			logger.trace("Order: " + t);
+		}
+	}
+	finally {
+		session.close();
+	}
+	
+} // end addOrder method
+	
 
 	@Override
 	public Integer add(Order t) {
@@ -50,7 +79,7 @@ public class OrderHibernate implements OrderDAO {
 		Order order = session.get(Order.class, id);
 			
 		if(order == null) {
-			logger.trace("Session contains: " + order);
+			logger.trace("Session contains a " + order + " order");
 			
 		}
 		
@@ -70,7 +99,7 @@ public class OrderHibernate implements OrderDAO {
 		List<Order> orderList = orderQuery.getResultList();
 		
 		if (orderList == null) {
-			logger.trace("The List of Orders returned: " + orderList);
+			logger.trace("The List of Orders contained " + orderList + " values");
 		}
 		
 		

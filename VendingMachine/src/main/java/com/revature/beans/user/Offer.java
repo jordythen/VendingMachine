@@ -29,7 +29,17 @@ public class Offer {
 	@SequenceGenerator(name="offerGen", sequenceName="offer_seq", allocationSize=1)
 	@GeneratedValue(generator="offerGen",strategy=GenerationType.SEQUENCE)
 	private Integer id;
+	
+	
+// links an offer to a vendingmachine
+	@Column
+	private Integer vendingMachineId;
 
+// we links an offer to a user
+	@Column
+	private Integer userId;
+	
+	
 	//ASK SIERRA IF THIS IS CORRECT
 	@ManyToMany(fetch=FetchType.EAGER,cascade=CascadeType.ALL)
 	@JoinTable(name="SNACKOFFER", joinColumns=@JoinColumn(name="offerID"),
@@ -50,6 +60,20 @@ public class Offer {
 	}
 	public void setId(Integer id) {
 		this.id = id;
+	}
+	public Integer getVendingMachineId() {
+		
+		return vendingMachineId;
+	}
+	public void setVendingMachineId(Integer vendingMachineId) {
+		this.vendingMachineId = vendingMachineId;
+	}
+	
+	public Integer getUserId() {
+		return userId;
+	}
+	public void setUserId(Integer userId) {
+		this.userId = userId;
 	}
 	public Set<Snack> getSnacksOfInterest() {
 		return snacksOfInterest;
@@ -84,6 +108,8 @@ public class Offer {
 		result = prime * result + ((snacksToOffer == null) ? 0 : snacksToOffer.hashCode());
 		result = prime * result + ((status == null) ? 0 : status.hashCode());
 		result = prime * result + ((timeOfferWasMade == null) ? 0 : timeOfferWasMade.hashCode());
+		result = prime * result + ((userId == null) ? 0 : userId.hashCode());
+		result = prime * result + ((vendingMachineId == null) ? 0 : vendingMachineId.hashCode());
 		return result;
 	}
 	@Override
@@ -120,12 +146,23 @@ public class Offer {
 				return false;
 		} else if (!timeOfferWasMade.equals(other.timeOfferWasMade))
 			return false;
+		if (userId == null) {
+			if (other.userId != null)
+				return false;
+		} else if (!userId.equals(other.userId))
+			return false;
+		if (vendingMachineId == null) {
+			if (other.vendingMachineId != null)
+				return false;
+		} else if (!vendingMachineId.equals(other.vendingMachineId))
+			return false;
 		return true;
 	}
 	@Override
 	public String toString() {
-		return "Offer [id=" + id + ", snacksOfInterest=" + snacksOfInterest + ", snacksToOffer=" + snacksToOffer
-				+ ", status=" + status + ", timeOfferWasMade=" + timeOfferWasMade + "]";
+		return "Offer [id=" + id + ", vendingMachineId=" + vendingMachineId + ", userId=" + userId
+				+ ", snacksOfInterest=" + snacksOfInterest + ", snacksToOffer=" + snacksToOffer + ", status=" + status
+				+ ", timeOfferWasMade=" + timeOfferWasMade + "]";
 	}
 	
 	
