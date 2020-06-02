@@ -16,6 +16,34 @@ public class OrderHibernate implements OrderDAO {
 	private HibernateUtil conn = HibernateUtil.getHibernateUtil();
 	Logger logger = Logger.getLogger(OrderHibernate.class);
 
+	
+public void addOrder(Order t) {
+	
+	logger.trace("adding Order: " + t);
+	Session session = conn.getSession();
+	Transaction transaction = null;
+	
+	try {
+		transaction = session.beginTransaction();
+		session.save(t);
+		transaction.commit();
+		
+	}
+	catch(Exception e) {
+		if(transaction != null) {
+			transaction.rollback();
+			logger.trace("Exception occured when adding order: " + e);
+			logger.trace("Transaction: " + transaction);
+			logger.trace("Order: " + t);
+		}
+	}
+	finally {
+		session.close();
+	}
+	
+} // end addOrder method
+	
+
 	@Override
 	public Integer add(Order t) {
 		logger.trace("adding Order: " + t);

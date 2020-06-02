@@ -7,7 +7,7 @@ import com.revature.beans.user.User;
 
 public interface OfferDAO extends GenericDAO<Offer> {
 	
-	public List<Offer> getAllOffersByVendingID(Offer vendingMachineID);
+	public List<Offer> getAllOffersByVendingID(Integer vendingMachineID);
 	public void deleteOfferById(int id);
 	
 	/*

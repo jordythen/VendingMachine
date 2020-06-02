@@ -15,26 +15,17 @@ public class OfferHibernateTest {
 	Logger loggerForTests = Logger.getLogger(OfferHibernateTest.class);
 	static OfferHibernate offerHiber = new OfferHibernate();
 
-//	@Test
-//	public void testGetAllOffersByVendingID() {
-//		Offer vendingID = new Offer();
-//		vendingID.getVendingMachineId();
-//		loggerForTests.trace("VendingID = " + vendingID);
-//		
-//		
-//		List<Offer> offer = offerHiber.getAllOffersByVendingID(vendingID);
-//		
-//		loggerForTests.trace("List offer = " + offer);
-//		int expected = 0;
-//		int actual = offer.size();
-//		
-//		loggerForTests.trace("Expected: " + expected + " Actual: " + actual);
-//		
-//		System.out.println("Expected: " + expected + " Actual: " + actual);
-//		assertTrue(actual > expected);
-//		
-//		
-//	}
+	@Test
+	public void testGetAllOffersByVendingID() {
+		
+		List<Offer> numberOfOffers = offerHiber.getAllOffersByVendingID(1);
+		int expected = 4;
+		int actual = numberOfOffers.size();
+		
+		assertTrue(actual == expected);
+		
+		
+	}
 	
 	@Test
 	public void testGetById() {
@@ -48,16 +39,29 @@ public class OfferHibernateTest {
 		assertTrue(expected == actual);
 	}
 	
+	//This works, but we dont want it adding everytime we run tests :p
+//	@Test
+//	public void testAdd() {
+//		
+//		Offer offer = new Offer();
+//		
+//		offer.setId(5);
+//		offer.setTimeOfferWasMade("9:49");
+//		offerHiber.addOffer(offer);
+//		
+//		assertTrue(offerHiber.getById(5) != null);
+//	}
+	
 	@Test
-	public void testAdd() {
+	public void testGetOfferByUserID() {
 		
-		Offer offer = new Offer();
 		
-		offer.setId(5);
-		offer.setTimeOfferWasMade("9:49");
-		offerHiber.addOffer(offer);
+		List<Offer> numberOfOffers = offerHiber.getAllOffersByUserID(1);
+		int expected = 3;
+		int actual = numberOfOffers.size();
 		
-		assertTrue(offerHiber.getById(5) != null);
+		assertTrue(actual == expected);
+		
 	}
 	
 //	@Test

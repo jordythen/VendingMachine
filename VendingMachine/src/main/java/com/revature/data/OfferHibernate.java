@@ -44,6 +44,7 @@ public class OfferHibernate implements OfferDAO {
 	}
 
 	// Do we need an add method to return an Integer?
+	// I can test this if we need it, but I didnt test it because its gross and weird. 
 	@Override
 	public Integer add(Offer t) {
 		logger.trace("adding Offer: " + t);
@@ -175,7 +176,7 @@ public class OfferHibernate implements OfferDAO {
 	}// end delete method
 
 	@Override
-	public List<Offer> getAllOffersByVendingID(Offer vendingmachineID) {
+	public List<Offer> getAllOffersByVendingID(Integer vendingmachineID) {
 		logger.trace("Getting offer from Vending Machine number: " + vendingmachineID);
 		
 		Session session = conn.getSession();
@@ -191,16 +192,16 @@ public class OfferHibernate implements OfferDAO {
 		return offerList;
 	}
 
-	// I need to add a userID field in User bean for this to work. But its functionality will be needed
+	
 	@Override
 	public List<Offer> getAllOffersByUserID(Integer userID) {
 		logger.trace("Getting all offers by userID" + userID);
 		
 		Session session = conn.getSession();
 		
-		String HQL =  "From OFFER where userID = :Id";
+		String HQL =  "From Offer where userID = :Id";
 		Query<Offer> query = session.createQuery(HQL, Offer.class);
-		query.setParameter("id", userID);
+		query.setParameter("Id", userID);
 		List<Offer> offerList = query.getResultList();
 		
 		logger.trace("found " + offerList.size() + " results");
