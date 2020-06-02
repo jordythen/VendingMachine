@@ -124,6 +124,7 @@ public class UserHibernate implements UserDAO{
 	@Override
 	public User getByUsernameAndPassword(String username, String password) {
 		log.trace("Getting user by username: " + username + " and password " + password);
+		User u = null;
 		Session s = connection.getSession();
 		CriteriaBuilder cb = s.getCriteriaBuilder();
 		CriteriaQuery<User> krit = cb.createQuery(User.class);
@@ -134,9 +135,12 @@ public class UserHibernate implements UserDAO{
 		Predicate predicateForUsernamePassword = cb.and(predicateForUsername, predicateForPassword);
 
 		krit.select(root).where(predicateForUsernamePassword);
-		
-		User u = s.createQuery(krit).getSingleResult();
-		
+		try {
+		u = s.createQuery(krit).getSingleResult();
+		}catch(Exception e) {
+			u = null;
+			log.warn("No account with username or password.");
+		}
 		return u;
 	}
 //	Session s = connection.getSession();
