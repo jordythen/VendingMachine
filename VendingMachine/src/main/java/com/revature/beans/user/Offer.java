@@ -31,10 +31,12 @@ public class Offer {
 	private Integer id;
 	
 	
-//	@OneToOne(fetch=FetchType.EAGER,cascade=CascadeType.ALL)
-//	@JoinTable(name="VENDINGMACHINE", joinColumns=@JoinColumn(name="id"),								inverseJoinColumns=@JoinColumn(name="vendingmachine_id"))
-	private Integer vendingMachineId;
+//	@ManyToOne(fetch=FetchType.EAGER,cascade=CascadeType.ALL)
+//	@JoinTable(name="VENDINGMACHINE", joinColumns=@JoinColumn(name="id"),	
+//	inverseJoinColumns=@JoinColumn(name="vendingmachine_id"))
+//	private Integer vendingMachineId;
 
+	
 	
 	//ASK SIERRA IF THIS IS CORRECT
 	@ManyToMany(fetch=FetchType.EAGER,cascade=CascadeType.ALL)
@@ -57,13 +59,13 @@ public class Offer {
 	public void setId(Integer id) {
 		this.id = id;
 	}
-	public Integer getVendingMachineId(Integer id) {
-		id = vendingMachineId;
-		return vendingMachineId;
-	}
-	public void setVendingMachineId(Integer vendingMachineId) {
-		this.vendingMachineId = vendingMachineId;
-	}
+//	public Integer getVendingMachineId() {
+//		
+//		return vendingMachineId;
+//	}
+//	public void setVendingMachineId(Integer vendingMachineId) {
+//		this.vendingMachineId = vendingMachineId;
+//	}
 	public Set<Snack> getSnacksOfInterest() {
 		return snacksOfInterest;
 	}
@@ -97,7 +99,7 @@ public class Offer {
 		result = prime * result + ((snacksToOffer == null) ? 0 : snacksToOffer.hashCode());
 		result = prime * result + ((status == null) ? 0 : status.hashCode());
 		result = prime * result + ((timeOfferWasMade == null) ? 0 : timeOfferWasMade.hashCode());
-		result = prime * result + ((vendingMachineId == null) ? 0 : vendingMachineId.hashCode());
+		//result = prime * result + ((vendingMachineId == null) ? 0 : vendingMachineId.hashCode());
 		return result;
 	}
 	@Override
@@ -134,19 +136,20 @@ public class Offer {
 				return false;
 		} else if (!timeOfferWasMade.equals(other.timeOfferWasMade))
 			return false;
-		if (vendingMachineId == null) {
-			if (other.vendingMachineId != null)
-				return false;
-		} else if (!vendingMachineId.equals(other.vendingMachineId))
-			return false;
+//		if (vendingMachineId == null) {
+//			if (other.vendingMachineId != null)
+//				return false;
+//		} else if (!vendingMachineId.equals(other.vendingMachineId))
+//			return false;
 		return true;
 	}
 	@Override
 	public String toString() {
-		return "Offer [id=" + id + ", vendingMachineId=" + vendingMachineId + ", snacksOfInterest=" + snacksOfInterest
+		return "Offer [id=" + id  + ", snacksOfInterest=" + snacksOfInterest
 				+ ", snacksToOffer=" + snacksToOffer + ", status=" + status + ", timeOfferWasMade=" + timeOfferWasMade
 				+ "]";
 	}
+//	+ ", vendingMachineId=" + vendingMachineId
 	
 	
 }

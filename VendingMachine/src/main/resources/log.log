@@ -3216,3 +3216,388 @@
 2020-05-31 17:18:01 INFO  Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
 2020-05-31 17:18:03 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
 2020-05-31 17:18:03 TRACE OfferHibernate:56 - Offer [id=1, vendingMachineId=1, snacksOfInterest=[], snacksToOffer=[], status=3, timeOfferWasMade=5:06pm] Returned from Session
+2020-06-01 20:31:51 TRACE OfferHibernate:151 - Getting offer from Vending Machine number: Offer [id=null, vendingMachineId=null, snacksOfInterest=null, snacksToOffer=null, status=null, timeOfferWasMade=null]
+2020-06-01 20:31:51 DEBUG logging:44 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2020-06-01 20:31:51 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.16.Final
+2020-06-01 20:31:51 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-01 20:31:52 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-06-01 20:31:52 INFO  pooling:115 - HHH10001005: using driver [oracle.jdbc.driver.OracleDriver] at URL [jdbc:oracle:thin:@rev2004.cvuojc8pwavn.us-east-2.rds.amazonaws.com:1521:ORCL]
+2020-06-01 20:31:52 INFO  pooling:124 - HHH10001001: Connection properties: {password=****, user=vendingmachine}
+2020-06-01 20:31:52 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2020-06-01 20:31:52 INFO  DriverManagerConnectionProviderImpl:249 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-06-01 20:31:53 INFO  Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2020-06-01 20:31:54 TRACE OfferHibernate:48 - Getting offer by id of: 1
+2020-06-01 20:31:54 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-06-01 20:31:54 INFO  pooling:115 - HHH10001005: using driver [oracle.jdbc.driver.OracleDriver] at URL [jdbc:oracle:thin:@rev2004.cvuojc8pwavn.us-east-2.rds.amazonaws.com:1521:ORCL]
+2020-06-01 20:31:54 INFO  pooling:124 - HHH10001001: Connection properties: {password=****, user=vendingmachine}
+2020-06-01 20:31:54 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2020-06-01 20:31:54 INFO  DriverManagerConnectionProviderImpl:249 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-06-01 20:31:54 INFO  Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2020-06-01 20:33:23 TRACE OfferHibernate:48 - Getting offer by id of: 1
+2020-06-01 20:33:23 DEBUG logging:44 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2020-06-01 20:33:23 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.16.Final
+2020-06-01 20:33:23 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-01 20:33:24 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-06-01 20:33:24 INFO  pooling:115 - HHH10001005: using driver [oracle.jdbc.driver.OracleDriver] at URL [jdbc:oracle:thin:@rev2004.cvuojc8pwavn.us-east-2.rds.amazonaws.com:1521:ORCL]
+2020-06-01 20:33:24 INFO  pooling:124 - HHH10001001: Connection properties: {password=****, user=vendingmachine}
+2020-06-01 20:33:24 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2020-06-01 20:33:24 INFO  DriverManagerConnectionProviderImpl:249 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-06-01 20:33:25 INFO  Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2020-06-01 20:34:01 TRACE OfferHibernate:48 - Getting offer by id of: 1
+2020-06-01 20:34:01 DEBUG logging:44 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2020-06-01 20:34:01 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.16.Final
+2020-06-01 20:34:02 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-01 20:34:02 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-06-01 20:34:02 INFO  pooling:115 - HHH10001005: using driver [oracle.jdbc.driver.OracleDriver] at URL [jdbc:oracle:thin:@rev2004.cvuojc8pwavn.us-east-2.rds.amazonaws.com:1521:ORCL]
+2020-06-01 20:34:02 INFO  pooling:124 - HHH10001001: Connection properties: {password=****, user=vendingmachine}
+2020-06-01 20:34:02 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2020-06-01 20:34:02 INFO  DriverManagerConnectionProviderImpl:249 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-06-01 20:34:03 INFO  Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2020-06-01 20:34:44 TRACE OfferHibernate:48 - Getting offer by id of: 1
+2020-06-01 20:34:44 DEBUG logging:44 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2020-06-01 20:34:44 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.16.Final
+2020-06-01 20:34:45 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-01 20:34:45 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-06-01 20:34:45 INFO  pooling:115 - HHH10001005: using driver [oracle.jdbc.driver.OracleDriver] at URL [jdbc:oracle:thin:@rev2004.cvuojc8pwavn.us-east-2.rds.amazonaws.com:1521:ORCL]
+2020-06-01 20:34:45 INFO  pooling:124 - HHH10001001: Connection properties: {password=****, user=vendingmachine}
+2020-06-01 20:34:45 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2020-06-01 20:34:45 INFO  DriverManagerConnectionProviderImpl:249 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-06-01 20:34:46 INFO  Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2020-06-01 20:37:32 TRACE OfferHibernate:151 - Getting offer from Vending Machine number: Offer [id=null, vendingMachineId=null, snacksOfInterest=null, snacksToOffer=null, status=null, timeOfferWasMade=null]
+2020-06-01 20:37:32 DEBUG logging:44 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2020-06-01 20:37:32 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.16.Final
+2020-06-01 20:37:33 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-01 20:37:33 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-06-01 20:37:33 INFO  pooling:115 - HHH10001005: using driver [oracle.jdbc.driver.OracleDriver] at URL [jdbc:oracle:thin:@rev2004.cvuojc8pwavn.us-east-2.rds.amazonaws.com:1521:ORCL]
+2020-06-01 20:37:33 INFO  pooling:124 - HHH10001001: Connection properties: {password=****, user=vendingmachine}
+2020-06-01 20:37:33 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2020-06-01 20:37:33 INFO  DriverManagerConnectionProviderImpl:249 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-06-01 20:37:34 INFO  Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2020-06-01 20:37:35 TRACE OfferHibernate:48 - Getting offer by id of: 1
+2020-06-01 20:37:35 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-06-01 20:37:35 INFO  pooling:115 - HHH10001005: using driver [oracle.jdbc.driver.OracleDriver] at URL [jdbc:oracle:thin:@rev2004.cvuojc8pwavn.us-east-2.rds.amazonaws.com:1521:ORCL]
+2020-06-01 20:37:35 INFO  pooling:124 - HHH10001001: Connection properties: {password=****, user=vendingmachine}
+2020-06-01 20:37:35 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2020-06-01 20:37:35 INFO  DriverManagerConnectionProviderImpl:249 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-06-01 20:37:35 INFO  Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2020-06-01 20:38:03 TRACE OfferHibernate:151 - Getting offer from Vending Machine number: Offer [id=null, vendingMachineId=null, snacksOfInterest=null, snacksToOffer=null, status=null, timeOfferWasMade=null]
+2020-06-01 20:38:03 DEBUG logging:44 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2020-06-01 20:38:03 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.16.Final
+2020-06-01 20:38:03 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-01 20:38:04 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-06-01 20:38:04 INFO  pooling:115 - HHH10001005: using driver [oracle.jdbc.driver.OracleDriver] at URL [jdbc:oracle:thin:@rev2004.cvuojc8pwavn.us-east-2.rds.amazonaws.com:1521:ORCL]
+2020-06-01 20:38:04 INFO  pooling:124 - HHH10001001: Connection properties: {password=****, user=vendingmachine}
+2020-06-01 20:38:04 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2020-06-01 20:38:04 INFO  DriverManagerConnectionProviderImpl:249 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-06-01 20:38:05 INFO  Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2020-06-01 20:38:06 TRACE OfferHibernate:48 - Getting offer by id of: 1
+2020-06-01 20:38:06 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-06-01 20:38:06 INFO  pooling:115 - HHH10001005: using driver [oracle.jdbc.driver.OracleDriver] at URL [jdbc:oracle:thin:@rev2004.cvuojc8pwavn.us-east-2.rds.amazonaws.com:1521:ORCL]
+2020-06-01 20:38:06 INFO  pooling:124 - HHH10001001: Connection properties: {password=****, user=vendingmachine}
+2020-06-01 20:38:06 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2020-06-01 20:38:06 INFO  DriverManagerConnectionProviderImpl:249 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-06-01 20:38:06 INFO  Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2020-06-01 20:43:03 TRACE OfferHibernateTest:20 - VendingID = Offer [id=null, vendingMachineId=null, snacksOfInterest=null, snacksToOffer=null, status=null, timeOfferWasMade=null]
+2020-06-01 20:43:03 TRACE OfferHibernate:151 - Getting offer from Vending Machine number: Offer [id=null, vendingMachineId=null, snacksOfInterest=null, snacksToOffer=null, status=null, timeOfferWasMade=null]
+2020-06-01 20:43:03 DEBUG logging:44 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2020-06-01 20:43:04 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.16.Final
+2020-06-01 20:43:04 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-01 20:43:05 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-06-01 20:43:05 INFO  pooling:115 - HHH10001005: using driver [oracle.jdbc.driver.OracleDriver] at URL [jdbc:oracle:thin:@rev2004.cvuojc8pwavn.us-east-2.rds.amazonaws.com:1521:ORCL]
+2020-06-01 20:43:05 INFO  pooling:124 - HHH10001001: Connection properties: {password=****, user=vendingmachine}
+2020-06-01 20:43:05 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2020-06-01 20:43:05 INFO  DriverManagerConnectionProviderImpl:249 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-06-01 20:43:06 INFO  Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2020-06-01 20:43:08 TRACE OfferHibernate:48 - Getting offer by id of: 1
+2020-06-01 20:43:08 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-06-01 20:43:08 INFO  pooling:115 - HHH10001005: using driver [oracle.jdbc.driver.OracleDriver] at URL [jdbc:oracle:thin:@rev2004.cvuojc8pwavn.us-east-2.rds.amazonaws.com:1521:ORCL]
+2020-06-01 20:43:08 INFO  pooling:124 - HHH10001001: Connection properties: {password=****, user=vendingmachine}
+2020-06-01 20:43:08 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2020-06-01 20:43:08 INFO  DriverManagerConnectionProviderImpl:249 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-06-01 20:43:08 INFO  Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2020-06-01 20:55:32 TRACE OfferHibernate:48 - Getting offer by id of: 1
+2020-06-01 20:55:32 DEBUG logging:44 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2020-06-01 20:55:32 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.16.Final
+2020-06-01 20:55:33 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-01 20:55:33 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-06-01 20:55:33 INFO  pooling:115 - HHH10001005: using driver [oracle.jdbc.driver.OracleDriver] at URL [jdbc:oracle:thin:@rev2004.cvuojc8pwavn.us-east-2.rds.amazonaws.com:1521:ORCL]
+2020-06-01 20:55:33 INFO  pooling:124 - HHH10001001: Connection properties: {password=****, user=vendingmachine}
+2020-06-01 20:55:33 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2020-06-01 20:55:33 INFO  DriverManagerConnectionProviderImpl:249 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-06-01 20:55:34 INFO  Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2020-06-01 20:56:42 TRACE OfferHibernateTest:20 - VendingID = Offer [id=null, vendingMachineId=null, snacksOfInterest=null, snacksToOffer=null, status=null, timeOfferWasMade=null]
+2020-06-01 20:56:42 TRACE OfferHibernate:151 - Getting offer from Vending Machine number: Offer [id=null, vendingMachineId=null, snacksOfInterest=null, snacksToOffer=null, status=null, timeOfferWasMade=null]
+2020-06-01 20:56:42 DEBUG logging:44 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2020-06-01 20:56:42 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.16.Final
+2020-06-01 20:56:43 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-01 20:56:43 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-06-01 20:56:43 INFO  pooling:115 - HHH10001005: using driver [oracle.jdbc.driver.OracleDriver] at URL [jdbc:oracle:thin:@rev2004.cvuojc8pwavn.us-east-2.rds.amazonaws.com:1521:ORCL]
+2020-06-01 20:56:43 INFO  pooling:124 - HHH10001001: Connection properties: {password=****, user=vendingmachine}
+2020-06-01 20:56:43 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2020-06-01 20:56:43 INFO  DriverManagerConnectionProviderImpl:249 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-06-01 20:56:44 INFO  Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2020-06-01 20:56:45 TRACE OfferHibernate:48 - Getting offer by id of: 1
+2020-06-01 20:56:45 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-06-01 20:56:45 INFO  pooling:115 - HHH10001005: using driver [oracle.jdbc.driver.OracleDriver] at URL [jdbc:oracle:thin:@rev2004.cvuojc8pwavn.us-east-2.rds.amazonaws.com:1521:ORCL]
+2020-06-01 20:56:45 INFO  pooling:124 - HHH10001001: Connection properties: {password=****, user=vendingmachine}
+2020-06-01 20:56:45 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2020-06-01 20:56:45 INFO  DriverManagerConnectionProviderImpl:249 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-06-01 20:56:45 INFO  Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2020-06-01 21:08:59 TRACE OfferHibernate:48 - Getting offer by id of: 1
+2020-06-01 21:08:59 DEBUG logging:44 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2020-06-01 21:08:59 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.16.Final
+2020-06-01 21:09:00 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-01 21:09:00 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-06-01 21:09:01 INFO  pooling:115 - HHH10001005: using driver [oracle.jdbc.driver.OracleDriver] at URL [jdbc:oracle:thin:@rev2004.cvuojc8pwavn.us-east-2.rds.amazonaws.com:1521:ORCL]
+2020-06-01 21:09:01 INFO  pooling:124 - HHH10001001: Connection properties: {password=****, user=vendingmachine}
+2020-06-01 21:09:01 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2020-06-01 21:09:01 INFO  DriverManagerConnectionProviderImpl:249 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-06-01 21:09:01 INFO  Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2020-06-01 21:09:03 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-01 21:09:03 TRACE OfferHibernate:56 - Offer [id=1, snacksOfInterest=[], snacksToOffer=[], status=3, timeOfferWasMade=5:06pm] Returned from Session
+2020-06-01 21:09:03 TRACE OfferHibernateTest:40 - Offer id = Offer [id=1, snacksOfInterest=[], snacksToOffer=[], status=3, timeOfferWasMade=5:06pm]
+2020-06-01 21:09:03 TRACE OfferHibernateTest:44 - Expected: 1 Actual: 1
+2020-06-01 21:27:58 TRACE OfferHibernate:48 - Getting offer by id of: 1
+2020-06-01 21:27:58 DEBUG logging:44 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2020-06-01 21:27:58 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.16.Final
+2020-06-01 21:27:59 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-01 21:27:59 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-06-01 21:27:59 INFO  pooling:115 - HHH10001005: using driver [oracle.jdbc.driver.OracleDriver] at URL [jdbc:oracle:thin:@rev2004.cvuojc8pwavn.us-east-2.rds.amazonaws.com:1521:ORCL]
+2020-06-01 21:27:59 INFO  pooling:124 - HHH10001001: Connection properties: {password=****, user=vendingmachine}
+2020-06-01 21:27:59 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2020-06-01 21:27:59 INFO  DriverManagerConnectionProviderImpl:249 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-06-01 21:28:00 INFO  Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2020-06-01 21:28:02 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-01 21:28:02 TRACE OfferHibernate:56 - Offer [id=1, snacksOfInterest=[], snacksToOffer=[], status=3, timeOfferWasMade=5:06pm] Returned from Session
+2020-06-01 21:28:02 TRACE OfferHibernateTest:40 - Offer id = Offer [id=1, snacksOfInterest=[], snacksToOffer=[], status=3, timeOfferWasMade=5:06pm]
+2020-06-01 21:28:02 TRACE OfferHibernateTest:44 - Expected: 1 Actual: 1
+2020-06-01 21:28:02 TRACE OfferHibernate:74 - SHOW ME THE MONEY!
+2020-06-01 21:31:51 TRACE OfferHibernate:48 - Getting offer by id of: 1
+2020-06-01 21:31:51 DEBUG logging:44 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2020-06-01 21:31:51 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.16.Final
+2020-06-01 21:31:52 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-01 21:31:52 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-06-01 21:31:52 INFO  pooling:115 - HHH10001005: using driver [oracle.jdbc.driver.OracleDriver] at URL [jdbc:oracle:thin:@rev2004.cvuojc8pwavn.us-east-2.rds.amazonaws.com:1521:ORCL]
+2020-06-01 21:31:52 INFO  pooling:124 - HHH10001001: Connection properties: {password=****, user=vendingmachine}
+2020-06-01 21:31:52 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2020-06-01 21:31:52 INFO  DriverManagerConnectionProviderImpl:249 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-06-01 21:31:53 INFO  Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2020-06-01 21:31:55 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-01 21:31:55 TRACE OfferHibernate:56 - Offer [id=1, snacksOfInterest=[], snacksToOffer=[], status=3, timeOfferWasMade=5:06pm] Returned from Session
+2020-06-01 21:31:55 TRACE OfferHibernateTest:40 - Offer id = Offer [id=1, snacksOfInterest=[], snacksToOffer=[], status=3, timeOfferWasMade=5:06pm]
+2020-06-01 21:31:55 TRACE OfferHibernateTest:44 - Expected: 1 Actual: 1
+2020-06-01 21:31:55 TRACE OfferHibernate:48 - Getting offer by id of: 1
+2020-06-01 21:31:55 TRACE OfferHibernate:56 - Offer [id=1, snacksOfInterest=[], snacksToOffer=[], status=3, timeOfferWasMade=5:06pm] Returned from Session
+2020-06-01 21:31:55 TRACE OfferHibernate:125 - Deleting: Offer [id=1, snacksOfInterest=[], snacksToOffer=[], status=3, timeOfferWasMade=5:06pm]
+2020-06-01 21:31:56 TRACE OfferHibernate:134 - Offer [id=1, snacksOfInterest=[], snacksToOffer=[], status=3, timeOfferWasMade=5:06pm] Deleted successfully
+2020-06-01 21:31:56 TRACE OfferHibernate:74 - SHOW ME THE MONEY!
+2020-06-01 21:37:07 TRACE OfferHibernate:48 - Getting offer by id of: 1
+2020-06-01 21:37:07 DEBUG logging:44 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2020-06-01 21:37:07 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.16.Final
+2020-06-01 21:37:08 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-01 21:37:08 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-06-01 21:37:08 INFO  pooling:115 - HHH10001005: using driver [oracle.jdbc.driver.OracleDriver] at URL [jdbc:oracle:thin:@rev2004.cvuojc8pwavn.us-east-2.rds.amazonaws.com:1521:ORCL]
+2020-06-01 21:37:08 INFO  pooling:124 - HHH10001001: Connection properties: {password=****, user=vendingmachine}
+2020-06-01 21:37:08 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2020-06-01 21:37:08 INFO  DriverManagerConnectionProviderImpl:249 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-06-01 21:37:09 INFO  Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2020-06-01 21:37:11 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-01 21:37:11 TRACE OfferHibernate:53 - Session contains a null offer
+2020-06-01 21:37:11 TRACE OfferHibernate:56 - null Returned from Session
+2020-06-01 21:37:11 TRACE OfferHibernateTest:40 - Offer id = null
+2020-06-01 21:37:11 TRACE OfferHibernate:48 - Getting offer by id of: 1
+2020-06-01 21:37:11 TRACE OfferHibernate:53 - Session contains a null offer
+2020-06-01 21:37:11 TRACE OfferHibernate:56 - null Returned from Session
+2020-06-01 21:37:11 TRACE OfferHibernate:125 - Deleting: null
+2020-06-01 21:37:11 TRACE OfferHibernate:140 - There was a problem deleting: null
+2020-06-01 21:37:11 TRACE OfferHibernate:74 - SHOW ME THE MONEY!
+2020-06-01 21:37:12 TRACE OfferHibernate:85 - Offers in List are: [Offer [id=2, snacksOfInterest=[], snacksToOffer=[], status=3, timeOfferWasMade=5:06pm]]
+2020-06-01 21:42:10 TRACE OfferHibernate:48 - Getting offer by id of: 1
+2020-06-01 21:42:10 DEBUG logging:44 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2020-06-01 21:42:10 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.16.Final
+2020-06-01 21:42:11 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-01 21:42:11 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-06-01 21:42:11 INFO  pooling:115 - HHH10001005: using driver [oracle.jdbc.driver.OracleDriver] at URL [jdbc:oracle:thin:@rev2004.cvuojc8pwavn.us-east-2.rds.amazonaws.com:1521:ORCL]
+2020-06-01 21:42:11 INFO  pooling:124 - HHH10001001: Connection properties: {password=****, user=vendingmachine}
+2020-06-01 21:42:11 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2020-06-01 21:42:11 INFO  DriverManagerConnectionProviderImpl:249 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-06-01 21:42:12 INFO  Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2020-06-01 21:42:14 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-01 21:42:14 TRACE OfferHibernate:53 - Session contains a null offer
+2020-06-01 21:42:14 TRACE OfferHibernate:56 - null Returned from Session
+2020-06-01 21:42:14 TRACE OfferHibernateTest:43 - Offer id = null
+2020-06-01 21:42:14 TRACE OfferHibernate:48 - Getting offer by id of: 2
+2020-06-01 21:42:14 TRACE OfferHibernate:56 - Offer [id=2, snacksOfInterest=[], snacksToOffer=[], status=3, timeOfferWasMade=5:06pm] Returned from Session
+2020-06-01 21:42:14 TRACE OfferHibernate:125 - Deleting: Offer [id=2, snacksOfInterest=[], snacksToOffer=[], status=3, timeOfferWasMade=5:06pm]
+2020-06-01 21:53:30 TRACE OfferHibernate:48 - Getting offer by id of: 1
+2020-06-01 21:53:30 DEBUG logging:44 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2020-06-01 21:53:30 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.16.Final
+2020-06-01 21:53:30 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-01 21:53:31 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-06-01 21:53:31 INFO  pooling:115 - HHH10001005: using driver [oracle.jdbc.driver.OracleDriver] at URL [jdbc:oracle:thin:@rev2004.cvuojc8pwavn.us-east-2.rds.amazonaws.com:1521:ORCL]
+2020-06-01 21:53:31 INFO  pooling:124 - HHH10001001: Connection properties: {password=****, user=vendingmachine}
+2020-06-01 21:53:31 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2020-06-01 21:53:31 INFO  DriverManagerConnectionProviderImpl:249 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-06-01 21:53:34 INFO  Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2020-06-01 21:53:36 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-01 21:53:36 TRACE OfferHibernate:53 - Session contains a null offer
+2020-06-01 21:53:36 TRACE OfferHibernate:56 - null Returned from Session
+2020-06-01 21:53:36 TRACE OfferHibernateTest:43 - Offer id = null
+2020-06-01 21:53:36 TRACE OfferHibernate:48 - Getting offer by id of: 1
+2020-06-01 21:53:36 TRACE OfferHibernate:53 - Session contains a null offer
+2020-06-01 21:53:36 TRACE OfferHibernate:56 - null Returned from Session
+2020-06-01 21:53:36 TRACE OfferHibernateTest:43 - Offer id = null
+2020-06-01 21:54:52 TRACE OfferHibernate:21 - adding Offer: Offer [id=4, snacksOfInterest=null, snacksToOffer=null, status=null, timeOfferWasMade=9:49]
+2020-06-01 21:54:52 DEBUG logging:44 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2020-06-01 21:54:52 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.16.Final
+2020-06-01 21:54:53 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-01 21:54:53 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-06-01 21:54:53 INFO  pooling:115 - HHH10001005: using driver [oracle.jdbc.driver.OracleDriver] at URL [jdbc:oracle:thin:@rev2004.cvuojc8pwavn.us-east-2.rds.amazonaws.com:1521:ORCL]
+2020-06-01 21:54:53 INFO  pooling:124 - HHH10001001: Connection properties: {password=****, user=vendingmachine}
+2020-06-01 21:54:53 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2020-06-01 21:54:53 INFO  DriverManagerConnectionProviderImpl:249 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-06-01 21:54:54 INFO  Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2020-06-01 21:54:56 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-01 21:55:43 TRACE OfferHibernate:21 - adding Offer: Offer [id=4, snacksOfInterest=null, snacksToOffer=null, status=null, timeOfferWasMade=9:49]
+2020-06-01 21:55:43 DEBUG logging:44 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2020-06-01 21:55:43 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.16.Final
+2020-06-01 21:55:44 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-01 21:55:44 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-06-01 21:55:45 INFO  pooling:115 - HHH10001005: using driver [oracle.jdbc.driver.OracleDriver] at URL [jdbc:oracle:thin:@rev2004.cvuojc8pwavn.us-east-2.rds.amazonaws.com:1521:ORCL]
+2020-06-01 21:55:45 INFO  pooling:124 - HHH10001001: Connection properties: {password=****, user=vendingmachine}
+2020-06-01 21:55:45 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2020-06-01 21:55:45 INFO  DriverManagerConnectionProviderImpl:249 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-06-01 21:55:45 INFO  Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2020-06-01 21:55:47 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-01 21:56:10 TRACE OfferHibernate:48 - Getting offer by id of: 1
+2020-06-01 21:56:10 DEBUG logging:44 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2020-06-01 21:56:10 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.16.Final
+2020-06-01 21:56:11 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-01 21:56:11 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-06-01 21:56:11 INFO  pooling:115 - HHH10001005: using driver [oracle.jdbc.driver.OracleDriver] at URL [jdbc:oracle:thin:@rev2004.cvuojc8pwavn.us-east-2.rds.amazonaws.com:1521:ORCL]
+2020-06-01 21:56:11 INFO  pooling:124 - HHH10001001: Connection properties: {password=****, user=vendingmachine}
+2020-06-01 21:56:11 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2020-06-01 21:56:11 INFO  DriverManagerConnectionProviderImpl:249 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-06-01 21:56:12 INFO  Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2020-06-01 21:56:14 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-01 21:56:14 TRACE OfferHibernate:53 - Session contains a null offer
+2020-06-01 21:56:14 TRACE OfferHibernate:56 - null Returned from Session
+2020-06-01 21:56:14 TRACE OfferHibernateTest:42 - Offer id = null
+2020-06-01 21:56:38 WARN  SqlExceptionHelper:137 - SQL Error: 1, SQLState: 23000
+2020-06-01 21:56:38 ERROR SqlExceptionHelper:142 - ORA-00001: unique constraint (VENDINGMACHINE.PK_OFFER) violated
+
+2020-06-01 21:56:38 TRACE OfferHibernate:34 - Exception occured when adding Offer  javax.persistence.PersistenceException: org.hibernate.exception.ConstraintViolationException: could not execute statement
+2020-06-01 21:56:38 TRACE OfferHibernate:35 - Transaction: org.hibernate.engine.transaction.internal.TransactionImpl@6b9c42bd
+2020-06-01 21:56:38 TRACE OfferHibernate:36 - Offer: Offer [id=1, snacksOfInterest=null, snacksToOffer=null, status=null, timeOfferWasMade=9:49]
+2020-06-01 21:56:38 TRACE OfferHibernate:48 - Getting offer by id of: 1
+2020-06-01 21:56:38 TRACE OfferHibernate:56 - Offer [id=1, snacksOfInterest=[], snacksToOffer=[], status=3, timeOfferWasMade=5:06pm] Returned from Session
+2020-06-01 21:56:38 TRACE OfferHibernateTest:42 - Offer id = Offer [id=1, snacksOfInterest=[], snacksToOffer=[], status=3, timeOfferWasMade=5:06pm]
+2020-06-01 21:56:38 TRACE OfferHibernateTest:46 - Expected: 1 Actual: 1
+2020-06-01 21:56:41 WARN  SqlExceptionHelper:137 - SQL Error: 60, SQLState: 61000
+2020-06-01 21:56:41 ERROR SqlExceptionHelper:142 - ORA-00060: deadlock detected while waiting for resource
+
+2020-06-01 21:56:41 TRACE OfferHibernate:134 - Offer [id=2, snacksOfInterest=[], snacksToOffer=[], status=3, timeOfferWasMade=5:06pm] Deleted successfully
+2020-06-01 21:56:41 TRACE OfferHibernate:74 - SHOW ME THE MONEY!
+2020-06-01 21:56:41 TRACE OfferHibernate:34 - Exception occured when adding Offer  javax.persistence.OptimisticLockException: org.hibernate.exception.LockAcquisitionException: could not execute statement
+2020-06-01 21:56:41 TRACE OfferHibernate:35 - Transaction: org.hibernate.engine.transaction.internal.TransactionImpl@33324c05
+2020-06-01 21:56:41 TRACE OfferHibernate:36 - Offer: Offer [id=2, snacksOfInterest=null, snacksToOffer=null, status=null, timeOfferWasMade=9:49]
+2020-06-01 21:56:41 TRACE OfferHibernate:48 - Getting offer by id of: 1
+2020-06-01 21:56:41 TRACE OfferHibernate:56 - Offer [id=1, snacksOfInterest=[], snacksToOffer=[], status=3, timeOfferWasMade=5:06pm] Returned from Session
+2020-06-01 21:56:41 TRACE OfferHibernateTest:42 - Offer id = Offer [id=1, snacksOfInterest=[], snacksToOffer=[], status=3, timeOfferWasMade=5:06pm]
+2020-06-01 21:56:41 TRACE OfferHibernateTest:46 - Expected: 1 Actual: 1
+2020-06-01 21:56:41 TRACE OfferHibernate:85 - Offers in List are: [Offer [id=1, snacksOfInterest=[], snacksToOffer=[], status=3, timeOfferWasMade=5:06pm], Offer [id=3, snacksOfInterest=[], snacksToOffer=[], status=3, timeOfferWasMade=5:06pm], Offer [id=4, snacksOfInterest=[], snacksToOffer=[], status=3, timeOfferWasMade=5:06pm]]
+2020-06-01 21:56:41 TRACE OfferHibernate:48 - Getting offer by id of: 1
+2020-06-01 21:56:41 TRACE OfferHibernate:56 - Offer [id=1, snacksOfInterest=[], snacksToOffer=[], status=3, timeOfferWasMade=5:06pm] Returned from Session
+2020-06-01 21:56:41 TRACE OfferHibernateTest:43 - Offer id = Offer [id=1, snacksOfInterest=[], snacksToOffer=[], status=3, timeOfferWasMade=5:06pm]
+2020-06-01 21:56:41 TRACE OfferHibernateTest:47 - Expected: 1 Actual: 1
+2020-06-01 21:56:41 TRACE OfferHibernate:48 - Getting offer by id of: 2
+2020-06-01 21:56:41 TRACE OfferHibernate:53 - Session contains a null offer
+2020-06-01 21:56:41 TRACE OfferHibernate:56 - null Returned from Session
+2020-06-01 21:56:41 TRACE OfferHibernate:125 - Deleting: null
+2020-06-01 21:56:41 TRACE OfferHibernate:140 - There was a problem deleting: null
+2020-06-01 21:56:41 TRACE OfferHibernate:74 - SHOW ME THE MONEY!
+2020-06-01 21:56:41 TRACE OfferHibernate:85 - Offers in List are: [Offer [id=1, snacksOfInterest=[], snacksToOffer=[], status=3, timeOfferWasMade=5:06pm], Offer [id=3, snacksOfInterest=[], snacksToOffer=[], status=3, timeOfferWasMade=5:06pm], Offer [id=4, snacksOfInterest=[], snacksToOffer=[], status=3, timeOfferWasMade=5:06pm]]
+2020-06-01 21:56:41 TRACE OfferHibernate:48 - Getting offer by id of: 2
+2020-06-01 21:56:41 TRACE OfferHibernate:53 - Session contains a null offer
+2020-06-01 21:56:41 TRACE OfferHibernate:56 - null Returned from Session
+2020-06-01 21:56:41 TRACE OfferHibernate:125 - Deleting: null
+2020-06-01 21:56:41 TRACE OfferHibernate:140 - There was a problem deleting: null
+2020-06-01 21:56:41 TRACE OfferHibernate:74 - SHOW ME THE MONEY!
+2020-06-01 21:56:42 TRACE OfferHibernate:85 - Offers in List are: [Offer [id=1, snacksOfInterest=[], snacksToOffer=[], status=3, timeOfferWasMade=5:06pm], Offer [id=3, snacksOfInterest=[], snacksToOffer=[], status=3, timeOfferWasMade=5:06pm], Offer [id=4, snacksOfInterest=[], snacksToOffer=[], status=3, timeOfferWasMade=5:06pm]]
+2020-06-01 21:56:46 TRACE OfferHibernate:48 - Getting offer by id of: 1
+2020-06-01 21:56:46 DEBUG logging:44 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2020-06-01 21:56:46 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.16.Final
+2020-06-01 21:56:47 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-01 21:56:47 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-06-01 21:56:47 INFO  pooling:115 - HHH10001005: using driver [oracle.jdbc.driver.OracleDriver] at URL [jdbc:oracle:thin:@rev2004.cvuojc8pwavn.us-east-2.rds.amazonaws.com:1521:ORCL]
+2020-06-01 21:56:47 INFO  pooling:124 - HHH10001001: Connection properties: {password=****, user=vendingmachine}
+2020-06-01 21:56:47 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2020-06-01 21:56:47 INFO  DriverManagerConnectionProviderImpl:249 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-06-01 21:56:48 INFO  Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2020-06-01 21:56:50 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-01 21:56:50 TRACE OfferHibernate:56 - Offer [id=1, snacksOfInterest=[], snacksToOffer=[], status=3, timeOfferWasMade=5:06pm] Returned from Session
+2020-06-01 21:56:50 TRACE OfferHibernateTest:42 - Offer id = Offer [id=1, snacksOfInterest=[], snacksToOffer=[], status=3, timeOfferWasMade=5:06pm]
+2020-06-01 21:56:50 TRACE OfferHibernateTest:46 - Expected: 1 Actual: 1
+2020-06-01 21:57:32 TRACE OfferHibernate:21 - adding Offer: Offer [id=5, snacksOfInterest=null, snacksToOffer=null, status=null, timeOfferWasMade=9:49]
+2020-06-01 21:57:32 DEBUG logging:44 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2020-06-01 21:57:32 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.16.Final
+2020-06-01 21:57:33 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-01 21:57:33 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-06-01 21:57:33 INFO  pooling:115 - HHH10001005: using driver [oracle.jdbc.driver.OracleDriver] at URL [jdbc:oracle:thin:@rev2004.cvuojc8pwavn.us-east-2.rds.amazonaws.com:1521:ORCL]
+2020-06-01 21:57:33 INFO  pooling:124 - HHH10001001: Connection properties: {password=****, user=vendingmachine}
+2020-06-01 21:57:33 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2020-06-01 21:57:33 INFO  DriverManagerConnectionProviderImpl:249 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-06-01 21:57:34 INFO  Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2020-06-01 21:57:36 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-01 21:57:36 WARN  SqlExceptionHelper:137 - SQL Error: 1, SQLState: 23000
+2020-06-01 21:57:36 ERROR SqlExceptionHelper:142 - ORA-00001: unique constraint (VENDINGMACHINE.PK_OFFER) violated
+
+2020-06-01 21:57:36 TRACE OfferHibernate:34 - Exception occured when adding Offer  javax.persistence.PersistenceException: org.hibernate.exception.ConstraintViolationException: could not execute statement
+2020-06-01 21:57:36 TRACE OfferHibernate:35 - Transaction: org.hibernate.engine.transaction.internal.TransactionImpl@129c4d19
+2020-06-01 21:57:36 TRACE OfferHibernate:36 - Offer: Offer [id=3, snacksOfInterest=null, snacksToOffer=null, status=null, timeOfferWasMade=9:49]
+2020-06-01 21:57:37 TRACE OfferHibernate:48 - Getting offer by id of: 1
+2020-06-01 21:57:37 TRACE OfferHibernate:56 - Offer [id=1, snacksOfInterest=[], snacksToOffer=[], status=3, timeOfferWasMade=5:06pm] Returned from Session
+2020-06-01 21:57:37 TRACE OfferHibernateTest:42 - Offer id = Offer [id=1, snacksOfInterest=[], snacksToOffer=[], status=3, timeOfferWasMade=5:06pm]
+2020-06-01 21:57:37 TRACE OfferHibernateTest:46 - Expected: 1 Actual: 1
+2020-06-01 21:59:38 TRACE OfferHibernate:21 - adding Offer: Offer [id=5, snacksOfInterest=null, snacksToOffer=null, status=null, timeOfferWasMade=9:49]
+2020-06-01 21:59:38 DEBUG logging:44 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2020-06-01 21:59:38 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.16.Final
+2020-06-01 21:59:39 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-01 21:59:39 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-06-01 21:59:39 INFO  pooling:115 - HHH10001005: using driver [oracle.jdbc.driver.OracleDriver] at URL [jdbc:oracle:thin:@rev2004.cvuojc8pwavn.us-east-2.rds.amazonaws.com:1521:ORCL]
+2020-06-01 21:59:39 INFO  pooling:124 - HHH10001001: Connection properties: {password=****, user=vendingmachine}
+2020-06-01 21:59:39 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2020-06-01 21:59:39 INFO  DriverManagerConnectionProviderImpl:249 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-06-01 21:59:40 INFO  Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2020-06-01 21:59:41 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-01 21:59:42 WARN  SqlExceptionHelper:137 - SQL Error: 1, SQLState: 23000
+2020-06-01 21:59:42 ERROR SqlExceptionHelper:142 - ORA-00001: unique constraint (VENDINGMACHINE.PK_OFFER) violated
+
+2020-06-01 21:59:42 TRACE OfferHibernate:34 - Exception occured when adding Offer  javax.persistence.PersistenceException: org.hibernate.exception.ConstraintViolationException: could not execute statement
+2020-06-01 21:59:42 TRACE OfferHibernate:35 - Transaction: org.hibernate.engine.transaction.internal.TransactionImpl@129c4d19
+2020-06-01 21:59:42 TRACE OfferHibernate:36 - Offer: Offer [id=4, snacksOfInterest=null, snacksToOffer=null, status=null, timeOfferWasMade=9:49]
+2020-06-01 21:59:42 TRACE OfferHibernate:48 - Getting offer by id of: 5
+2020-06-01 21:59:42 TRACE OfferHibernate:53 - Session contains a null offer
+2020-06-01 21:59:42 TRACE OfferHibernate:56 - null Returned from Session
+2020-06-01 21:59:42 TRACE OfferHibernate:48 - Getting offer by id of: 1
+2020-06-01 21:59:42 TRACE OfferHibernate:56 - Offer [id=1, snacksOfInterest=[], snacksToOffer=[], status=3, timeOfferWasMade=5:06pm] Returned from Session
+2020-06-01 21:59:42 TRACE OfferHibernateTest:42 - Offer id = Offer [id=1, snacksOfInterest=[], snacksToOffer=[], status=3, timeOfferWasMade=5:06pm]
+2020-06-01 21:59:42 TRACE OfferHibernateTest:46 - Expected: 1 Actual: 1
+2020-06-01 22:06:08 TRACE OfferHibernate:21 - adding Offer: Offer [id=5, snacksOfInterest=null, snacksToOffer=null, status=null, timeOfferWasMade=9:49]
+2020-06-01 22:06:08 DEBUG logging:44 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2020-06-01 22:06:08 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.16.Final
+2020-06-01 22:06:09 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-01 22:06:09 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-06-01 22:06:09 INFO  pooling:115 - HHH10001005: using driver [oracle.jdbc.driver.OracleDriver] at URL [jdbc:oracle:thin:@rev2004.cvuojc8pwavn.us-east-2.rds.amazonaws.com:1521:ORCL]
+2020-06-01 22:06:09 INFO  pooling:124 - HHH10001001: Connection properties: {password=****, user=vendingmachine}
+2020-06-01 22:06:09 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2020-06-01 22:06:09 INFO  DriverManagerConnectionProviderImpl:249 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-06-01 22:06:10 INFO  Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2020-06-01 22:06:12 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-01 22:06:12 TRACE OfferHibernate:29 - Offer [id=5, snacksOfInterest=null, snacksToOffer=null, status=null, timeOfferWasMade=9:49] Added as an offer
+2020-06-01 22:06:12 TRACE OfferHibernate:75 - Getting offer by id of: 5
+2020-06-01 22:06:12 TRACE OfferHibernate:83 - Offer [id=5, snacksOfInterest=[], snacksToOffer=[], status=null, timeOfferWasMade=9:49] Returned from Session
+2020-06-01 22:06:12 TRACE OfferHibernate:75 - Getting offer by id of: 1
+2020-06-01 22:06:12 TRACE OfferHibernate:83 - Offer [id=1, snacksOfInterest=[], snacksToOffer=[], status=3, timeOfferWasMade=5:06pm] Returned from Session
+2020-06-01 22:06:12 TRACE OfferHibernateTest:42 - Offer id = Offer [id=1, snacksOfInterest=[], snacksToOffer=[], status=3, timeOfferWasMade=5:06pm]
+2020-06-01 22:06:12 TRACE OfferHibernateTest:46 - Expected: 1 Actual: 1

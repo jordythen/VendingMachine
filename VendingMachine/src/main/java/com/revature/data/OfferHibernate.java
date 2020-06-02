@@ -15,7 +15,35 @@ public class OfferHibernate implements OfferDAO {
 	
 	private HibernateUtil conn = HibernateUtil.getHibernateUtil();
 	Logger logger = Logger.getLogger(OfferHibernate.class);
+	
+	
+	public void addOffer(Offer t) {
+		logger.trace("adding Offer: " + t);
+		Session session = conn.getSession();
+		Transaction transaction = null;
+		
+		try {
+			transaction = session.beginTransaction();
+			session.save(t);
+			transaction.commit();
+			logger.trace(t + " Added as an offer");
+		}
+		catch(Exception e) {
+			if(transaction != null) {
+				transaction.rollback();
+				logger.trace("Exception occured when adding Offer  " + e );
+				logger.trace("Transaction: " + transaction);
+				logger.trace("Offer: " + t);
+			}
+		}
+		finally {
+			session.close();
+		}
 
+		//return t.getId();
+	}
+
+	// Do we need an add method to return an Integer?
 	@Override
 	public Integer add(Offer t) {
 		logger.trace("adding Offer: " + t);
@@ -147,13 +175,13 @@ public class OfferHibernate implements OfferDAO {
 	}// end delete method
 
 	@Override
-	public List<Offer> getAllOffersByVendingID(Integer id) {
-		logger.trace("Getting offer from Vending Machine number: " + id);
+	public List<Offer> getAllOffersByVendingID(Offer vendingmachineID) {
+		logger.trace("Getting offer from Vending Machine number: " + vendingmachineID);
 		
 		Session session = conn.getSession();
 		String HQL = "From Offer where vendingmachineId=:id";
 		Query<Offer> query = session.createQuery(HQL, Offer.class);
-		query.setParameter("id", id);
+		query.setParameter("id", vendingmachineID);
 		List<Offer> offerList = query.getResultList();
 		
 		logger.trace("Found " + offerList.size() + " results");
@@ -163,9 +191,23 @@ public class OfferHibernate implements OfferDAO {
 		return offerList;
 	}
 
+	// I need to add a userID field in User bean for this to work. But its functionality will be needed
 	@Override
-	public List<Offer> getAllOffersByUserID() {
-		return null;
+	public List<Offer> getAllOffersByUserID(Integer userID) {
+		logger.trace("Getting all offers by userID" + userID);
+		
+		Session session = conn.getSession();
+		
+		String HQL =  "From OFFER where userID = :Id";
+		Query<Offer> query = session.createQuery(HQL, Offer.class);
+		query.setParameter("id", userID);
+		List<Offer> offerList = query.getResultList();
+		
+		logger.trace("found " + offerList.size() + " results");
+		
+		session.close();
+		
+		return offerList;
 	}
 
 	
