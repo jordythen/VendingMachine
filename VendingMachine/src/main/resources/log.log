@@ -3695,3 +3695,17 @@
 2020-06-02 08:25:58 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
 2020-06-02 08:25:59 TRACE OrderHibernate:92 - Getting all orders
 2020-06-02 08:25:59 TRACE OrderHibernate:104 - Orders in List are: [Order [id=1, tax=3.0, orderTotal=1.5, orderTime=8:21am]]
+2020-06-02 09:18:47 TRACE OrderHibernate:75 - Getting order by id1
+2020-06-02 09:18:47 DEBUG logging:44 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2020-06-02 09:18:47 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.16.Final
+2020-06-02 09:18:49 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-02 09:18:49 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-06-02 09:18:49 INFO  pooling:115 - HHH10001005: using driver [oracle.jdbc.driver.OracleDriver] at URL [jdbc:oracle:thin:@rev2004.cvuojc8pwavn.us-east-2.rds.amazonaws.com:1521:ORCL]
+2020-06-02 09:18:49 INFO  pooling:124 - HHH10001001: Connection properties: {password=****, user=vendingmachine}
+2020-06-02 09:18:49 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2020-06-02 09:18:49 INFO  DriverManagerConnectionProviderImpl:249 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-06-02 09:18:50 INFO  Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2020-06-02 09:18:53 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-02 09:18:53 TRACE OrderHibernate:84 - Order [id=1, tax=3.0, orderTotal=1.5, orderTime=8:21am] Returned from Session
+2020-06-02 09:18:53 TRACE OrderHibernate:92 - Getting all orders
+2020-06-02 09:18:53 TRACE OrderHibernate:104 - Orders in List are: [Order [id=1, tax=3.0, orderTotal=1.5, orderTime=8:21am]]
