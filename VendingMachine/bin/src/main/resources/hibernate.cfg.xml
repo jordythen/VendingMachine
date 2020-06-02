@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+
+	<session-factory>
+		
+		<!-- set up our JDBC connection info, same info that goes into our database properties -->
+		<property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+		<property name="hibernate.connection.url">jdbc:oracle:thin:@rev2004.cvuojc8pwavn.us-east-2.rds.amazonaws.com:1521:ORCL</property>
+		<property name="hibernate.connection.username">vendingmachine</property>
+		<property name="hibernate.connection.password">p4ssword</property>
+		
+		<!-- tell hibernate the SQL dialect -->
+		<property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property>
+		
+		<!-- other, optional settings -->
+		<property name="show_sql">true</property>
+		<property name="hibernate.format_sql">true</property>
+		<property name="use_sql_comments">true</property>
+		
+		<!-- tell Hibernate the mappings location -->
+		
+		<!-- WE AVOID THIS  -->
+		<!-- tags for mapping with xml -->
+		<!-- have one of these for each class -->
+		<!-- <mapping resource="User.hbm.xml"></mapping> -->
+		
+		<!-- tags for mapping with ANNOTATIONS!!!  -->
+		<mapping class="com.revature.beans.user.User"></mapping>
+		<mapping class="com.revature.beans.vendingmachine.VendingMachine"></mapping>
+		<mapping class="com.revature.beans.snack.Snack"></mapping>
+		<mapping class="com.revature.beans.snack.Type"></mapping>
+		<mapping class="com.revature.beans.user.Offer"></mapping>
+		<mapping class="com.revature.beans.user.Order"></mapping>
+		<mapping class="com.revature.beans.user.Review"></mapping>
+		
+	
+	</session-factory>
+</hibernate-configuration>
