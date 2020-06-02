@@ -21,6 +21,7 @@ import com.revature.beans.snack.Snack;
 import com.revature.beans.user.User;
 import com.revature.beans.vendingmachine.VendingMachine;
 import com.revature.services.SnackService;
+import com.revature.services.UserService;
 
 @RestController
 @CrossOrigin(origins="http://localhost:4200", allowCredentials="true")
@@ -28,10 +29,11 @@ import com.revature.services.SnackService;
 public class SnackController {
 	public static Logger log = Logger.getLogger(SnackController.class);
 	private SnackService sserv;
-	
+	private UserService userv;
 	@Autowired
-	public SnackController(SnackService s) {
+	public SnackController(SnackService s, UserService u) {
 		sserv=s;
+		userv=u;
 	}
 	
 	@GetMapping
@@ -51,21 +53,24 @@ public class SnackController {
 	}
 	
 	@PostMapping
-	public ResponseEntity<Snack> addSnack(@RequestBody Snack s){
+	public ResponseEntity<Snack> addSnack(@RequestBody Snack s, HttpSession session ){
 		s.setId(sserv.add(s));
+		updateSessionUser(session);
 		return ResponseEntity.ok(s);
 	}
 	
 	@PutMapping
-	public ResponseEntity<Snack> updateSnack(@RequestBody Snack s){
+	public ResponseEntity<Snack> updateSnack(@RequestBody Snack s, HttpSession session ){
 		sserv.update(s);
+		updateSessionUser(session);
 		return ResponseEntity.ok(sserv.getById(s.getId()));
 	}
 	
 	@DeleteMapping(path="/{id}")
-	public ResponseEntity<Void> deleteSnack(@PathVariable("id") Integer id){
+	public ResponseEntity<Void> deleteSnack(@PathVariable("id") Integer id, HttpSession session ){
 		Snack s=sserv.getById(id);
 		sserv.delete(s);
+		updateSessionUser(session);
 		return ResponseEntity.noContent().build();
 	}
 	
@@ -77,9 +82,18 @@ public class SnackController {
 			return ResponseEntity.status(400).build();
 		}else {
 			sserv.buySnackFromVendingMachine(s, buyer);
+			//User u2=userv.getById(u.getId());
+			u.setBalance(u.getBalance()-s.getCost());
+			userv.update(u);
+			updateSessionUser(session);
 			return ResponseEntity.ok().build();
 		}
 		
+	}
+	public void updateSessionUser(HttpSession session) {
+		User u=(User) session.getAttribute("user");
+		User u2=userv.getById(u.getId());
+		session.setAttribute("user", u2);
 	}
 	
 }

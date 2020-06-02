@@ -95,7 +95,7 @@ create table SNACK(
     --foreign key (vendingmachineID) references vendingmachine(id)
 );
 
-alter table snack add isHidden char(1);
+alter table snack add isHidden number(1);
 alter table snack add quantity number(5);
 
 --alter table snack drop column vendingmachineID;
@@ -223,7 +223,7 @@ create sequence type_seq;
 
 
 
-select * from review;
+--select * from review;
 
 
 
