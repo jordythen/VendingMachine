@@ -9,7 +9,7 @@ import javax.persistence.criteria.Root;
 
 import org.hibernate.query.NativeQuery;
 import org.hibernate.query.Query;
-
+import org.springframework.stereotype.Repository;
 import org.apache.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -17,6 +17,7 @@ import org.hibernate.Transaction;
 import com.revature.beans.user.User;
 import com.revature.utils.HibernateUtil;
 
+@Repository
 public class UserHibernate implements UserDAO{
 	private HibernateUtil connection = HibernateUtil.getHibernateUtil();
 	Logger log = Logger.getLogger(UserHibernate.class);
@@ -54,7 +55,10 @@ public class UserHibernate implements UserDAO{
 		log.trace("Hibernate session has been made");
 		User u = s.get(User.class, id);
 		log.info("THIS IS USER: " + u);
+		s.close();
 		log.trace("Got user with id "+ u.getId());
+		//log.trace("Got user with id "+ u.getId());
+		// For this log.trace if getById returns null, the above commented out line will cause error because u has no id
 		return u;
 	}
 
@@ -120,6 +124,7 @@ public class UserHibernate implements UserDAO{
 	@Override
 	public User getByUsernameAndPassword(String username, String password) {
 		log.trace("Getting user by username: " + username + " and password " + password);
+		User u = null;
 		Session s = connection.getSession();
 		CriteriaBuilder cb = s.getCriteriaBuilder();
 		CriteriaQuery<User> krit = cb.createQuery(User.class);
@@ -130,9 +135,12 @@ public class UserHibernate implements UserDAO{
 		Predicate predicateForUsernamePassword = cb.and(predicateForUsername, predicateForPassword);
 
 		krit.select(root).where(predicateForUsernamePassword);
-		
-		User u = s.createQuery(krit).getSingleResult();
-		
+		try {
+		u = s.createQuery(krit).getSingleResult();
+		}catch(Exception e) {
+			u = null;
+			log.warn("No account with username or password.");
+		}
 		return u;
 	}
 //	Session s = connection.getSession();

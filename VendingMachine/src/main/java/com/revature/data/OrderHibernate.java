@@ -7,10 +7,12 @@ import org.apache.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
+import org.springframework.stereotype.Repository;
 
 import com.revature.beans.user.Order;
 import com.revature.utils.HibernateUtil;
 
+@Repository
 public class OrderHibernate implements OrderDAO {
 	
 	private HibernateUtil conn = HibernateUtil.getHibernateUtil();

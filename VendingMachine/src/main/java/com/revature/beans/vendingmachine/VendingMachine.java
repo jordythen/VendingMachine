@@ -1,5 +1,6 @@
 package com.revature.beans.vendingmachine;
 
+import java.util.List;
 import java.util.Set;
 
 import javax.persistence.*;
@@ -31,7 +32,7 @@ public class VendingMachine {
 	@OneToMany(fetch=FetchType.EAGER,cascade=CascadeType.ALL)
 	@JoinTable(name="SNACK_VENDINGMACHINE", joinColumns=@JoinColumn(name="vendingmachine_id"),
 											inverseJoinColumns=@JoinColumn(name="snack_id"))
-	private Set<Snack> snacks;
+	private List<Snack> snacks;
 	
 	public Integer getId() {
 		return id;
@@ -81,11 +82,11 @@ public class VendingMachine {
 		this.secondaryColor = secondaryColor;
 	}
 
-	public Set<Snack> getSnacks() {
+	public List<Snack> getSnacks() {
 		return snacks;
 	}
 
-	public void setSnacks(Set<Snack> snacks) {
+	public void setSnacks(List<Snack> snacks) {
 		this.snacks = snacks;
 	}
 

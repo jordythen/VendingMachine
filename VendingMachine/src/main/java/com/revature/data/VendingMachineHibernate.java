@@ -2,8 +2,11 @@ package com.revature.data;
 
 import java.util.List;
 
-import org.hibernate.query.Query;
+import javax.persistence.TypedQuery;
 
+import org.hibernate.query.NativeQuery;
+import org.hibernate.query.Query;
+import org.springframework.stereotype.Repository;
 import org.apache.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -12,6 +15,7 @@ import com.revature.beans.snack.Type;
 import com.revature.beans.vendingmachine.VendingMachine;
 import com.revature.utils.HibernateUtil;
 
+@Repository
 public class VendingMachineHibernate implements VendingMachineDAO {
 	private HibernateUtil connection = HibernateUtil.getHibernateUtil();
 	Logger log = Logger.getLogger(VendingMachineHibernate.class);
@@ -26,6 +30,7 @@ public class VendingMachineHibernate implements VendingMachineDAO {
 		try {
 			tx = s.beginTransaction();
 			s.save(vm);
+			tx.commit();
 			log.trace("Successfully added VendingMachine " + vm.getName());
 			
 		}catch(Exception e) {
@@ -113,9 +118,9 @@ public class VendingMachineHibernate implements VendingMachineDAO {
 	public List<VendingMachine> getByName(String name) {
 		log.trace("Getting VendingMachines with name "+ name);
 		Session s = connection.getSession();
-		String hql = "FROM vendingmachine V WHERE V.vending_name = name";
-		Query<VendingMachine> q = s.createQuery(hql, VendingMachine.class);
-		List<VendingMachine> vmList = q.getResultList();
+		String sql = "SELECT * FROM vendingmachine WHERE vending_name = '" + name +"'";
+		NativeQuery<VendingMachine> nq = s.createNativeQuery(sql, VendingMachine.class);
+		List<VendingMachine> vmList = nq.getResultList();
 		log.trace("Got VendingMachines with name "+ name);
 		return vmList;
 	}
@@ -124,58 +129,56 @@ public class VendingMachineHibernate implements VendingMachineDAO {
 	   ordered by popularity(highest rating first) */
 	@Override
 	public List<VendingMachine> getByPopularityHighest() {
-		/*
+		
 		log.trace("Getting VendingMachines by popularity HIGHEST first");
 		Session s = connection.getSession();
-		
-		// TODO need to figure our joining, grouping, etc for hql or sql...
-		//String hql = "SELECT vendingmachine FROM review ORDER BY rating desc";
-		// ...need to get all reviews, group by VandingMachinId average the rating, 
-		// 		then select the vending machines?
-		
-		Query<VendingMachine> q = s.createQuery(hql, VendingMachine.class);
-		List<VendingMachine> vmList = q.getResultList();
+		String sql = "SELECT * FROM vendingmachine JOIN " + 
+				"(SELECT vendingmachineid, AVG(rating) AS rating FROM review " + 
+				"JOIN vendingmachine ON vendingmachineid = vendingmachine.id " + 
+				"GROUP BY vendingmachine.id) " + 
+				"ON vendingmachine.id = vendingmachineid " + 
+				"ORDER BY rating DESC";
+		NativeQuery<VendingMachine> nq = s.createNativeQuery(sql, VendingMachine.class);
+		List<VendingMachine> vmList = nq.getResultList();
 		log.trace("Got VendingMachines by popularity HIGHEST first");
 		return vmList;
-		*/
-		return null;
 	}
 	
 	/* 5.8 User can search for other people's VendingMachine 
 	   ordered by popularity(lowest rating first) */
 	@Override
 	public List<VendingMachine> getByPopularityLowest() {
-		/*
 		log.trace("Getting VendingMachines by popularity LOWEST first");
 		Session s = connection.getSession();
-		
-		// TODO need to figure our joining, grouping, etc for hql or sql...
-		
-		Query<VendingMachine> q = s.createQuery(hql, VendingMachine.class);
-		List<VendingMachine> vmList = q.getResultList();
+		String sql = "SELECT * FROM vendingmachine JOIN " + 
+				"(SELECT vendingmachineid, AVG(rating) AS rating FROM review " + 
+				"JOIN vendingmachine ON vendingmachineid = vendingmachine.id " + 
+				"GROUP BY vendingmachine.id) " + 
+				"ON vendingmachine.id = vendingmachineid " + 
+				"ORDER BY rating ASC";
+		NativeQuery<VendingMachine> nq = s.createNativeQuery(sql, VendingMachine.class);
+		List<VendingMachine> vmList = nq.getResultList();
 		log.trace("Got VendingMachines by popularity LOWEST first");
 		return vmList;
-		*/
-		return null;
 	}
 	
 	/* 5.9 User can search for other people's VendingMachine by Type */
 	@Override
 	public List<VendingMachine> getByType(Type t) {
-		
-		/*
 		log.trace("Getting VendingMachines by Type " + t.getSnacktype());
 		Session s = connection.getSession();
-		
-		// TODO need to figure our joining, grouping, etc for hql or sql...
-		// ...Type is for snacks... so need to get all machines having any snack of that type?
-		
-		Query<VendingMachine> q = s.createQuery(hql, VendingMachine.class);
-		List<VendingMachine> vmList = q.getResultList();
+		String sql = "select vendingmachine.id, vendingmachine.vending_name, vendingmachine.descript,"
+				+ " vendingmachine.theme, vendingmachine.main_color, vendingmachine.secondary_color" + 
+				"from vendingmachine" + 
+				"join snack_vendingmachine on vendingmachine.id = snack_vendingmachine.vendingmachine_id" + 
+				"join snack on snack_vendingmachine.snack_id = snack.id" + 
+				"join snack_snacktype on snack_snacktype.snackid = snack.id" + 
+				"join snacktype on snack_snacktype.typeid = snacktype.id" + 
+				"where snacktype.id = " + t.getId();
+		NativeQuery<VendingMachine> nq = s.createNativeQuery(sql, VendingMachine.class);
+		List<VendingMachine> vmList = nq.getResultList();
 		log.trace("Got VendingMachines by Type " + t.getSnacktype());
 		return vmList;
-		*/
-		return null;
 	}
 
 }

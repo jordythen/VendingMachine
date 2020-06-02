@@ -1,15 +1,15 @@
 /*- - - - - - - - Add sample data to tables - - - - - - - -*/
 
 -- ----------------- insert sample users -----------------
-/*
+
 INSERT INTO usertable (id, first_name, last_name, email, username, passwd, balance)
-    VALUES (1, 'Cookie', 'Monster', 'cmonster@email.com', 'cmonster', 'c123', 100.00);
+    VALUES (user_seq.nextval, 'Cookie', 'Monster', 'cmonster@email.com', 'cmonster', 'c123', 100.00);
     
 INSERT INTO usertable (id, first_name, last_name, email, username, passwd, balance)
-    VALUES (2, 'Joe', 'Smith', 'jsmith@email.com', 'jsmith', 'j123', 50.00);
+    VALUES (user_seq.nextval, 'Joe', 'Smith', 'jsmith@email.com', 'jsmith', 'j123', 50.00);
 
 -- ----------------- insert sample vending machines -----------------
-
+/*
 INSERT INTO vendingmachine (id, vending_name, descript, theme, main_color, secondary_color)
     VALUES (1, 'Monster Cookie Machine', 'The best cookies for a monster.', 'Cookies', '8E44AD', '85C1E9');
 
