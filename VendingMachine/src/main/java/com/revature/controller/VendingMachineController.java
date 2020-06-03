@@ -16,7 +16,7 @@ import com.revature.beans.vendingmachine.VendingMachine;
 import com.revature.services.VendingMachineService;
 
 @RestController
-@CrossOrigin(origins ="Http://localhost:4200", allowCredentials = "true")
+@CrossOrigin(origins ="http://localhost:4200", allowCredentials = "true")
 @RequestMapping(path="/vendingMachine")
 public class VendingMachineController {
 	private VendingMachineService vendingService; 
@@ -36,7 +36,7 @@ public class VendingMachineController {
 		
 	}
 	
-	@GetMapping(path = "/{id}")
+	@GetMapping(path = "/id/{id}")
 	public ResponseEntity<VendingMachine> getVendingMachineById(@PathVariable("id") int id){
 		VendingMachine vm = vendingService.getById(id);
 		
@@ -47,7 +47,7 @@ public class VendingMachineController {
 		return ResponseEntity.ok(vm);
 	}
 	
-	@GetMapping(path = "/{name}")
+	@GetMapping(path = "/name/{name}")
 	public ResponseEntity<List<VendingMachine>> getVendingMachineByName(@PathVariable("name") String name){
 		
 		List<VendingMachine> vm = vendingService.getByName(name);

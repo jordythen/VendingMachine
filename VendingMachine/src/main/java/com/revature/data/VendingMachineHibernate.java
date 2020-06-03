@@ -51,7 +51,7 @@ public class VendingMachineHibernate implements VendingMachineDAO {
 		log.trace("Getting VendingMachine with id "+ id);
 		Session s = connection.getSession();
 		VendingMachine vm = s.get(VendingMachine.class, id);
-		log.trace("Got user with id "+ vm.getId());
+		log.trace("Got vendingmachine "+ vm);
 		return vm;
 	}
 	
