@@ -164,8 +164,8 @@ public class VendingMachineHibernate implements VendingMachineDAO {
 	
 	/* 5.9 User can search for other people's VendingMachine by Type */
 	@Override
-	public List<VendingMachine> getByType(Type t) {
-		log.trace("Getting VendingMachines by Type " + t.getSnacktype());
+	public List<VendingMachine> getByType(int typeId) {
+		log.trace("Getting VendingMachines by Type id " + typeId);
 		Session s = connection.getSession();
 		String sql = "select vendingmachine.id, vendingmachine.vending_name, vendingmachine.descript,"
 				+ " vendingmachine.theme, vendingmachine.main_color, vendingmachine.secondary_color" + 
@@ -174,10 +174,10 @@ public class VendingMachineHibernate implements VendingMachineDAO {
 				"join snack on snack_vendingmachine.snack_id = snack.id" + 
 				"join snack_snacktype on snack_snacktype.snackid = snack.id" + 
 				"join snacktype on snack_snacktype.typeid = snacktype.id" + 
-				"where snacktype.id = " + t.getId();
+				"where snacktype.id = " + typeId;
 		NativeQuery<VendingMachine> nq = s.createNativeQuery(sql, VendingMachine.class);
 		List<VendingMachine> vmList = nq.getResultList();
-		log.trace("Got VendingMachines by Type " + t.getSnacktype());
+		log.trace("Got VendingMachines by Type id " + typeId);
 		return vmList;
 	}
 

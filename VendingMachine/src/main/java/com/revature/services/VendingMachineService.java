@@ -48,8 +48,8 @@ public class VendingMachineService implements GenericService<VendingMachine> {
 		return vmh.getByName(name);
 	}
 	
-	public List<VendingMachine> getByType(Type t){
-		return vmh.getByType(t);
+	public List<VendingMachine> getByType(int typeId){
+		return vmh.getByType(typeId);
 		
 	}
 	

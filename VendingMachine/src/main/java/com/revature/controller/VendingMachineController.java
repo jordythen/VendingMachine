@@ -57,9 +57,9 @@ public class VendingMachineController {
 	}
 	
 	@GetMapping(path = "/{type}")
-	public ResponseEntity<List<VendingMachine>> getVendingMachineByType(@PathVariable("type") Type type){
+	public ResponseEntity<List<VendingMachine>> getVendingMachineByType(@PathVariable("type") int typeId){
 		
-		List<VendingMachine> vm = vendingService.getByType(type);
+		List<VendingMachine> vm = vendingService.getByType(typeId);
 		
 		return ResponseEntity.ok(vm);
 	}
