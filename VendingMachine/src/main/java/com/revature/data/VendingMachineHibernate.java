@@ -52,6 +52,7 @@ public class VendingMachineHibernate implements VendingMachineDAO {
 		Session s = connection.getSession();
 		VendingMachine vm = s.get(VendingMachine.class, id);
 		log.trace("Got vendingmachine "+ vm);
+		s.close();
 		return vm;
 	}
 	
@@ -76,6 +77,27 @@ public class VendingMachineHibernate implements VendingMachineDAO {
 		try {
 			tx = s.beginTransaction();
 			s.update(vm);
+			tx.commit();
+			log.trace("VendingMachine updated");
+		}
+		catch(Exception e){
+			if(tx != null) {
+				tx.rollback();
+				log.warn(e);
+			}
+		}
+		finally {
+			s.close();
+		}
+	}
+	
+	public void merge(VendingMachine vm) {
+		log.trace("Updating VendingMachine " + vm.getName());
+		Session s = connection.getSession();
+		Transaction tx = null;
+		try {
+			tx = s.beginTransaction();
+			s.merge(vm);
 			tx.commit();
 			log.trace("VendingMachine updated");
 		}

@@ -77,6 +77,7 @@ public class SnackController {
 	@PutMapping(path="/buywithmoney")
 	public ResponseEntity<Void> buySnackWithMoney(@RequestBody Snack s, HttpSession session){
 		User u=(User) session.getAttribute("user");
+		log.info("Received purchase request...");
 		VendingMachine buyer=u.getVendingMachine();
 		if (buyer==null|| s==null) {
 			return ResponseEntity.status(400).build();
@@ -84,7 +85,7 @@ public class SnackController {
 			sserv.buySnackFromVendingMachine(s, buyer);
 			//User u2=userv.getById(u.getId());
 			u.setBalance(u.getBalance()-s.getCost());
-			userv.update(u);
+			userv.merge(u);
 			updateSessionUser(session);
 			return ResponseEntity.ok().build();
 		}
