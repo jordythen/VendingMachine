@@ -60,7 +60,7 @@ public class VendingMachineHibernate implements VendingMachineDAO {
 	public List<VendingMachine> getAll() {
 		log.trace("Getting all VendingMachines from the database");
 		Session s = connection.getSession();
-		String hql = "FROM vendingmachine";
+		String hql = "FROM VendingMachine";
 		Query<VendingMachine> q = s.createQuery(hql, VendingMachine.class);
 		List<VendingMachine> vmList = q.getResultList();
 		s.close();
