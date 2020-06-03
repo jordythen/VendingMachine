@@ -17,5 +17,5 @@ public interface VendingMachineDAO extends GenericDAO<VendingMachine> {
 	public List<VendingMachine> getByPopularityLowest();
 	
 	//5.9 User can search for other people's vending machine by type
-	public List<VendingMachine> getByType(Type t);
+	public List<VendingMachine> getByType(int typeId);
 }
