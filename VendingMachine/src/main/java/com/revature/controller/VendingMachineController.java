@@ -40,9 +40,11 @@ public class VendingMachineController {
 	public ResponseEntity<VendingMachine> getVendingMachineById(@PathVariable("id") int id){
 		VendingMachine vm = vendingService.getById(id);
 		
-		if(vm == null) {
-			return ResponseEntity.notFound().build();
-		}
+		/* Commented out by Michael: I'm now checking for a null object on front end to 
+		   show a message that there were no matches, instead of throwing this error. */
+		//if(vm == null) {
+		//	return ResponseEntity.notFound().build();
+		//}
 		
 		return ResponseEntity.ok(vm);
 	}
@@ -56,15 +58,15 @@ public class VendingMachineController {
 		
 	}
 	
-	@GetMapping(path = "/{type}")
-	public ResponseEntity<List<VendingMachine>> getVendingMachineByType(@PathVariable("type") int typeId){
+	@GetMapping(path = "/type/{type}")
+	public ResponseEntity<List<VendingMachine>> getVendingMachineByType(@PathVariable("type") int type){
 		
-		List<VendingMachine> vm = vendingService.getByType(typeId);
+		List<VendingMachine> vm = vendingService.getByType(type);
 		
 		return ResponseEntity.ok(vm);
 	}
 	
-	@GetMapping(path = "/{popularity/highest")
+	@GetMapping(path = "/popularity/highest")
 	public ResponseEntity<List<VendingMachine>> getHighestRatedMachine(){
 		
 		List<VendingMachine> vm = vendingService.getByHighestPopularity();
@@ -72,7 +74,7 @@ public class VendingMachineController {
 		return ResponseEntity.ok(vm);
 	}
 	
-	@GetMapping(path = "/{popularity/lowest")
+	@GetMapping(path = "/popularity/lowest")
 	public ResponseEntity<List<VendingMachine>> getLowestRatedMachine(){
 		
 		List<VendingMachine> vm = vendingService.getByLowestPopularity();
