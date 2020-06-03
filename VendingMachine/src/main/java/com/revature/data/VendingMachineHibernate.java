@@ -1,5 +1,7 @@
 package com.revature.data;
 
+import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 
 import javax.persistence.TypedQuery;
@@ -189,18 +191,20 @@ public class VendingMachineHibernate implements VendingMachineDAO {
 	public List<VendingMachine> getByType(int typeId) {
 		log.trace("Getting VendingMachines by Type id " + typeId);
 		Session s = connection.getSession();
-		String sql = "select vendingmachine.id, vendingmachine.vending_name, vendingmachine.descript,"
-				+ " vendingmachine.theme, vendingmachine.main_color, vendingmachine.secondary_color" + 
-				"from vendingmachine" + 
-				"join snack_vendingmachine on vendingmachine.id = snack_vendingmachine.vendingmachine_id" + 
-				"join snack on snack_vendingmachine.snack_id = snack.id" + 
-				"join snack_snacktype on snack_snacktype.snackid = snack.id" + 
-				"join snacktype on snack_snacktype.typeid = snacktype.id" + 
-				"where snacktype.id = " + typeId;
+		String sql = "SELECT vendingmachine.id, vendingmachine.vending_name, vendingmachine.descript, "
+				+ "vendingmachine.theme, vendingmachine.main_color, vendingmachine.secondary_color " + 
+				"FROM vendingmachine " +
+				"JOIN snack_vendingmachine ON vendingmachine.id = snack_vendingmachine.vendingmachine_id " + 
+				"JOIN snack ON snack_vendingmachine.snack_id = snack.id " + 
+				"JOIN snack_snacktype ON snack_snacktype.snackid = snack.id " + 
+				"JOIN snacktype ON snack_snacktype.typeid = snacktype.id " + 
+				"WHERE snacktype.id = " + typeId;
 		NativeQuery<VendingMachine> nq = s.createNativeQuery(sql, VendingMachine.class);
 		List<VendingMachine> vmList = nq.getResultList();
+		// scrub duplicates from list using a set
+		List<VendingMachine> vmListNoDup = new ArrayList<>(new HashSet<>(vmList));
 		log.trace("Got VendingMachines by Type id " + typeId);
-		return vmList;
+		return vmListNoDup;
 	}
 
 }
