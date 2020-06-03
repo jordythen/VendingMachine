@@ -82,10 +82,10 @@ public class SnackController {
 		if (buyer==null|| s==null) {
 			return ResponseEntity.status(400).build();
 		}else {
-			sserv.buySnackFromVendingMachine(s, buyer);
+			sserv.buySnackFromVendingMachine(s, buyer, u);
 			//User u2=userv.getById(u.getId());
-			u.setBalance(u.getBalance()-s.getCost());
-			userv.merge(u);
+//			u.setBalance(u.getBalance()-s.getCost());
+//			userv.merge(u);
 			updateSessionUser(session);
 			return ResponseEntity.ok().build();
 		}
