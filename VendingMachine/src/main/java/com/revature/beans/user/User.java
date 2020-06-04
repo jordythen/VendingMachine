@@ -1,5 +1,6 @@
 package com.revature.beans.user;
 
+import java.util.List;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
@@ -52,7 +53,7 @@ public class User {
 	@OneToMany(fetch=FetchType.EAGER,cascade=CascadeType.ALL)
 	@JoinTable(name="SNACKOFFER", joinColumns=@JoinColumn(name="userid"),
 								inverseJoinColumns=@JoinColumn(name="offerid"))
-	private Set<Offer> pendingOffers;
+	private List<Offer> pendingOffers;
 	
 	
 	@OneToMany(fetch=FetchType.EAGER,cascade=CascadeType.ALL)
@@ -115,10 +116,10 @@ public class User {
 	public void setVendingMachine(VendingMachine vendingMachine) {
 		this.vendingMachine = vendingMachine;
 	}
-	public Set<Offer> getPendingOffers() {
+	public List<Offer> getPendingOffers() {
 		return pendingOffers;
 	}
-	public void setPendingOffers(Set<Offer> pendingOffers) {
+	public void setPendingOffers(List<Offer> pendingOffers) {
 		this.pendingOffers = pendingOffers;
 	}
 	public Set<Order> getOrderHistory() {
