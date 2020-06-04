@@ -23,7 +23,7 @@ import com.revature.services.UserService;
 import com.revature.services.VendingMachineService;
 
 @RestController
-@CrossOrigin(origins ="http://localhost:4200", allowCredentials = "true")
+@CrossOrigin(origins ="http://vendingmachine-s3.s3-website.us-east-2.amazonaws.com", allowCredentials = "true")
 @RequestMapping(path="/vendingMachine")
 public class VendingMachineController {
 	private VendingMachineService vendingService; 

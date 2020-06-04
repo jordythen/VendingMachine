@@ -223,7 +223,7 @@ create sequence type_seq;
 
 
 
-select * from vendingmachine;
+select * from usertable;
 
 
 
