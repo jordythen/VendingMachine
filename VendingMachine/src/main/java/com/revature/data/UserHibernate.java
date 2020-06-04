@@ -97,6 +97,30 @@ public class UserHibernate implements UserDAO{
 		}
 		
 	}
+	
+	public void merge(User t) {
+		log.trace("updating user Id" + t.getId());
+		Session s = connection.getSession();
+		Transaction tx = null;
+		try {
+			tx = s.beginTransaction();
+			s.merge(t);
+			tx.commit();
+			log.trace("User updated");
+			
+		}
+		catch(Exception e){
+			if(tx != null) {
+				tx.rollback();
+				log.warn(e);
+			}
+			
+		}
+		finally {
+			s.close();
+		}
+		
+	}
 
 	@Override
 	public void delete(User t) {

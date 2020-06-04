@@ -45,6 +45,11 @@ public class UserService implements GenericService<User> {
 		// TODO Auto-generated method stub
 		uhib.update(t);
 	}
+	
+	public void merge(User t) {
+		// TODO Auto-generated method stub
+		uhib.merge(t);
+	}
 
 	@Override
 	public void delete(User t) {
@@ -61,8 +66,8 @@ public class UserService implements GenericService<User> {
 		String userFullName= t.getFirstName() + " " + t.getLastName();
 		VendingMachine vendo = new VendingMachine();
 		vendo.setName(userFullName);
-		vendo.setMainColor("000");
-		vendo.setSecondaryColor("fff");
+		vendo.setMainColor("#000000");
+		vendo.setSecondaryColor("#FFFFFF");
 		vendo.setDescription("");
 		vendo.setTheme("default");
 		vendo.setSnacks(null);

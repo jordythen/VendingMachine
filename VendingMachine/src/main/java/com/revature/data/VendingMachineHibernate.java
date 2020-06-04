@@ -1,5 +1,7 @@
 package com.revature.data;
 
+import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 
 import javax.persistence.TypedQuery;
@@ -51,7 +53,8 @@ public class VendingMachineHibernate implements VendingMachineDAO {
 		log.trace("Getting VendingMachine with id "+ id);
 		Session s = connection.getSession();
 		VendingMachine vm = s.get(VendingMachine.class, id);
-		log.trace("Got user with id "+ vm.getId());
+		log.trace("Got vendingmachine "+ vm);
+		s.close();
 		return vm;
 	}
 	
@@ -60,7 +63,7 @@ public class VendingMachineHibernate implements VendingMachineDAO {
 	public List<VendingMachine> getAll() {
 		log.trace("Getting all VendingMachines from the database");
 		Session s = connection.getSession();
-		String hql = "FROM vendingmachine";
+		String hql = "FROM VendingMachine";
 		Query<VendingMachine> q = s.createQuery(hql, VendingMachine.class);
 		List<VendingMachine> vmList = q.getResultList();
 		s.close();
@@ -76,6 +79,27 @@ public class VendingMachineHibernate implements VendingMachineDAO {
 		try {
 			tx = s.beginTransaction();
 			s.update(vm);
+			tx.commit();
+			log.trace("VendingMachine updated");
+		}
+		catch(Exception e){
+			if(tx != null) {
+				tx.rollback();
+				log.warn(e);
+			}
+		}
+		finally {
+			s.close();
+		}
+	}
+	
+	public void merge(VendingMachine vm) {
+		log.trace("Updating VendingMachine " + vm.getName());
+		Session s = connection.getSession();
+		Transaction tx = null;
+		try {
+			tx = s.beginTransaction();
+			s.merge(vm);
 			tx.commit();
 			log.trace("VendingMachine updated");
 		}
@@ -164,21 +188,23 @@ public class VendingMachineHibernate implements VendingMachineDAO {
 	
 	/* 5.9 User can search for other people's VendingMachine by Type */
 	@Override
-	public List<VendingMachine> getByType(Type t) {
-		log.trace("Getting VendingMachines by Type " + t.getSnacktype());
+	public List<VendingMachine> getByType(int typeId) {
+		log.trace("Getting VendingMachines by Type id " + typeId);
 		Session s = connection.getSession();
-		String sql = "select vendingmachine.id, vendingmachine.vending_name, vendingmachine.descript,"
-				+ " vendingmachine.theme, vendingmachine.main_color, vendingmachine.secondary_color" + 
-				"from vendingmachine" + 
-				"join snack_vendingmachine on vendingmachine.id = snack_vendingmachine.vendingmachine_id" + 
-				"join snack on snack_vendingmachine.snack_id = snack.id" + 
-				"join snack_snacktype on snack_snacktype.snackid = snack.id" + 
-				"join snacktype on snack_snacktype.typeid = snacktype.id" + 
-				"where snacktype.id = " + t.getId();
+		String sql = "SELECT vendingmachine.id, vendingmachine.vending_name, vendingmachine.descript, "
+				+ "vendingmachine.theme, vendingmachine.main_color, vendingmachine.secondary_color " + 
+				"FROM vendingmachine " +
+				"JOIN snack_vendingmachine ON vendingmachine.id = snack_vendingmachine.vendingmachine_id " + 
+				"JOIN snack ON snack_vendingmachine.snack_id = snack.id " + 
+				"JOIN snack_snacktype ON snack_snacktype.snackid = snack.id " + 
+				"JOIN snacktype ON snack_snacktype.typeid = snacktype.id " + 
+				"WHERE snacktype.id = " + typeId;
 		NativeQuery<VendingMachine> nq = s.createNativeQuery(sql, VendingMachine.class);
 		List<VendingMachine> vmList = nq.getResultList();
-		log.trace("Got VendingMachines by Type " + t.getSnacktype());
-		return vmList;
+		// scrub duplicates from list using a set
+		List<VendingMachine> vmListNoDup = new ArrayList<>(new HashSet<>(vmList));
+		log.trace("Got VendingMachines by Type id " + typeId);
+		return vmListNoDup;
 	}
 
 }

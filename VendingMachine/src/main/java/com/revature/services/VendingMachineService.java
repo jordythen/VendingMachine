@@ -38,6 +38,10 @@ public class VendingMachineService implements GenericService<VendingMachine> {
 	public void update(VendingMachine vm) {
 		vmh.update(vm);
 	}
+	
+	public void merge(VendingMachine vm) {
+		vmh.merge(vm);
+	}
 
 	@Override
 	public void delete(VendingMachine vm) {
@@ -48,8 +52,8 @@ public class VendingMachineService implements GenericService<VendingMachine> {
 		return vmh.getByName(name);
 	}
 	
-	public List<VendingMachine> getByType(Type t){
-		return vmh.getByType(t);
+	public List<VendingMachine> getByType(int typeId){
+		return vmh.getByType(typeId);
 		
 	}
 	
