@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -77,18 +76,5 @@ public class UserController {
 		log.info("User has been logged out");
 		return ResponseEntity.ok().build();
 	}
-	
-	@PutMapping
-	public ResponseEntity<User> update(HttpSession session, @RequestBody User u ){
-		uServ.update(u);
-		updateSessionUser(session);
-		return ResponseEntity.ok(uServ.getById(u.getId()));
-	}
-	
-	public void updateSessionUser(HttpSession session) {
-		User u=(User) session.getAttribute("user");
-		User u2=uServ.getById(u.getId());
-		session.setAttribute("user", u2);
-	}
-	
+
 }

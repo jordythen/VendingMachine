@@ -24,6 +24,8 @@ public class Review {
 	@GeneratedValue(generator="reviewGen",strategy=GenerationType.SEQUENCE)
 	private Integer id;
 	
+	private Integer vendingMachineId;
+	
 	//One star to five stars!!!!
 	@Column(name="rating")
 	private Integer starRating;
@@ -33,8 +35,11 @@ public class Review {
 	public Integer getId() {
 		return id;
 	}
-	public void setId(Integer id) {
-		this.id = id;
+	public Integer getVendingMachineId() {
+		return vendingMachineId;
+	}
+	public void setVendingMachineId(Integer vendingMachineId) {
+		this.vendingMachineId = vendingMachineId;
 	}
 	public Integer getStarRating() {
 		return starRating;
@@ -54,10 +59,8 @@ public class Review {
 	public void setReviewTime(String reviewTime) {
 		this.reviewTime = reviewTime;
 	}
-	@Override
-	public String toString() {
-		return "Review [id=" + id + ", starRating=" + starRating + ", comments=" + comments + ", reviewTime="
-				+ reviewTime + "]";
+	public void setId(Integer id) {
+		this.id = id;
 	}
 	@Override
 	public int hashCode() {
@@ -67,6 +70,7 @@ public class Review {
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
 		result = prime * result + ((reviewTime == null) ? 0 : reviewTime.hashCode());
 		result = prime * result + ((starRating == null) ? 0 : starRating.hashCode());
+		result = prime * result + ((vendingMachineId == null) ? 0 : vendingMachineId.hashCode());
 		return result;
 	}
 	@Override
@@ -98,7 +102,17 @@ public class Review {
 				return false;
 		} else if (!starRating.equals(other.starRating))
 			return false;
+		if (vendingMachineId == null) {
+			if (other.vendingMachineId != null)
+				return false;
+		} else if (!vendingMachineId.equals(other.vendingMachineId))
+			return false;
 		return true;
 	}
-	
+	@Override
+	public String toString() {
+		return "Review [id=" + id + ", vendingMachineId=" + vendingMachineId + ", starRating=" + starRating
+				+ ", comments=" + comments + ", reviewTime=" + reviewTime + "]";
+	}
+
 }

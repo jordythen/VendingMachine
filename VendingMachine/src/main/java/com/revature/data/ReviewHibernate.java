@@ -5,6 +5,7 @@ import java.util.List;
 import org.apache.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.hibernate.query.NativeQuery;
 import org.hibernate.query.Query;
 import org.springframework.stereotype.Repository;
 
@@ -15,6 +16,16 @@ import com.revature.utils.HibernateUtil;
 public class ReviewHibernate implements ReviewDAO {
 	private HibernateUtil connection = HibernateUtil.getHibernateUtil();
 	Logger log = Logger.getLogger(ReviewHibernate.class);
+	
+	@Override
+	public List<Review> getByMachineId(int id) {
+		Session s = connection.getSession();
+		String sql = "SELECT * FROM review WHERE vendingmachineid = " + id;
+		NativeQuery<Review> nq = s.createNativeQuery(sql, Review.class);
+		List<Review> revList = nq.getResultList();
+		log.trace("Got Reviews by VendingMachine id " + id);
+		return revList;
+	}
 	
 	@Override
 	public Integer add(Review t) {
