@@ -33,9 +33,10 @@ public class SnackController {
 	private UserService userv;
 	private VendingMachineService vmserv;
 	@Autowired
-	public SnackController(SnackService s, UserService u) {
+	public SnackController(SnackService s, UserService u, VendingMachineService v) {
 		sserv=s;
 		userv=u;
+		vmserv=v;
 	}
 	
 	@GetMapping
