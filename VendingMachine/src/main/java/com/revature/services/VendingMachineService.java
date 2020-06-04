@@ -38,6 +38,10 @@ public class VendingMachineService implements GenericService<VendingMachine> {
 	public void update(VendingMachine vm) {
 		vmh.update(vm);
 	}
+	
+	public void merge(VendingMachine vm) {
+		vmh.merge(vm);
+	}
 
 	@Override
 	public void delete(VendingMachine vm) {

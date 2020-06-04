@@ -55,7 +55,7 @@ public class SnackService implements GenericService<Snack>{
 		
 	}
 	
-	public void buySnackFromVendingMachine(Snack s, VendingMachine buyer) {
+	public void buySnackFromVendingMachine(Snack s, VendingMachine buyer, User user) {
 		List<VendingMachine> allvm=vmhib.getAll();
 		
 		for (VendingMachine vm :allvm) {
@@ -73,12 +73,15 @@ public class SnackService implements GenericService<Snack>{
 			if (hassnack) {
 				log.trace("VM: "+vm+" has had snack: "+s+" removed");
 				vm.setSnacks(slist);
-				vmhib.update(vm); // removing snack from vending machine
+				//vmhib.merge(vm); // removing snack from vending machine
 				
 				List<User> ulist=userv.getAll(); // increasing sellers balance
 				for (User u:ulist) {
 					if (u.getVendingMachine().getId()==vm.getId()) {
 						u.setBalance(u.getBalance()+s.getCost());
+						
+						u.setVendingMachine(vm);
+						
 						userv.update(u);
 					}
 				}
@@ -89,7 +92,10 @@ public class SnackService implements GenericService<Snack>{
 		List<Snack> buyersnacks=buyer.getSnacks();
 		buyersnacks.add(s); //adding snack to buyer vending machine
 		buyer.setSnacks(buyersnacks);
-		vmhib.update(buyer);
+//		vmhib.merge(buyer);
+		user.setBalance(user.getBalance()-s.getCost());
+		user.setVendingMachine(buyer);
+		userv.merge(user);
 		
 		log.trace("VM: "+buyer+" has had snack: "+s+" added");
 	}
