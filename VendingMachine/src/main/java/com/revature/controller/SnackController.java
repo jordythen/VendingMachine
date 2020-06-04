@@ -22,6 +22,7 @@ import com.revature.beans.user.User;
 import com.revature.beans.vendingmachine.VendingMachine;
 import com.revature.services.SnackService;
 import com.revature.services.UserService;
+import com.revature.services.VendingMachineService;
 
 @RestController
 @CrossOrigin(origins="http://localhost:4200", allowCredentials="true")
@@ -30,6 +31,7 @@ public class SnackController {
 	public static Logger log = Logger.getLogger(SnackController.class);
 	private SnackService sserv;
 	private UserService userv;
+	private VendingMachineService vmserv;
 	@Autowired
 	public SnackController(SnackService s, UserService u) {
 		sserv=s;
@@ -57,6 +59,18 @@ public class SnackController {
 		s.setId(sserv.add(s));
 		updateSessionUser(session);
 		return ResponseEntity.ok(s);
+	}
+	
+	@PostMapping(path="/{id}")
+	public ResponseEntity<VendingMachine> addSnackToVM(@RequestBody Snack s, @PathVariable("id") Integer id, HttpSession session ){
+		s.setId(sserv.add(s));
+		VendingMachine vm=vmserv.getById(id);
+		List<Snack> slist=vm.getSnacks();
+		slist.add(s);
+		vm.setSnacks(slist);
+		vmserv.update(vm);
+		updateSessionUser(session);
+		return ResponseEntity.ok(vm);
 	}
 	
 	@PutMapping
