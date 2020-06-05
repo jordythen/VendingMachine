@@ -11,10 +11,12 @@ INSERT INTO usertable (id, first_name, last_name, email, username, passwd, balan
 -- ----------------- insert sample vending machines -----------------
 
 INSERT INTO vendingmachine (id, vending_name, descript, theme, main_color, secondary_color)
-    VALUES (vendingmachine_seq.nextval, 'Monster Cookie Machine', 'The best cookies for a monster.', 'Cookies', '8E44AD', '85C1E9');
+    VALUES (vendingmachine_seq.nextval, 'Monster Cookie Machine', 'The best cookies for a monster.', 'Cookies', '#8E44AD', '#85C1E9');
 
 INSERT INTO vendingmachine (id, vending_name, descript, theme, main_color, secondary_color)
-    VALUES (vendingmachine_seq.nextval, 'Joes Candybar Machine', 'A wide selection of candybars.', 'Candybars', 'F39C12', '85929E');
+    VALUES (vendingmachine_seq.nextval, 'Joes Candybar Machine', 'A wide selection of candybars.', 'Candybars', '#F39C12', '#85929E');
+    
+
 
 -- ----------------- insert sample snacks -----------------
 
